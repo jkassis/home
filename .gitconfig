@@ -1,0 +1,29 @@
+
+[core]
+	editor = emacs
+	excludesfile = /Users/jeremykassis/.gitignore_global
+[user]
+	name = Jeremy Kassis
+	email = jeremy@betterworks.com
+[push]
+	default = current
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+    am = commit --amend -C HEAD
+	ch = checkout
+	br = branch
+	co = commit
+	st = status
+	re = reset
+    rb = rebase
+	fe = fetch
+    di = diff
+    ps = push
+    pl = pull
+	me = merge
+    cop = commit -p
