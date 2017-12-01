@@ -2,6 +2,7 @@
 
 # homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew tap caskroom/versions
 
 # browsers
 brew cask install google-chrome
@@ -45,7 +46,7 @@ brew cask install slack
 # TODO: slack - auto add my specific servers?
 
 # languages : java
-brew cask install java
+brew cask install java8
 
 # language : javascript
 brew install node
@@ -131,8 +132,10 @@ ln -sf `pwd`/zsh/completions ~/.oh-my-zsh/completions
 # shell : directory environments
 brew install direnv
 
-# shell : text / code searching
+# search
 brew install the_silver_searcher
+brew install elasticsearch@5.6
+brew services start elasticsearch@5.6
 
 # databases
 brew install neo4j
