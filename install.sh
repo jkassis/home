@@ -45,11 +45,16 @@ brew cask install keeper
 brew cask install slack
 # TODO: slack - auto add my specific servers?
 
+# virtual machine managers
+brew cask install virtualbox
+
 # languages : java
 brew cask install java8
 
 # language : javascript
 brew install node
+npm install -g jasmine-core
+npm install -g karma karma-jasmine karma-coverage karma-webpack karma-sourcemap-loader karma-chrome-launcher
 
 # languages: python
 brew install python
@@ -59,13 +64,14 @@ pip2 install virtualenv virtualenvwrapper flake8
 brew install go --cross-compile-common
 mkdir -p ~/Code/go
 
+# build system
+npm install -g webpack
+
 # editors : atom
 brew cask install atom
 apm install python-debugger language-python
 brew cask install sublime-text3
 
-# virtual machine managers
-brew cask install virtualbox
 
 # TODO: atom package setup...
 # ex-mode
@@ -80,15 +86,15 @@ brew cask install emacs
 
 # editors : vim
 brew install neovim
-# symlinks
+# editors : vim : symlinks
 ln -sf `pwd`/init.vim ~/.config/nvim/init.vim
 ln -sf `pwd`/init.vim ~/.vimrc
 
-# vim-plug
+# editors : vim : vim-plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# python language support
+# editors : vim : python language support
 pip2 install neovim
 vim +PlugInstall +qall
 # TODO: symlink nvimrc to vimrc
@@ -113,21 +119,10 @@ brew cask install dropbox
 brew cask install iterm2
 curl "https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/master/scheme/iterm/One%20Dark.itermcolors" > ~/Downloads/OneDark.itermcolors
 
-# zsh
+# shell : zsh and oh-my-zsh
 brew install zsh
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-
-# install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# symlink zshrc
-ln -sf `pwd`/.zshrc ~/.zshrc
-
-# symlink zsh theme
-ln -sf `pwd`/zsh/dbprompt.zsh-theme ~/.oh-my-zsh/themes/dbprompt.zsh-theme
-# symlink zsh aliases
-mkdir ~/zsh
-ln -sf `pwd`/zsh/aliases.zsh ~/zsh/aliases.zsh
-ln -sf `pwd`/zsh/completions ~/.oh-my-zsh/completions
 
 # shell : directory environments
 brew install direnv
