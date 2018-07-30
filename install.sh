@@ -39,6 +39,7 @@ brew cask install vlc
 # passwords
 brew cask install 1password
 brew cask install keeper
+brew cask install lastpass
 # TODO: can we automate 1password setup/config?
 
 # communication
@@ -51,28 +52,24 @@ brew cask install virtualbox
 # languages : java
 brew cask install java8
 
-# language : javascript
-brew install node
-npm install -g jasmine-core
-npm install -g karma karma-jasmine karma-coverage karma-webpack karma-sourcemap-loader karma-chrome-launcher
+## language : javascript
+#brew install node
+#npm install -g jasmine-core
+#npm install -g karma karma-jasmine karma-coverage karma-webpack karma-sourcemap-loader karma-chrome-launcher
 
-# languages: python
-brew install python
-pip2 install virtualenv virtualenvwrapper flake8
+## languages: python
+#brew install python
+#pip2 install virtualenv virtualenvwrapper flake8
 
-# languages: go
-brew install go --cross-compile-common
-mkdir -p ~/Code/go
+## languages: go
+#brew install go --cross-compile-common
+#mkdir -p ~/Code/go
 
-# build system
-npm install -g webpack
+## build system
+#npm install -g webpack
 
 # editors : atom
 brew cask install atom
-apm install python-debugger language-python
-brew cask install sublime-text3
-
-
 # TODO: atom package setup...
 # ex-mode
 # linter
@@ -81,24 +78,19 @@ brew cask install sublime-text3
 # language-javascript-jsx
 # vim-mode-plus
 
+# editors : sublime
+brew cask install sublime-text3
+
 # editors : emacs
 brew cask install emacs
 
-# editors : vim
+# editors : neovim
 brew install neovim
-# editors : vim : symlinks
-ln -sf `pwd`/init.vim ~/.config/nvim/init.vim
-ln -sf `pwd`/init.vim ~/.vimrc
-
-# editors : vim : vim-plug
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# editors : vim : python language support
+#ln -sf `pwd`/init.vim ~/.config/nvim/init.vim
+#ln -sf `pwd`/init.vim ~/.vimrc
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 pip2 install neovim
 vim +PlugInstall +qall
-# TODO: symlink nvimrc to vimrc
-# TODO: run nvim :PlugInstall (and vim)
 
 # ides
 xcode-select --install
@@ -113,7 +105,6 @@ brew cask install docker
 # file transfer
 brew install httpie
 brew cask install dropbox
-# TODO: dropbox - can we get my specific version?
 
 # terminal
 brew cask install iterm2
@@ -133,20 +124,21 @@ brew install elasticsearch@5.6
 brew services start elasticsearch@5.6
 
 # databases
-brew install neo4j
-#brew install postgresql
-brew cask install postgres
-brew cask install pgadmin4
-brew services start postgresql
+# brew install neo4j
+# brew install postgresql
+# brew cask install postgres
+# brew cask install pgadmin4
+# brew services start postgresql
 
 # git setup
-git config --global user.email "jeremy@betterworks.com"
-git config --global user.name "Jeremy Kassis"
-git config --global core.editor nvim
-# TODO: automate ssh key registration with github? - can be a python script
+ln -s ~/home/.gitconfig ~/.gitconfig
+ln -s ~/home/.gitignore_global ~/.gitignore_global
 
 # sourcetree
 brew cask install sourcetree
+
+# beyond compare
+brew cask install beyond compare
 
 # font setup
 brew tap caskroom/fonts
