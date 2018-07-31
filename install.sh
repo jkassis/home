@@ -84,13 +84,8 @@ brew cask install sublime-text3
 # editors : emacs
 brew cask install emacs
 
-# editors : neovim
-brew install neovim
-#ln -sf `pwd`/init.vim ~/.config/nvim/init.vim
-#ln -sf `pwd`/init.vim ~/.vimrc
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-pip2 install neovim
-vim +PlugInstall +qall
+# vim
+./installVim.sh
 
 # ides
 xcode-select --install

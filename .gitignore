@@ -1,8 +1,2 @@
-*
-!.gitconfig
-!.gitignore_global
-!.gitignore
-!.ssh
-!.zshrc
-!install.sh
 .ssh/id_rsa
+.idea
