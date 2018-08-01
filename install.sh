@@ -133,7 +133,7 @@ ln -s ~/home/.gitignore_global ~/.gitignore_global
 brew cask install sourcetree
 
 # beyond compare
-brew cask install beyond compare
+brew cask install beyond-compare
 
 # font setup
 brew tap caskroom/fonts

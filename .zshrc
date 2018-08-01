@@ -42,8 +42,6 @@ plugins=(git git-extras virtualenvwrapper zsh-autosuggestions)
 # Fire it up
 source $ZSH/oh-my-zsh.sh
 
-# START HERE
-cd .
 
 # LANGUAGE
 # You may need to manually set your language environment
@@ -62,29 +60,6 @@ cd .
 
 # SSH
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# BETTERWORKS
-alias wb="cd $HOME/Code/BetterWorks"
-alias es="wb; cd ../elasticsearch; ./es.sh"
-
-# GIT
-alias gac="git add . && git commit"
-alias gmu="git fetch upstream && git merge upstream/master"
-alias gru="git pull -r upstream master"
-alias gpo="git push --set-upstream origin \`git symbolic-ref --short HEAD\`"
-alias gbd="git branch -D "
-alias gpf="git push --force-with-lease"
-alias gd="git diff --minimal -w HEAD | cdiff -s -w 100"
-alias gs='git status'
-alias gc='git commit'
-
-# PYTHON
-alias f8="ls -1 -d */ | xargs -n 2 -P 8 flake8 -j 1"
-alias is="find . -name \"*.py\" -not -name appfiles | xargs -n 400 -P 8 isort -q"
-alias tt="py.test -s"
-
-# ELASTIC SEARCH
-bindkey "^R" history-incremental-pattern-search-backward
 
 # POSTGRES
 # list all current dbs
@@ -108,13 +83,3 @@ whichdb() {
 dropdb() {
   psql -c "DROP DATABASE \"$1\""
 }
-
-# JAVA
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
-
-# CIRCLECI
-#CIRCLE_TEST_REPORTS=/tmp
-#export CIRCLE_TEST_REPORTS
-
-# As per... https://betterworks.atlassian.net/wiki/spaces/QA/pages/45056063/Testing+Internet+Explorer+with+Localhost+server
-export ENABLE_TEST_HOOKS=0000000000

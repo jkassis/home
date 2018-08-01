@@ -1,17 +1,17 @@
 [alias]
-    coa = commit --amend -C HEAD
-	ch = checkout
 	br = branch
+	ch = checkout
 	co = commit
-	st = status
-	re = reset
-    rb = rebase
-	fe = fetch
+    coa = commit --amend -C HEAD
+    cop = commit -p
     di = diff
+	fe = fetch
+	me = merge
     ps = push
     pl = pull
-	me = merge
-    cop = commit -p
+	re = reset
+    rb = rebase
+	st = status
 [branch]
 	autosetuprebase = always
 [color]
@@ -24,6 +24,11 @@
 	guitool = bc3
 [difftool]
 	prompt = false
+[filter "lfs"]
+        process = git-lfs filter-process
+        required = true
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
 [include]
     path = ~/.gitconfig.local
 [merge]
