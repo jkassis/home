@@ -6,3 +6,5 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 vim +PlugInstall +qall
 
 #pip2 install neovim
+
+sudo ln -s /usr/local/bin/nvim /usr/local/bin/nv
