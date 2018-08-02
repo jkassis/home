@@ -14,5 +14,8 @@ Plug 'rking/ag.vim'
 
 call plug#end()
 
+" Run :PlugInstall from inside NeoVim
 
+" https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
 nnoremap <C-p> :FZF<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
