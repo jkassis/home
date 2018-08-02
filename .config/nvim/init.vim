@@ -19,3 +19,8 @@ call plug#end()
 " https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
 nnoremap <C-p> :FZF<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
+
+" For mouse click in NERDTree
+:set mouse=a
+let g:NERDTreeMouseMode=3 
+
