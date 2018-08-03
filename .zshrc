@@ -37,11 +37,11 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git-extras heroku jira django)
-plugins=(git git-extras virtualenvwrapper zsh-autosuggestions)
+plugins=(git git-extras zsh-autosuggestions)
 
 # Fire it up
 source $ZSH/oh-my-zsh.sh
-
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # LANGUAGE
 # You may need to manually set your language environment
@@ -63,23 +63,34 @@ source $ZSH/oh-my-zsh.sh
 
 # POSTGRES
 # list all current dbs
-alias listdb="psql -c 'select datname from pg_database where datistemplate=false;'"
+alias plistdb="psql -c 'select datname from pg_database where datistemplate=false;'"
 
 # usage: copydb (current db name) (new db name)
-copydb() {
+pcopydb() {
   createdb -O $USERNAME -T $1 $2
 }
 
 # sets current active db, tricky part is it is only for that terminal so if you have multiple open it can get fun
-setdb() {
+psetdb() {
   export DATABASE_URL=postgresql://$USERNAME@localhost:5432/$1
 }
 
 # which db is currently set as my active db
-whichdb() {
+pwhichdb() {
   echo $DATABASE_URL
 }
 
-dropdb() {
+pdropdb() {
   psql -c "DROP DATABASE \"$1\""
 }
+
+
+# Kubernetes Stuff
+export KUBECONFIG=$KUBECONFIG:~/.kube/config-kops
+alias kc='kubectl'
+if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
+if [ $commands[helm] ]; then source <(helm completion zsh); fi
+
+
+# Local Config
+source ~/.zshrc.local

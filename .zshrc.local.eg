@@ -1,0 +1,2 @@
+export KOPS_STATE_STORE=s3://mz-kops-us-west-2
+
