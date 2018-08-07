@@ -94,3 +94,6 @@ if [ $commands[helm] ]; then source <(helm completion zsh); fi
 
 # Local Config
 source ~/.zshrc.local
+
+
+#alias rm='safe-rm'

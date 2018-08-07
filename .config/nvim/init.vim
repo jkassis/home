@@ -26,5 +26,15 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeMouseMode=3 
 
 " Swap semi-colon and colon
-noremap ; :
-noremap : ;
+"noremap ; :
+"noremap : ;
+
+set showmatch           " Show matching brackets.
+set number              " Show the line numbers on the left side.
+set formatoptions+=o    " Continue comment marker in new lines.
+set expandtab           " Insert spaces when TAB is pressed.
+set tabstop=4           " Render TABs using this many spaces.
+set shiftwidth=4        " Indentation amount for < and > commands.
+
+" Find file with command shift o
+nnoremap <D-S-o> :FZF<CR>
