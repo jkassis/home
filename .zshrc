@@ -1,3 +1,6 @@
+# Home Bin
+export PATH="~/home/bin:$PATH"
+
 # OPT PACKAGES
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
@@ -97,3 +100,4 @@ source ~/.zshrc.local
 
 
 #alias rm='safe-rm'
+
