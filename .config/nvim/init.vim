@@ -2,14 +2,17 @@
 
 " Run :PlugInstall from inside NeoVim
 call plug#begin('~/.config/nvim/plugged')
-Plug '/usr/local/opt/fzf' " fuzzy file search with fzf
-Plug 'junegunn/fzf.vim'
-Plug 'avakhov/vim-yaml' " VIM yaml formatter
+Plug '/usr/local/opt/fzf'                               " fzf fuzzy search with fzf
+Plug 'junegunn/fzf.vim'                                 " fzf fuzzy search
+Plug 'avakhov/vim-yaml'                                 " VIM yaml formatter
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " directory tree browser
-Plug 'rking/ag.vim'                                     " full text search with silver surfer
-Plug 'Lokaltog/vim-powerline'                           " Powerline smart statusline.
+Plug 'vim-airline/vim-airline'                          " Lightweight statusline (since powerline is deprecated)
 Plug 'scrooloose/syntastic'                             " Integration for external syntax checkers.
 Plug 'pangloss/vim-javascript'                          " Syntax highlighting and improved indentation.
+Plug 'tbastos/vim-lua'                                  " Improved Lua 5.3 syntax and indentation support for Vim
+Plug 'christoomey/vim-tmux-navigator'                   " Use same shortcuts for tmux and vim pane navigation
+Plug 'groenewege/vim-less'                            " Syntax highlighting for less files
+Plug 'ekalinin/Dockerfile.vim'                        " Syntax highlighting for Dockerfiles
 call plug#end()
 
 
@@ -47,6 +50,7 @@ set hlsearch            " Highlight search pattern matches
 set incsearch           " Make search look within strings
 nnoremap n nzz             " Center searches?
 nnoremap N Nzz          " Center searches?
+let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik
 
 " Colors
 syntax enable           " enable syntax color schemes without overwriting existing highlighting rules
@@ -76,4 +80,9 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
 
