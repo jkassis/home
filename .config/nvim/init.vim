@@ -9,7 +9,9 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " directory tree browser
 Plug 'rking/ag.vim'                                     " full text search with silver surfer
 Plug 'Lokaltog/vim-powerline'                           " Powerline smart statusline.
 Plug 'scrooloose/syntastic'                             " Integration for external syntax checkers.
+Plug 'pangloss/vim-javascript'                          " Syntax highlighting and improved indentation.
 call plug#end()
+
 
 " https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
 nnoremap <C-p> :FZF<CR>
