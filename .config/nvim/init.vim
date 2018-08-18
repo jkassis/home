@@ -13,6 +13,7 @@ Plug 'tbastos/vim-lua'                                  " Improved Lua 5.3 synta
 Plug 'christoomey/vim-tmux-navigator'                   " Use same shortcuts for tmux and vim pane navigation
 Plug 'groenewege/vim-less'                            " Syntax highlighting for less files
 Plug 'ekalinin/Dockerfile.vim'                        " Syntax highlighting for Dockerfiles
+Plug 'fatih/vim-go'                                     " Go development plugin for Vim
 call plug#end()
 
 
