@@ -89,8 +89,9 @@ pdropdb() {
 
 
 # Kubernetes Stuff
-export KUBECONFIG=$KUBECONFIG:~/.kube/config-kops
+export KUBECONFIG=$KUBECONFIG:~/.kube/config
 alias kc='kubectl'
+alias kce='kubectl exec -it '
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 if [ $commands[helm] ]; then source <(helm completion zsh); fi
 
