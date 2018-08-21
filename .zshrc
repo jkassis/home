@@ -15,7 +15,7 @@ export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 # GO
 export GOPATH="$HOME/Projects/go"
-export PATH="/usr/local/go/bin:$PATH"
+export PATH="$GOPATH/bin:/usr/local/go/bin:$PATH"
 
 # OH-MY-ZSH
 export ZSH=$HOME/.oh-my-zsh
@@ -91,7 +91,11 @@ pdropdb() {
 # Kubernetes Stuff
 export KUBECONFIG=$KUBECONFIG:~/.kube/config
 alias kc='kubectl'
+alias kcl='kubectl logs '
 alias kce='kubectl exec -it '
+alias kcx='kubectl delete'
+alias kcd='kubectl describe'
+alias kcg='kubectl get'
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 if [ $commands[helm] ]; then source <(helm completion zsh); fi
 
