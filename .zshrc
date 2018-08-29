@@ -91,11 +91,12 @@ pdropdb() {
 # Kubernetes Stuff
 export KUBECONFIG=$KUBECONFIG:~/.kube/config
 alias kc='kubectl'
-alias kcl='kubectl logs '
-alias kce='kubectl exec -it '
-alias kcx='kubectl delete'
+alias kcl='kubectl logs -f'
+alias kcx='kubectl exec -it '
+alias kcdd='kubectl delete'
 alias kcd='kubectl describe'
 alias kcg='kubectl get'
+alias kce='kubectl get events --sort-by=.metadata.creationTimestamp'
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 if [ $commands[helm] ]; then source <(helm completion zsh); fi
 
