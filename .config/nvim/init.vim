@@ -1,5 +1,3 @@
-" https://medium.com/@boiser/a-vim-poser-s-guide-to-neovim-ea79e95c31cd
-
 " Run :PlugInstall from inside NeoVim
 call plug#begin('~/.config/nvim/plugged')
 Plug '/usr/local/opt/fzf'                               " fzf fuzzy search with fzf
@@ -11,15 +9,26 @@ Plug 'scrooloose/syntastic'                             " Integration for extern
 Plug 'pangloss/vim-javascript'                          " Syntax highlighting and improved indentation.
 Plug 'tbastos/vim-lua'                                  " Improved Lua 5.3 syntax and indentation support for Vim
 Plug 'christoomey/vim-tmux-navigator'                   " Use same shortcuts for tmux and vim pane navigation
-Plug 'groenewege/vim-less'                            " Syntax highlighting for less files
-Plug 'ekalinin/Dockerfile.vim'                        " Syntax highlighting for Dockerfiles
+Plug 'groenewege/vim-less'                              " Syntax highlighting for less files
+Plug 'ekalinin/Dockerfile.vim'                          " Syntax highlighting for Dockerfiles
 Plug 'fatih/vim-go'                                     " Go development plugin for Vim
+"Plug 'yuttie/comfortable-motion.vim'                    " Smooth, inertial scrolling
 call plug#end()
 
 
 " https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
 nnoremap <C-p> :FZF<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
+
+" Comfortable Motion: Mouse scrolling inertia
+" https://github.com/yuttie/comfortable-motion.vim
+" let g:comfortable_motion_no_default_key_mappings = 1
+"let g:comfortable_motion_scroll_down_key = "j"
+"let g:comfortable_motion_scroll_up_key = "k"
+"noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(10)<CR>
+"noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-10)<CR>
+" noremap <ScrollWheelDown> j
+" noremap <ScrollWheelUp> k
 
 " For mouse click in NERDTree
 :set mouse=a
