@@ -12,9 +12,14 @@ Plug 'christoomey/vim-tmux-navigator'                   " Use same shortcuts for
 Plug 'groenewege/vim-less'                              " Syntax highlighting for less files
 Plug 'ekalinin/Dockerfile.vim'                          " Syntax highlighting for Dockerfiles
 Plug 'fatih/vim-go'                                     " Go development plugin for Vim
+Plug 'mileszs/ack.vim'                                  " ACK full-text searching with quickfix window
 "Plug 'yuttie/comfortable-motion.vim'                    " Smooth, inertial scrolling
 call plug#end()
 
+" ACK Options (use silver searcher)
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
 nnoremap <C-p> :FZF<CR>
