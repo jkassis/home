@@ -14,7 +14,7 @@ Plug 'ekalinin/Dockerfile.vim'                          " Syntax highlighting fo
 Plug 'fatih/vim-go'                                     " Go development plugin for Vim
 Plug 'mileszs/ack.vim'                                  " ACK full-text searching with quickfix window
 "Plug 'yuttie/comfortable-motion.vim'                    " Smooth, inertial scrolling
-Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling
+Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
 call plug#end()
 
 " ACK Options (use silver searcher)
@@ -41,6 +41,10 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+" scroll one line at a time with the mouse
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
 
 " For mouse click in NERDTree
 :set mouse=a
