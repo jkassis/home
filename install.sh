@@ -87,6 +87,10 @@ brew cask install emacs
 # vim
 ./installVim.sh
 
+# oni
+brew cask install oni
+defaults write com.extropy.oni ApplePressAndHoldEnabled -bool false
+
 # ides
 xcode-select --install
 sudo xcodebuild -license accept # agree to xcode license
