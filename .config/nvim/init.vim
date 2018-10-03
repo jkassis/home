@@ -17,16 +17,22 @@ Plug 'mileszs/ack.vim'                                  " ACK full-text searchin
 Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
 call plug#end()
 
-" ACK Options (use silver searcher)
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+
+" CONFIGURATION HOWTO
+" https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
+
+" Search for Content in Files (ACK)
+if executable('ag')                   " Have Silver Searcher?
+  let g:ackprg = 'ag --vimgrep'       " Use it
+  let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik
 endif
 
-" https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
+" Search for Files By Name (FZF)
 nnoremap <C-p> :FZF<CR>
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <D-S-o> :FZF<CR>
 
-" Comfortable Motion: Mouse scrolling inertia
+
+" Mouse scrolling inertia (Comfortable Motion)
 " https://github.com/yuttie/comfortable-motion.vim
 " let g:comfortable_motion_no_default_key_mappings = 1
 "let g:comfortable_motion_scroll_down_key = "j"
@@ -36,29 +42,32 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 " noremap <ScrollWheelDown> j
 " noremap <ScrollWheelUp> k
 
-" terryma/vim-smooth-scroll
+" Smooth Scrolling (terryma/vim-smooth-scroll)
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
-" scroll one line at a time with the mouse
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
+" Mouse In Buffers
+set mouse=a
+map <ScrollWheelUp> <C-Y>         " Scroll one line up at a time
+map <ScrollWheelDown> <C-E>      " Scroll one line down at a time
 
-" For mouse click in NERDTree
-:set mouse=a
-let g:NERDTreeMouseMode=3 
+" NERDTree (C-n)
+nnoremap <C-n> :NERDTreeToggle<CR> 
+let g:NERDTreeMouseMode=3               " Use Mouse
+let NERDTreeShowHidden=1                " Show hidden files
 
-" Swap semi-colon and colon
-"noremap ; :
-"noremap : ;
+"" semi-colon / colon swap
+""noremap ; :
+""noremap : ;
 
+" Buffer View Options
 set showmatch           " Show matching brackets.
-set ruler               " Always show current position
+set ruler               " Show current position
 set number              " Show the line numbers on the left side.
 set formatoptions+=o    " Continue comment marker in new lines.
-set cursorline          " Highlight current line
+set cursorline          " Show highlight on current line
 "set magic              " Set magic on, for regexps
 set showmatch           " Show matching brackets when text indicator on top of one
 set title               " Show the filename
@@ -71,12 +80,12 @@ set shiftwidth=2        " Indentation amount for < and > commands.
 vnoremap < <gv
 vnoremap > >gv
 
-" Search Behavior
+" RegEXP Search Options
+"set magic              " Set magic on, for regexps
 set hlsearch            " Highlight search pattern matches
 set incsearch           " Make search look within strings
-nnoremap n nzz             " Center searches?
+nnoremap n nzz          " Center searches?
 nnoremap N Nzz          " Center searches?
-let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik
 
 " Colors
 syntax enable           " enable syntax color schemes without overwriting existing highlighting rules
@@ -95,13 +104,10 @@ set ffs=unix,dos,mac
 set wildmenu
 set wildmode=longest:full,full
 
-" Find file with command shift o
-nnoremap <D-S-o> :FZF<CR>
-
+" Startup Behavior
 set shellcmdflag=-ic        " Start in interactive mode
 
-
-" Disable the arrow keys
+" Arrow Keys (Disable)
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
