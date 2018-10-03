@@ -22,8 +22,9 @@ call plug#end()
 " https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
 
 " Search for Content in Files (ACK)
-if executable('ag')                   " Have Silver Searcher?
-  let g:ackprg = 'ag --vimgrep'       " Use it
+nnoremap <C-f> :Ack<Space>
+if executable('ag')                                  " Have Silver Searcher?
+  let g:ackprg = 'ag --vimgrep'                      " Use it
   let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik
 endif
 
@@ -31,6 +32,11 @@ endif
 nnoremap <C-p> :FZF<CR>
 nnoremap <D-S-o> :FZF<CR>
 
+" Navigation Windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Mouse scrolling inertia (Comfortable Motion)
 " https://github.com/yuttie/comfortable-motion.vim
@@ -43,10 +49,10 @@ nnoremap <D-S-o> :FZF<CR>
 " noremap <ScrollWheelUp> k
 
 " Smooth Scrolling (terryma/vim-smooth-scroll)
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+" noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+" noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+" noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+" noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " Mouse In Buffers
 set mouse=a
