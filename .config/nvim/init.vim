@@ -79,6 +79,9 @@ set showmatch           " Show matching brackets when text indicator on top of o
 set title               " Show the filename
 set showcmd             " Show commands when entered
 
+" Buffer Auto-Save Options
+set autoread            " Automatically re-read the file when it changes on the filesystem and does not change in the buffer
+
 " Tabbing
 set expandtab           " Insert spaces when TAB is pressed.
 set tabstop=4           " Render TABs using this many spaces.
