@@ -114,7 +114,7 @@ brew install zsh
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 rm ~/.zshrc
-ln -s ~/home/.zshrc ~/.zshrc
+ln -s ~/Home/.zshrc ~/.zshrc
 
 # shell : directory environments
 brew install direnv
@@ -132,8 +132,8 @@ brew services start elasticsearch@5.6
 # brew services start postgresql
 
 # git setup
-ln -s ~/home/.gitconfig ~/.gitconfig
-ln -s ~/home/.gitignore_global ~/.gitignore_global
+ln -s ~/Home/.gitconfig ~/.gitconfig
+ln -s ~/Home/.gitignore_global ~/.gitignore_global
 
 # sourcetree
 brew cask install sourcetree

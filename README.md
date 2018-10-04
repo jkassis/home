@@ -8,4 +8,4 @@ https://github.com/statico/dotfiles/
 
 
 ## Installation
-./home/install.sh
+./Home/install.sh
