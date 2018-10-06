@@ -32,6 +32,9 @@ endif
 nnoremap <C-p> :FZF<CR>
 nnoremap <D-S-o> :FZF<CR>
 
+" Undo / Redo
+nnoremap U <C-r>
+
 " Navigation Windows
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
