@@ -18,6 +18,30 @@ WINDOWS
 ctrl-[hjkl]         Navigate Windows
 
 TABS
+http://vim.wikia.com/wiki/Category:Tabs
+http://vim.wikia.com/wiki/Using_tab_pages
+http://vim.wikia.com/wiki/Quick_tips_for_using_tab_pages
+:tabedit {file}     edit specified file in a new tab
+:tabfind {file}     open a new tab with filename given, searching the 'path' to find it
+:tabclose           close current tab
+:tabclose {i}       close i-th tab
+:tabonly            close all other tabs (show only the current tab)
+:tab ball           show each buffer in a tab (up to 'tabpagemax' tabs)
+:tab help           open a new help window in its own tab page
+:tab drop {file}    open {file} in a new tab, or jump to a window/tab containing the file if there is one
+:tab split          copy the current window to a new tab of its own
+:tabs               list all tabs including their displayed windows
+:tabm 0             move current tab to first
+:tabm               move current tab to last
+:tabm {i}           move current tab to position i+1
+:tabn               go to next tab
+:tabp               go to previous tab
+:tabfirst           go to first tab
+:tablast            go to last tab
+<C-W>T              make it a tab
+gt                  go to next tab
+gT                  go to previous tab
+{i}gt               go to tab in position i
 
 MOVING
 hjkl                move left, down, up, right

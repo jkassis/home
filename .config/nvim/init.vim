@@ -35,11 +35,17 @@ nnoremap <D-S-o> :FZF<CR>
 " Undo / Redo
 nnoremap U <C-r>
 
-" Navigation Windows
+" Navigating Windows
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Navigating Tabs
+nnoremap <C-Left> gT
+nnoremap <C-Right> gt
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 
 " Mouse scrolling inertia (Comfortable Motion)
 " https://github.com/yuttie/comfortable-motion.vim
