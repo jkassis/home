@@ -84,13 +84,22 @@ noremap <C-L> :call append(line('.')+1, '')
 " Buffer View Options
 set showmatch           " Show matching brackets.
 set ruler               " Show current position
-set number              " Show the line numbers on the left side.
 set formatoptions+=o    " Continue comment marker in new lines.
 set cursorline          " Show highlight on current line
 "set magic              " Set magic on, for regexps
 set showmatch           " Show matching brackets when text indicator on top of one
 set title               " Show the filename
 set showcmd             " Show commands when entered
+
+" Line Numbering
+" https://jeffkreeftmeijer.com/vim-number/
+" :set number
+:set number relativenumber
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
 
 " Buffer Auto-Save Options
 set autoread            " Automatically re-read the file when it changes on the filesystem and does not change in the buffer
