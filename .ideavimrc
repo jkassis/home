@@ -1,11 +1,33 @@
+" IdeaVIM Commands Index
+http://ideavim.sourceforge.net/vim/index.html
 
 
+" Inserts
+noremap <C-l> :call append(line('.')-1, '')
+noremap <C-L> :call append(line('.')+1, '')
 
-
-" Search
-set hlsearch                " Highlight search results 
-set incsearch               " Incremental search as you type a regexp
-
-
-
+" Undo / Redo
 noremap U <C-r>
+
+" Visual Mode Selection Searches
+" See http://vim.wikia.com/wiki/Search_for_visually_selected_text
+vnoremap // y/\V<C-R>"<CR>
+"vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
+vnoremap /? y/\V<C-R>"<CR> 
+
+" RegEXP Search Options
+"set magic              " Set magic on, for regexps
+set hlsearch            " Highlight search pattern matches
+set incsearch           " Make search look within strings
+" Goto next and prev regexp and center the screen on the match
+nnoremap n nzz
+nnoremap N Nzz 
+" Shortcut for global search and replace
+nnoremap <C-/> :%s/
+
+" Arrow Keys (Manage Whitespace)
+" http://vim.wikia.com/wiki/Quickly_adding_and_deleting_empty_lines
+noremap <Up> mZO<Esc>`Z
+noremap <S-Up> mZ:-1,-1s/^\s*$\n//<CR>:noh<CR>`Z
+noremap <Down> mZo<Esc>`Z
+noremap <S-Down> mZ:+1,+1s/^\s*$\n//<CR>:noh<CR>`Z 

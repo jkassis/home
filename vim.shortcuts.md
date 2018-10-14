@@ -1,3 +1,13 @@
+DISCOVERING BINDINGS
+use ":help {key}^D" to find out if
+a key is used for some command.  ({key} is the specific key you want to find
+out about, ^D is CTRL-D)
+
+
+HELP WITH MAPPINGS
+https://neovim.io/doc/user/map.html
+
+
 BUFFERS
 http://vim.wikia.com/wiki/Easier_buffer_switching<Paste>
 :ls                 list all buffers (aka :buffers)
@@ -9,15 +19,61 @@ ctrl-[hjkl]         Navigate Windows
 
 TABS
 
-CHANGING
-c[movement]         change something to something else
+MOVING
+hjkl                move left, down, up, right
+()                  move back/forward one sentence
+[]                  move to next/prev curly-bracket sections
+{}                  move to next/previous blank-line separated section
+tk                  move fwd until character k
+Tk                  move bak until character k
+fk                  move fwd to character k
+Fk                  move bak to character k
+w                   move fwd to start of word
+W                   move fwd to start of WORD
+e                   move fwd to end of word
+E                   move fwd to end of WORD
+b                   move bak to start of word
+B                   move bak to start of WORD
+0                   move to column zero (beginning of line)
+|                   move to column zero (beginning of line)
+$                   move to end of line
+;                   repeat last 'f', 'F', 't', or 'T' Command
+<C-f>               forward one screen
+<C-b>               backward one screen
+<C-D>               down half-screen
+
+
+MARK AND MOVE
+'k                   move to mark, first non-whitespace
+`k                   move to marked line, memorized column
+mk                  set mark k to cursor position
+
+-                   move to first non-whitespace of previous line
+^                   move to first non-whitespace of line
+_                   move to first non-whitespace of line
++                   move to first non-whitespace of next line
+
+FILTERING
+=                   filter through external program
+
+WHITELINES
+up-arrow            add whitespace one line up
+shift up-arrow      remove whitespace one line up
+down-arrow          add whitespace one line down
+shit down-arrow     remove whitespace one line down
+
+CHANGING / REPLACING
+c[movement]         change characters in movements (delete them and goto insert mode)
+nsk                 change n characters (delete them and goto insert mode)
+nrk                 delete n characters and fill with k
 
 INSERTING
 iI                  insert to the left of point / line
 aA                  insert to the right of point / line
 
-INDENTING
-<>                  indent visual selection left / right
+INDENTING / SHIFTING
+<>                  indent visual selection left / right one shiftwidth
+n<>                 indent n line left / right one shiftwidth
 
 UNDO
 u                   undo last change
@@ -75,6 +131,7 @@ http://vim.wikia.com/wiki/Search_and_replace
 :5,12s/foo/bar/g   	Change each 'foo' to 'bar' for all lines from line 5 to line 12 (inclusive).
 
 
+
 GOING
 gd                  will take you to the local declaration.
 gD                  will take you to the global declaration.
@@ -89,3 +146,6 @@ MACROS
 http://vim.wikia.com/wiki/Macros
 q<letter><commands>q    Record your macro
 @<letter>               Play your macro back
+
+LINE-WISE ACTIONS
+:[range]g/pattern/cmd   executing the Ex command cmd for each line matching pattern in a range

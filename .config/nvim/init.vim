@@ -44,10 +44,10 @@ nnoremap <C-l> <C-w>l
 " Mouse scrolling inertia (Comfortable Motion)
 " https://github.com/yuttie/comfortable-motion.vim
 " let g:comfortable_motion_no_default_key_mappings = 1
-"let g:comfortable_motion_scroll_down_key = "j"
-"let g:comfortable_motion_scroll_up_key = "k"
-"noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(10)<CR>
-"noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-10)<CR>
+" let g:comfortable_motion_scroll_down_key = "j"
+" let g:comfortable_motion_scroll_up_key = "k"
+" noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(10)<CR>
+" noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-10)<CR>
 " noremap <ScrollWheelDown> j
 " noremap <ScrollWheelUp> k
 
@@ -66,6 +66,10 @@ map <ScrollWheelDown> <C-E>      " Scroll one line down at a time
 nnoremap <C-n> :NERDTreeToggle<CR> 
 let g:NERDTreeMouseMode=3               " Use Mouse
 let NERDTreeShowHidden=1                " Show hidden files
+
+" Special Edits
+noremap <C-l> :call append(line('.')-1, '')
+noremap <C-L> :call append(line('.')+1, '') 
 
 "" semi-colon / colon swap
 ""noremap ; :
@@ -96,8 +100,16 @@ vnoremap > >gv
 "set magic              " Set magic on, for regexps
 set hlsearch            " Highlight search pattern matches
 set incsearch           " Make search look within strings
-nnoremap n nzz          " Center searches?
-nnoremap N Nzz          " Center searches?
+" Goto next and prev regexp and center the screen on the match
+nnoremap n nzz
+nnoremap N Nzz 
+" Shortcut for global search and replace
+nnoremap <C-/> :%s/
+
+" Visual Mode Selection Searches
+" See http://vim.wikia.com/wiki/Search_for_visually_selected_text
+vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
+vnoremap /? y/\V<C-R>"<CR>      
 
 " Colors
 syntax enable           " enable syntax color schemes without overwriting existing highlighting rules
@@ -120,13 +132,19 @@ set wildmode=longest:full,full
 set shellcmdflag=-ic        " Start in interactive mode
 
 " Arrow Keys (Disable)
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+"noremap <Up> <NOP>
+"noremap <Down> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
 
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-
+" Arrow Keys (Manage Whitespace) 
+" http://vim.wikia.com/wiki/Quickly_adding_and_deleting_empty_lines<Paste>
+noremap <Up> mZO<Esc>`Z
+noremap <S-Up> m`:-g/^\s*$\n/d<CR>'`:noh<CR>
+noremap <Down> mZo<Esc>`Z
+noremap <S-Down> m`:+g/^\s*$\n/d<CR>'`:noh<CR> 
+"
+"noremap <C-BS> mZO<Esc>`Z
+"noremap <BS> mZ:-1,-1s/^\s*$\n//<CR>:noh<CR>`Z
+"noremap <Space> mZo<Esc>`Z
+"noremap <C-Space> mZ:+1,+1s/^\s*$\n//<CR>:noh<CR>`Z
