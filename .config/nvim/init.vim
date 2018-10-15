@@ -1,3 +1,9 @@
+" CONFIGURATION HOWTO
+" https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
+
+" Startup Behavior
+set shellcmdflag=-ic        " Start in interactive mode
+
 " Run :PlugInstall from inside NeoVim
 call plug#begin('~/.config/nvim/plugged')
 Plug '/usr/local/opt/fzf'                               " fzf fuzzy search with fzf
@@ -17,11 +23,7 @@ Plug 'mileszs/ack.vim'                                  " ACK full-text searchin
 Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
 call plug#end()
 
-
-" CONFIGURATION HOWTO
-" https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
-
-" Search for Content in Files (ACK)
+" Search for Content (ACK) in Files with Silver Surfer 
 nnoremap <C-f> :Ack<Space>
 if executable('ag')                                  " Have Silver Searcher?
   let g:ackprg = 'ag --vimgrep'                      " Use it
@@ -32,20 +34,25 @@ endif
 nnoremap <C-p> :FZF<CR>
 nnoremap <D-S-o> :FZF<CR>
 
-" Undo / Redo
+" Undo / Redo with uU
 nnoremap U <C-r>
 
-" Navigating Windows
+" Window Navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Navigating Tabs
+" Tab Navigation
 nnoremap <C-Left> gT
 nnoremap <C-Right> gt
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+
+" Mouse Activated
+set mouse=a
+map <ScrollWheelUp> <C-Y>         " Scroll one line up at a time
+map <ScrollWheelDown> <C-E>       " Scroll one line down at a time
 
 " Mouse scrolling inertia (Comfortable Motion)
 " https://github.com/yuttie/comfortable-motion.vim
@@ -63,37 +70,28 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 " noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 " noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
-" Mouse In Buffers
-set mouse=a
-map <ScrollWheelUp> <C-Y>         " Scroll one line up at a time
-map <ScrollWheelDown> <C-E>      " Scroll one line down at a time
-
 " NERDTree (C-n)
 nnoremap <C-n> :NERDTreeToggle<CR> 
 let g:NERDTreeMouseMode=3               " Use Mouse
 let NERDTreeShowHidden=1                " Show hidden files
 
-" Special Edits
-noremap <C-l> :call append(line('.')-1, '')
-noremap <C-L> :call append(line('.')+1, '') 
-
-"" semi-colon / colon swap
-""noremap ; :
-""noremap : ;
-
-" Buffer View Options
-set showmatch           " Show matching brackets.
-set ruler               " Show current position
+" Commenting
 set formatoptions+=o    " Continue comment marker in new lines.
-set cursorline          " Show highlight on current line
-"set magic              " Set magic on, for regexps
+
+" Cursor Cues
 set showmatch           " Show matching brackets when text indicator on top of one
+set cursorline          " Show highlight on current line
+
+" Status Bar / Title Bar
+set ruler               " Show current position
 set title               " Show the filename
 set showcmd             " Show commands when entered
 
-" Line Numbering
-" https://jeffkreeftmeijer.com/vim-number/
+" Standard Line Numbering
 " :set number
+
+" Hybrid Line Numbering
+" https://jeffkreeftmeijer.com/vim-number/
 :set number relativenumber
 :augroup numbertoggle
 :  autocmd!
@@ -101,10 +99,10 @@ set showcmd             " Show commands when entered
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
-" Buffer Auto-Save Options
+" Buffer Auto-Save / Read Options
 set autoread            " Automatically re-read the file when it changes on the filesystem and does not change in the buffer
 
-" Tabbing
+" Tabbing and Shifting
 set expandtab           " Insert spaces when TAB is pressed.
 set tabstop=4           " Render TABs using this many spaces.
 set shiftwidth=2        " Indentation amount for < and > commands.
@@ -137,14 +135,13 @@ set background=dark
 " Fonts
 set gfn=Bitstream\ Vera\ Sans\ Mono:h10
 set encoding=utf8
+
+" File Formats
 set ffs=unix,dos,mac
 
 " Wildmenu (http://vim.wikia.com/wiki/Great_wildmode/wildmenu_and_console_mouse)
 set wildmenu
 set wildmode=longest:full,full
-
-" Startup Behavior
-set shellcmdflag=-ic        " Start in interactive mode
 
 " Arrow Keys (Disable)
 "noremap <Up> <NOP>
@@ -152,8 +149,10 @@ set shellcmdflag=-ic        " Start in interactive mode
 "noremap <Left> <NOP>
 "noremap <Right> <NOP>
 
-" Arrow Keys (Manage Whitespace) 
+" Vertical Whitespace Shortcuts
 " http://vim.wikia.com/wiki/Quickly_adding_and_deleting_empty_lines<Paste>
+" noremap <C-l> :call append(line('.')-1, '')
+" noremap <C-L> :call append(line('.')+1, '') 
 noremap <Up> mZO<Esc>`Z
 noremap <S-Up> m`:-g/^\s*$\n/d<CR>'`:noh<CR>
 noremap <Down> mZo<Esc>`Z
