@@ -54,6 +54,15 @@ set mouse=a
 map <ScrollWheelUp> <C-Y>         " Scroll one line up at a time
 map <ScrollWheelDown> <C-E>       " Scroll one line down at a time
 
+" Alt-Mouse Drag for Visual Block Selection
+" Not-Working
+" http://vim.wikia.com/wiki/Use_Alt-Mouse_to_select_blockwise
+noremap <M-LeftMouse> <LeftMouse><Esc><C-V>
+noremap <M-LeftDrag> <LeftDrag>
+
+noremap <S-RightMouse> <LeftMouse><Esc><C-V>
+noremap <S-RightDrag> <LeftDrag>
+
 " Mouse scrolling inertia (Comfortable Motion)
 " https://github.com/yuttie/comfortable-motion.vim
 " let g:comfortable_motion_no_default_key_mappings = 1
