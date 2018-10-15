@@ -19,7 +19,8 @@ Plug 'groenewege/vim-less'                              " Syntax highlighting fo
 Plug 'ekalinin/Dockerfile.vim'                          " Syntax highlighting for Dockerfiles
 Plug 'fatih/vim-go'                                     " Go development plugin for Vim
 Plug 'mileszs/ack.vim'                                  " ACK full-text searching with quickfix window
-"Plug 'yuttie/comfortable-motion.vim'                    " Smooth, inertial scrolling
+"Plug 'yuttie/comfortable-motion.vim'                   " Smooth, inertial scrolling
+Plug 'ludovicchabant/vim-gutentags'                     " Gutentags
 Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
 call plug#end()
 
