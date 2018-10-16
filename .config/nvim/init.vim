@@ -23,6 +23,7 @@ Plug 'mileszs/ack.vim'                                  " ACK full-text searchin
 Plug 'ludovicchabant/vim-gutentags'                     " Gutentags
 Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
 Plug 'tpope/vim-unimpaired'                             " Paired bracket maps for navigation and more
+Plug 'tyok/nerdtree-ack', { 'on': 'NERDTreeToggle' }    " search menu option for NERDTRee
 call plug#end()
 
 " Search for Content (ACK) in Files with Silver Surfer 
