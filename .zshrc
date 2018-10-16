@@ -5,9 +5,10 @@ export PATH="~/home/bin:$PATH"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # PYTHON
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+#export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # GIT
+# Makes python 3.7 the default
 #export PATH="/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
 
 # POSTGRESS
