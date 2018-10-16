@@ -23,6 +23,7 @@ Plug 'mileszs/ack.vim'                                  " ACK full-text searchin
 Plug 'ludovicchabant/vim-gutentags'                     " Gutentags
 Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
 Plug 'tpope/vim-unimpaired'                             " Paired bracket maps for navigation and more
+Plug 'moll/vim-bbye'                                    " Clear out buffers with \q shortcut without blowing up windows
 Plug 'tyok/nerdtree-ack', { 'on': 'NERDTreeToggle' }    " search menu option for NERDTRee
 call plug#end()
 
@@ -45,6 +46,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+:nnoremap <Leader>q :Bdelete<CR>
+:nnoremap <Leader>Q :bufdo :Bdelete<CR>
+
 
 " Tab Navigation
 nnoremap <C-Left> gT
