@@ -22,6 +22,7 @@ Plug 'mileszs/ack.vim'                                  " ACK full-text searchin
 "Plug 'yuttie/comfortable-motion.vim'                   " Smooth, inertial scrolling
 Plug 'ludovicchabant/vim-gutentags'                     " Gutentags
 Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
+Plug 'tpope/vim-unimpaired'                             " Paired bracket maps for navigation and more
 call plug#end()
 
 " Search for Content (ACK) in Files with Silver Surfer 
@@ -159,14 +160,15 @@ set wildmode=longest:full,full
 "noremap <Left> <NOP>
 "noremap <Right> <NOP>
 
-" Vertical Whitespace Shortcuts
-" http://vim.wikia.com/wiki/Quickly_adding_and_deleting_empty_lines<Paste>
-" noremap <C-l> :call append(line('.')-1, '')
-" noremap <C-L> :call append(line('.')+1, '') 
-noremap <Up> mZO<Esc>`Z
-noremap <S-Up> m`:-g/^\s*$\n/d<CR>'`:noh<CR>
-noremap <Down> mZo<Esc>`Z
-noremap <S-Down> m`:+g/^\s*$\n/d<CR>'`:noh<CR> 
+" Removed in favor of vim-unimpaired
+"" Vertical Whitespace Shortcuts
+"" http://vim.wikia.com/wiki/Quickly_adding_and_deleting_empty_lines<Paste>
+"" noremap <C-l> :call append(line('.')-1, '')
+"" noremap <C-L> :call append(line('.')+1, '') 
+"noremap <Up> mZO<Esc>`Z
+"noremap <S-Up> m`:-g/^\s*$\n/d<CR>'`:noh<CR>
+"noremap <Down> mZo<Esc>`Z
+"noremap <S-Down> m`:+g/^\s*$\n/d<CR>'`:noh<CR> 
 "
 "noremap <C-BS> mZO<Esc>`Z
 "noremap <BS> mZ:-1,-1s/^\s*$\n//<CR>:noh<CR>`Z
