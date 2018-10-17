@@ -26,6 +26,7 @@ Plug 'tpope/vim-unimpaired'                             " Paired bracket maps fo
 Plug 'moll/vim-bbye'                                    " Clear out buffers with \q shortcut without blowing up windows
 Plug 'tyok/nerdtree-ack', { 'on': 'NERDTreeToggle' }    " search menu option for NERDTRee
 Plug 'skywind3000/vim-preview'                          " advanced preview window management"
+Plug 'vim-vdebug/vdebug'                                " DBGP debugger
 call plug#end()
 
 " Multi-file search (ACK)
