@@ -25,14 +25,24 @@ Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... ma
 Plug 'tpope/vim-unimpaired'                             " Paired bracket maps for navigation and more
 Plug 'moll/vim-bbye'                                    " Clear out buffers with \q shortcut without blowing up windows
 Plug 'tyok/nerdtree-ack', { 'on': 'NERDTreeToggle' }    " search menu option for NERDTRee
+Plug 'skywind3000/vim-preview'                          " advanced preview window management"
 call plug#end()
 
-" Search for Content (ACK) in Files with Silver Surfer 
-nnoremap <C-f> :Ack<Space>
+" Multi-file search (ACK)
+" add .ignore file to project folder to control search paths
+" shortcut Ack searchs and ! prevents first result from opening
+nnoremap <C-f> :Ack!<Space>
+" use Silver Surfer 
 if executable('ag')                                  " Have Silver Searcher?
   let g:ackprg = 'ag --vimgrep'                      " Use it
   let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik
 endif
+
+
+" Preview Window
+" p to Preview from QuickFix P to close it
+autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 
 " Search for Files By Name (FZF)
 nnoremap <C-p> :FZF<CR>
