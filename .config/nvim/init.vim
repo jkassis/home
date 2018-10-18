@@ -99,8 +99,12 @@ noremap <S-RightDrag> <LeftDrag>
 
 " NERDTree (C-n)
 nnoremap <C-n> :NERDTreeToggle<CR> 
+nnoremap <Leader>n :NERDTreeFind<CR>
 let g:NERDTreeMouseMode=3               " Use Mouse
 let NERDTreeShowHidden=1                " Show hidden files
+" Highlight currently open buffer in NERDTree
+"autocmd BufEnter * :NERDTreeFind<CR>
+
 
 " Commenting
 set formatoptions+=o    " Continue comment marker in new lines.
