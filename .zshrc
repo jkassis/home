@@ -1,5 +1,5 @@
 # Home Bin
-export PATH="~/home/bin:$PATH"
+export PATH="~/Home/bin:$PATH"
 
 # OPT PACKAGES
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
