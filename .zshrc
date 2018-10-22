@@ -10,6 +10,7 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # GIT
 # Makes python 3.7 the default
 #export PATH="/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
+alias python='python3'
 
 # POSTGRESS
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"

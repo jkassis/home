@@ -4,6 +4,10 @@
 " Startup Behavior
 set shellcmdflag=-ic        " Start in interactive mode
 
+" Python Support
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " Run :PlugInstall from inside NeoVim
 call plug#begin('~/.config/nvim/plugged')
 Plug '/usr/local/opt/fzf'                               " fzf fuzzy search with fzf
@@ -27,6 +31,9 @@ Plug 'moll/vim-bbye'                                    " Clear out buffers with
 Plug 'tyok/nerdtree-ack', { 'on': 'NERDTreeToggle' }    " search menu option for NERDTRee
 Plug 'skywind3000/vim-preview'                          " advanced preview window management"
 Plug 'vim-vdebug/vdebug'                                " DBGP debugger
+Plug 'Chiel92/vim-autoformat'                           " Code autoformatting
+Plug 'kana/vim-operator-user'                           " Easy API for making new operators
+Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
 call plug#end()
 
 " Multi-file search (ACK)
@@ -139,6 +146,7 @@ set tabstop=4           " Render TABs using this many spaces.
 set shiftwidth=2        " Indentation amount for < and > commands.
 vnoremap < <gv
 vnoremap > >gv
+noremap <F3> :Autoformat<CR>
 
 " RegEXP Search Options
 "set magic              " Set magic on, for regexps

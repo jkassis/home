@@ -20,6 +20,7 @@ FILES
 
 BUFFERS
 http://vim.wikia.com/wiki/Easier_buffer_switching<Paste>
+:bufdo              do the following command in all buffers
 :ls                 list all buffers (aka :buffers)
 :b                  change to buffer (aka :bu :buf :buffer)
 [b                  previous
@@ -165,7 +166,8 @@ iI                  insert to the left of point / line
 aA                  insert to the right of point / line
 
 
-INDENTING / SHIFTING
+INDENTING / SHIFTING / FORMATTING
+http://vim.wikia.com/wiki/Fix_indentation
 <>                  indent visual selection left / right one shiftwidth
 n<>                 indent n line left / right one shiftwidth
 
@@ -232,6 +234,7 @@ g#                  same as g* but in backward direction.
 
 SEARCH & REPLACE
 http://vim.wikia.com/wiki/Search_and_replace
+http://vim.wikia.com/wiki/Search_and_replace_in_multiple_buffers
 :%s/foo/bar/g       Find each occurrence of 'foo' (in all lines), and replace it with 'bar'.
 :s/foo/bar/g        Find each occurrence of 'foo' (in the current line only), and replace it with 'bar'.
 :%s/foo/bar/gc      Change each 'foo' to 'bar', but ask for confirmation first.
