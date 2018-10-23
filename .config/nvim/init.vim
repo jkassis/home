@@ -112,6 +112,9 @@ let NERDTreeShowHidden=1                " Show hidden files
 " Highlight currently open buffer in NERDTree
 "autocmd BufEnter * :NERDTreeFind<CR>
 
+" Special Yank
+map y <Plug>(operator-flashy)
+nmap Y <Plug>(operator-flashy)$
 
 " Commenting
 set formatoptions+=o    " Continue comment marker in new lines.
