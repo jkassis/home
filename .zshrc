@@ -54,11 +54,11 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # EDITOR
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='nvim'
+ fi
 
 # C LANG
 # export ARCHFLAGS="-arch x86_64"
