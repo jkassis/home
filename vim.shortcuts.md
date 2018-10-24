@@ -86,21 +86,23 @@ SCM CONFLICTS (DIFFS)
 ]n                  Next
 
 
-NAVIGATING COLUMNS
+COLUMNS MOTIONS
 jk                  move left/right
 0                   move to column zero (beginning of line)
 |                   move to column zero (beginning of line)
 $                   move to end of line
 
-
-NAVIGATING BLOCKS
+BLOCK MOTIONS
 ()                  move back/forward one sentence
 []                  move to next/prev curly-bracket sections
 {}                  move to next/previous blank-line separated section
 %                   go to other side of braces
 
+TEXT OBJECT MOTIONS (Operator Mode)
+an                  'around text object delimited by n'
+in                  inside text object delimited by n
 
-NAVIGATING CHARS
+CHAR MOTIONS
 tk                  move fwd until character k
 Tk                  move bak until character k
 fk                  move fwd to character k
@@ -108,7 +110,7 @@ Fk                  move bak to character k
 ;                   repeat last 'f', 'F', 't', or 'T' Command
 
 
-NAVIGATING WORDS
+WORD MOTIONS
 w                   move fwd to start of word
 W                   move fwd to start of WORD
 e                   move fwd to end of word
@@ -117,12 +119,12 @@ b                   move bak to start of word
 B                   move bak to start of WORD
 
 
-NAVIGATING TAGS
+TAG MOTIONS
 gd                  will take you to the local declaration.
 gD                  will take you to the global declaration.
 
 
-NAVIGATING LINES
+LINE MOTIONS
 jk                  move down, up
 <C-f>               forward one screen
 <C-b>               backward one screen
