@@ -112,7 +112,7 @@ let NERDTreeShowHidden=1                " Show hidden files
 " Highlight currently open buffer in NERDTree
 "autocmd BufEnter * :NERDTreeFind<CR>
 
-" Special Yank
+" Flashy Yank
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
 
@@ -161,13 +161,19 @@ nnoremap N Nzz
 " Shortcut for global search and replace
 nnoremap <C-/> :%s/
 
+" Register Rotation
+" http://vim.wikia.com/wiki/Comfortable_handling_of_registers
+:nnoremap <Leader>s :let @a=@" \| let @"=@+ \| let @+=@a<CR>
+
 " Visual Mode Selection Searches
 " See http://vim.wikia.com/wiki/Search_for_visually_selected_text
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 vnoremap /? y/\V<C-R>"<CR>      
 
-" Colors
+" Syntax Highlighting
 syntax enable           " enable syntax color schemes without overwriting existing highlighting rules
+
+" Colors
 set t_Co=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
@@ -176,10 +182,10 @@ set background=dark
 
 " Fonts
 set gfn=Bitstream\ Vera\ Sans\ Mono:h10
-set encoding=utf8
 
 " File Formats
 set ffs=unix,dos,mac
+set encoding=utf8
 
 " Wildmenu (http://vim.wikia.com/wiki/Great_wildmode/wildmenu_and_console_mouse)
 set wildmenu

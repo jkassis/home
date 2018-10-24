@@ -39,3 +39,6 @@ noremap <Up> mZO<Esc>`Z
 noremap <S-Up> mZ:-1,-1s/^\s*$\n//<CR>:noh<CR>`Z
 noremap <Down> mZo<Esc>`Z
 noremap <S-Down> mZ:+1,+1s/^\s*$\n//<CR>:noh<CR>`Z 
+
+" Register Rotation
+:nnoremap <Leader>s :let @a=@" \| let @"=@+ \| let @+=@a<CR>
