@@ -1,5 +1,4 @@
 # editors : nvim
-brew install python python3 nvim fzf the_silver_searcher ctags
 mkdir ~/.config
 ln -sf ~/Home/.config/nvim ~/.config/nvim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
