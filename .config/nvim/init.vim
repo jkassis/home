@@ -36,6 +36,9 @@ Plug 'kana/vim-operator-user'                           " Easy API for making ne
 Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
 call plug#end()
 
+" vim-go
+let g:go_version_warning = 0
+
 " Multi-file search (ACK)
 " add .ignore file to project folder to control search paths
 " shortcut Ack searchs and ! prevents first result from opening
