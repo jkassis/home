@@ -114,7 +114,6 @@ curl "https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/mast
 brew install zsh
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-rm ~/.zshrc
 
 # shell : directory environments
 brew install direnv
