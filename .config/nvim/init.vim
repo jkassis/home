@@ -10,7 +10,8 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Run :PlugInstall from inside NeoVim
 call plug#begin('~/.config/nvim/plugged')
-Plug '/usr/local/opt/fzf'                               " fzf fuzzy search with fzf
+" Plug '/usr/local/opt/fzf'                               " fzf fuzzy search with fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " fzf fuzzy search with fzf
 Plug 'junegunn/fzf.vim'                                 " fzf fuzzy search
 Plug 'avakhov/vim-yaml'                                 " VIM yaml formatter
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " directory tree browser
