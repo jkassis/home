@@ -35,6 +35,7 @@ Plug 'vim-vdebug/vdebug'                                " DBGP debugger
 Plug 'Chiel92/vim-autoformat'                           " Code autoformatting
 Plug 'kana/vim-operator-user'                           " Easy API for making new operators
 Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
+Plug 'tpope/vim-fugitive'                               " Git integration for vim
 call plug#end()
 
 " vim-go
