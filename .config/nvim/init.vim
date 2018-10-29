@@ -40,6 +40,9 @@ call plug#end()
 " vim-go
 let g:go_version_warning = 0
 
+" disable gutentags during gitcommit gitrebase
+au FileType gitcommit,gitrebase let g:gutentags_enabled=0
+
 " Multi-file search (ACK)
 " add .ignore file to project folder to control search paths
 " shortcut Ack searchs and ! prevents first result from opening
