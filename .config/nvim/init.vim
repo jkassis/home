@@ -124,6 +124,9 @@ let NERDTreeShowHidden=1                " Show hidden files
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
 
+" Yank to system clipboard
+map <Leader>y "+y
+
 " Commenting
 set formatoptions+=o    " Continue comment marker in new lines.
 
