@@ -38,6 +38,11 @@ Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
 Plug 'tpope/vim-fugitive'                               " Git integration for vim
 call plug#end()
 
+" Change Leader to <Space>
+
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 " vim-go
 let g:go_version_warning = 0
 
