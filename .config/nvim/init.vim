@@ -38,8 +38,16 @@ Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
 Plug 'tpope/vim-fugitive'                               " Git integration for vim
 call plug#end()
 
-" Change Leader to <Space>
+" Vim Debug Options
+if !exists('g:vdebug_options')
+    let g:vdebug_options = {}
+endif
+let g:vdebug_options['break_on_open'] = 1
+let g:vdebug_options.port = 10001
+let g:vdebug_options.server = 'localhost'
 
+
+" Change Leader to <Space>
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
