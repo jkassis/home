@@ -7,3 +7,5 @@ ln -sf ~/Home/.tmux.conf ~/.tmux.conf
 ln -sf ~/Home/.vim ~/.vim
 ln -sf ~/Home/.zshrc ~/.zshrc
 ln -sf ~/Home/bin ~/bin
+
+alias kcDashToken=~/Home/bin/kcDashToken.bash
