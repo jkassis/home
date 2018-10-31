@@ -46,7 +46,7 @@ plugins=(git git-extras zsh-autosuggestions)
 
 # Fire it up
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # LANGUAGE
 # You may need to manually set your language environment
