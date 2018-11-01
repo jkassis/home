@@ -36,15 +36,16 @@ Plug 'Chiel92/vim-autoformat'                           " Code autoformatting
 Plug 'kana/vim-operator-user'                           " Easy API for making new operators
 Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
 Plug 'tpope/vim-fugitive'                               " Git integration for vim
+Plug 'majutsushi/tagbar'                                " Tag based file outlines
 call plug#end()
 
 " Default window splitting options
-:set splitbelow
-:set splitright
+set splitbelow
+set splitright
 
 " Open quickfix window at bottom of screen with full-width
 " :autocmd FileType qf wincmd J
-:botright cwindow
+botright cwindow
 
 " Vim Debug Options
 if !exists('g:vdebug_options')
@@ -58,6 +59,9 @@ let g:vdebug_options.server = 'localhost'
 " Change Leader to <Space>
 nnoremap <SPACE> <Nop>
 let mapleader=" "
+
+" Tagbar shortcut
+nnoremap <Leader>t :TagbarToggle<CR>
 
 " vim-go
 let g:go_version_warning = 0
@@ -93,8 +97,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-:nnoremap <Leader>q :Bdelete!<CR>
-:nnoremap <Leader>Q :bufdo :Bdelete<CR>
+nnoremap <Leader>q :Bdelete!<CR>
+nnoremap <Leader>Q :bufdo :Bdelete<CR>
 
 
 " Tab Navigation
@@ -146,7 +150,7 @@ map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
 
 " Yank to system clipboard
-map <Leader>y "+y
+nnoremap <Leader>y "+y
 
 " Always yank and paste using system clipboard
 " :set clipboard+=unnamedplus
@@ -198,7 +202,7 @@ nnoremap <C-/> :%s/
 
 " Register Rotation
 " http://vim.wikia.com/wiki/Comfortable_handling_of_registers
-:nnoremap <Leader>s :let @a=@" \| let @"=@+ \| let @+=@a<CR>
+nnoremap <Leader>s :let @a=@" \| let @"=@+ \| let @+=@a<CR>
 
 " Visual Mode Selection Searches
 " See http://vim.wikia.com/wiki/Search_for_visually_selected_text
