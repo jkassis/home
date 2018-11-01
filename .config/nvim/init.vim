@@ -38,6 +38,14 @@ Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
 Plug 'tpope/vim-fugitive'                               " Git integration for vim
 call plug#end()
 
+" Default window splitting options
+:set splitbelow
+:set splitright
+
+" Open quickfix window at bottom of screen with full-width
+" :autocmd FileType qf wincmd J
+:botright cwindow
+
 " Vim Debug Options
 if !exists('g:vdebug_options')
   let g:vdebug_options = {}
