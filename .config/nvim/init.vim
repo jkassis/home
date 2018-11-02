@@ -166,7 +166,7 @@ map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
 
 " Yank to system clipboard
-nnoremap <Leader>y "+y
+map <Leader>y "+y
 
 " Always yank and paste using system clipboard
 " :set clipboard+=unnamedplus
