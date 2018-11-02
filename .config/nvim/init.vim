@@ -12,32 +12,33 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 " Run :PlugInstall from inside NeoVim
 call plug#begin('~/.config/nvim/plugged')
 " Plug '/usr/local/opt/fzf'                               " fzf fuzzy search with fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " fzf fuzzy search with fzf
-Plug 'junegunn/fzf.vim'                                 " fzf fuzzy search
 Plug 'avakhov/vim-yaml'                                 " VIM yaml formatter
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " directory tree browser
-Plug 'vim-airline/vim-airline'                          " Lightweight statusline (since powerline is deprecated)
-Plug 'scrooloose/syntastic'                             " Integration for external syntax checkers.
-Plug 'pangloss/vim-javascript'                          " Syntax highlighting and improved indentation.
-Plug 'tbastos/vim-lua'                                  " Improved Lua 5.3 syntax and indentation support for Vim
+Plug 'Chiel92/vim-autoformat'                           " Code autoformatting
 Plug 'christoomey/vim-tmux-navigator'                   " Use same shortcuts for tmux and vim pane navigation
-Plug 'groenewege/vim-less'                              " Syntax highlighting for less files
 Plug 'ekalinin/Dockerfile.vim'                          " Syntax highlighting for Dockerfiles
 Plug 'fatih/vim-go'                                     " Go development plugin for Vim
-Plug 'mileszs/ack.vim'                                  " ACK full-text searching with quickfix window
-"Plug 'yuttie/comfortable-motion.vim'                   " Smooth, inertial scrolling
+Plug 'groenewege/vim-less'                              " Syntax highlighting for less files
+Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " fzf fuzzy search with fzf
+Plug 'junegunn/fzf.vim'                                 " fzf fuzzy search
+Plug 'kana/vim-operator-user'                           " Easy API for making new operators
 Plug 'ludovicchabant/vim-gutentags'                     " Gutentags
+Plug 'majutsushi/tagbar'                                " Tag based file outlines
+Plug 'mileszs/ack.vim'                                  " ACK full-text searching with quickfix window
+Plug 'moll/vim-bbye'                                    " Clear out buffers with \q shortcut without blowing up windows
+Plug 'pangloss/vim-javascript'                          " Syntax highlighting and improved indentation.
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " directory tree browser
+Plug 'scrooloose/syntastic'                             " Integration for external syntax checkers.
+Plug 'scrooloose/nerdcommenter'                         " Code commenting
+Plug 'skywind3000/vim-preview'                          " advanced preview window management
+Plug 'tbastos/vim-lua'                                  " Improved Lua 5.3 syntax and indentation support for Vim
 Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
 Plug 'tpope/vim-unimpaired'                             " Paired bracket maps for navigation and more
-Plug 'moll/vim-bbye'                                    " Clear out buffers with \q shortcut without blowing up windows
-Plug 'tyok/nerdtree-ack', { 'on': 'NERDTreeToggle' }    " search menu option for NERDTRee
-Plug 'skywind3000/vim-preview'                          " advanced preview window management
-Plug 'vim-vdebug/vdebug'                                " DBGP debugger
-Plug 'Chiel92/vim-autoformat'                           " Code autoformatting
-Plug 'kana/vim-operator-user'                           " Easy API for making new operators
-Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
 Plug 'tpope/vim-fugitive'                               " Git integration for vim
-Plug 'majutsushi/tagbar'                                " Tag based file outlines
+Plug 'tyok/nerdtree-ack', { 'on': 'NERDTreeToggle' }    " search menu option for NERDTRee
+Plug 'vim-vdebug/vdebug'                                " DBGP debugger
+Plug 'vim-airline/vim-airline'                          " Lightweight statusline (since powerline is deprecated)
+"Plug 'yuttie/comfortable-motion.vim'                   " Smooth, inertial scrolling
 call plug#end()
 
 " Default window splitting options
