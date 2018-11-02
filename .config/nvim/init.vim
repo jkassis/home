@@ -52,7 +52,7 @@ botright cwindow
 if !exists('g:vdebug_options')
   let g:vdebug_options = {}
 endif
-let g:vdebug_options['break_on_open'] = 1
+let g:vdebug_options['break_on_open'] = 0
 let g:vdebug_options.port = 9001
 let g:vdebug_options.server = 'localhost'
 
