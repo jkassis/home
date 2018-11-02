@@ -1,4 +1,5 @@
 " CONFIGURATION HOWTO
+" http://learnvimscriptthehardway.stevelosh.com
 " https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
 
 " Startup Behavior
@@ -30,7 +31,7 @@ Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... ma
 Plug 'tpope/vim-unimpaired'                             " Paired bracket maps for navigation and more
 Plug 'moll/vim-bbye'                                    " Clear out buffers with \q shortcut without blowing up windows
 Plug 'tyok/nerdtree-ack', { 'on': 'NERDTreeToggle' }    " search menu option for NERDTRee
-Plug 'skywind3000/vim-preview'                          " advanced preview window management"
+Plug 'skywind3000/vim-preview'                          " advanced preview window management
 Plug 'vim-vdebug/vdebug'                                " DBGP debugger
 Plug 'Chiel92/vim-autoformat'                           " Code autoformatting
 Plug 'kana/vim-operator-user'                           " Easy API for making new operators
@@ -40,8 +41,8 @@ Plug 'majutsushi/tagbar'                                " Tag based file outline
 call plug#end()
 
 " Default window splitting options
-set splitbelow
-set splitright
+" set splitbelow
+" set splitright
 
 " Open quickfix window at bottom of screen with full-width
 " :autocmd FileType qf wincmd J
@@ -80,10 +81,15 @@ if executable('ag')                                  " Have Silver Searcher?
 endif
 
 
-" Preview Window
-" p to Preview from QuickFix P to close it
+" QuickFix Window Enhancements 
+" p to Open Preview Window
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+" P to Close Preview Window
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
+" Automatically close the preview window when quickfix closes
+" autocmd BufDelete <buffer> if &buftype == 'quickfix' | :pc! | endif     " Never Worked
+" autocmd FileType qf autocmd BufDelete <buffer> echom "Hey"              " Console Log Example
+autocmd FileType qf autocmd BufDelete <buffer> :pc! 
 
 " Search for Files By Name (FZF)
 nnoremap <C-p> :FZF<CR>
@@ -97,6 +103,15 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Window Rearrangement
+" Using alt-key combinations (just type the key combo in insert mode)
+nnoremap ˙ <C-w>H
+nnoremap ∆ <C-w>J
+nnoremap ˚ <C-w>K
+nnoremap ¬ <C-w>L
+
+" Easy Buffer Delete
 nnoremap <Leader>q :Bdelete!<CR>
 nnoremap <Leader>Q :bufdo :Bdelete<CR>
 
