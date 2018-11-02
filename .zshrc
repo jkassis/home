@@ -1,6 +1,9 @@
 # Home Bin
 export PATH="~/Home/bin:$PATH"
 
+# TERM IMPROVEMENTS
+alias cl=clear
+
 # OPT PACKAGES
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
