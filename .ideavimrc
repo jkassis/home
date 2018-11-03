@@ -1,6 +1,31 @@
 " IdeaVIM Commands Index
 http://ideavim.sourceforge.net/vim/index.html
 
+" Open quickfix window at bottom of screen with full-width
+" :autocmd FileType qf wincmd J
+botright cwindow
+
+" Change Leader to <Space>
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+" QuickFix Window Enhancements 
+" p to Open Preview Window
+autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+" P to Close Preview Window
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
+" Automatically close the preview window when quickfix closes
+" autocmd BufDelete <buffer> if &buftype == 'quickfix' | :pc! | endif     " Never Worked
+" autocmd FileType qf autocmd BufDelete <buffer> echom "Hey"              " Console Log Example
+autocmd FileType qf autocmd BufDelete <buffer> :pc! 
+
+" Undo / Redo
+noremap U <C-r>
+
+" Easy Buffer Delete
+nnoremap <Leader>q :Bdelete!<CR>
+nnoremap <Leader>Q :bufdo :Bdelete<CR>
+
 " Hybrid Line Numbering
 " https://jeffkreeftmeijer.com/vim-number/
 :set number relativenumber
@@ -10,12 +35,41 @@ http://ideavim.sourceforge.net/vim/index.html
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
-" Inserts
-noremap <C-l> :call append(line('.')-1, '')
-noremap <C-L> :call append(line('.')+1, '')
+" Flashy Yank
+map y <Plug>(operator-flashy)
+nmap Y <Plug>(operator-flashy)$
 
-" Undo / Redo
-noremap U <C-r>
+" Yank to system clipboard
+map <Leader>y "+y
+
+" Cursor Cues
+set showmatch           " Show matching brackets when text indicator on top of one
+set cursorline          " Show highlight on current line
+
+" Status Bar / Title Bar
+set ruler               " Show current position
+set title               " Show the filename
+set showcmd             " Show commands when entered
+
+" Hybrid Line Numbering
+" https://jeffkreeftmeijer.com/vim-number/
+:set number relativenumber
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
+
+" Buffer Auto-Save / Read Options
+set autoread            " Automatically re-read the file when it changes on the filesystem and does not change in the buffer
+
+" Tabbing and Shifting
+set expandtab           " Insert spaces when TAB is pressed.
+set tabstop=4           " Render TABs using this many spaces.
+set shiftwidth=2        " Indentation amount for < and > commands.
+vnoremap < <gv
+vnoremap > >gv
+noremap <F3> :Autoformat<CR>
 
 " Visual Mode Selection Searches
 " See http://vim.wikia.com/wiki/Search_for_visually_selected_text
@@ -33,12 +87,30 @@ nnoremap N Nzz
 " Shortcut for global search and replace
 nnoremap <C-/> :%s/
 
-" Arrow Keys (Manage Whitespace)
-" http://vim.wikia.com/wiki/Quickly_adding_and_deleting_empty_lines
-" noremap <Up> mZO<Esc>`Z
-" noremap <S-Up> mZ:-1,-1s/^\s*$\n//<CR>:noh<CR>`Z
-" noremap <Down> mZo<Esc>`Z
-" noremap <S-Down> mZ:+1,+1s/^\s*$\n//<CR>:noh<CR>`Z 
-
 " Register Rotation
 :nnoremap <Leader>s :let @a=@" \| let @"=@+ \| let @+=@a<CR>
+
+" Syntax Highlighting
+syntax enable           " enable syntax color schemes without overwriting existing highlighting rules
+
+" QuickFix Window Enhancements 
+" p to Open Preview Window
+autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+" P to Close Preview Window
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
+" Automatically close the preview window when quickfix closes
+" autocmd BufDelete <buffer> if &buftype == 'quickfix' | :pc! | endif     " Never Worked
+" autocmd FileType qf autocmd BufDelete <buffer> echom "Hey"              " Console Log Example
+autocmd FileType qf autocmd BufDelete <buffer> :pc! 
+
+
+
+
+
+
+
+
+
+
+
+

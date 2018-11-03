@@ -57,7 +57,6 @@ let g:vdebug_options['break_on_open'] = 0
 let g:vdebug_options.port = 9001
 let g:vdebug_options.server = 'localhost'
 
-
 " Change Leader to <Space>
 nnoremap <SPACE> <Nop>
 let mapleader=" "
@@ -115,7 +114,6 @@ nnoremap ¬ <C-w>L
 " Easy Buffer Delete
 nnoremap <Leader>q :Bdelete!<CR>
 nnoremap <Leader>Q :bufdo :Bdelete<CR>
-
 
 " Tab Navigation
 nnoremap <C-Left> gT
@@ -206,6 +204,12 @@ vnoremap < <gv
 vnoremap > >gv
 noremap <F3> :Autoformat<CR>
 
+" Visual Mode Selection Searches
+" See http://vim.wikia.com/wiki/Search_for_visually_selected_text
+vnoremap // y/\V<C-R>"<CR>
+"vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
+vnoremap /? y/\V<C-R>"<CR> 
+
 " RegEXP Search Options
 "set magic              " Set magic on, for regexps
 set hlsearch            " Highlight search pattern matches
@@ -216,14 +220,30 @@ nnoremap N Nzz
 " Shortcut for global search and replace
 nnoremap <C-/> :%s/
 
+" Arrow Keys (Disable)
+"noremap <Up> <NOP>
+"noremap <Down> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
+
+" Removed in favor of vim-unimpaired
+"" Vertical Whitespace Shortcuts
+"" http://vim.wikia.com/wiki/Quickly_adding_and_deleting_empty_lines<Paste>
+"" noremap <C-l> :call append(line('.')-1, '')
+"" noremap <C-L> :call append(line('.')+1, '') 
+"noremap <Up> mZO<Esc>`Z
+"noremap <S-Up> m`:-g/^\s*$\n/d<CR>'`:noh<CR>
+"noremap <Down> mZo<Esc>`Z
+"noremap <S-Down> m`:+g/^\s*$\n/d<CR>'`:noh<CR> 
+"
+"noremap <C-BS> mZO<Esc>`Z
+"noremap <BS> mZ:-1,-1s/^\s*$\n//<CR>:noh<CR>`Z
+"noremap <Space> mZo<Esc>`Z
+"noremap <C-Space> mZ:+1,+1s/^\s*$\n//<CR>:noh<CR>`Z
+
 " Register Rotation
 " http://vim.wikia.com/wiki/Comfortable_handling_of_registers
 nnoremap <Leader>s :let @a=@" \| let @"=@+ \| let @+=@a<CR>
-
-" Visual Mode Selection Searches
-" See http://vim.wikia.com/wiki/Search_for_visually_selected_text
-vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
-vnoremap /? y/\V<C-R>"<CR>      
 
 " Syntax Highlighting
 syntax enable           " enable syntax color schemes without overwriting existing highlighting rules
@@ -246,23 +266,3 @@ set encoding=utf8
 set wildmenu
 set wildmode=longest:full,full
 
-" Arrow Keys (Disable)
-"noremap <Up> <NOP>
-"noremap <Down> <NOP>
-"noremap <Left> <NOP>
-"noremap <Right> <NOP>
-
-" Removed in favor of vim-unimpaired
-"" Vertical Whitespace Shortcuts
-"" http://vim.wikia.com/wiki/Quickly_adding_and_deleting_empty_lines<Paste>
-"" noremap <C-l> :call append(line('.')-1, '')
-"" noremap <C-L> :call append(line('.')+1, '') 
-"noremap <Up> mZO<Esc>`Z
-"noremap <S-Up> m`:-g/^\s*$\n/d<CR>'`:noh<CR>
-"noremap <Down> mZo<Esc>`Z
-"noremap <S-Down> m`:+g/^\s*$\n/d<CR>'`:noh<CR> 
-"
-"noremap <C-BS> mZO<Esc>`Z
-"noremap <BS> mZ:-1,-1s/^\s*$\n//<CR>:noh<CR>`Z
-"noremap <Space> mZo<Esc>`Z
-"noremap <C-Space> mZ:+1,+1s/^\s*$\n//<CR>:noh<CR>`Z
