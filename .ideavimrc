@@ -35,10 +35,6 @@ nnoremap <Leader>Q :bufdo :Bdelete<CR>
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
-" Flashy Yank
-map y <Plug>(operator-flashy)
-nmap Y <Plug>(operator-flashy)$
-
 " Yank to system clipboard
 map <Leader>y "+y
 
