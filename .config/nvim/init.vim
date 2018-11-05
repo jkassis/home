@@ -15,6 +15,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'avakhov/vim-yaml'                                 " VIM yaml formatter
 Plug 'Chiel92/vim-autoformat'                           " Code autoformatting
 Plug 'christoomey/vim-tmux-navigator'                   " Use same shortcuts for tmux and vim pane navigation
+Plug 'easymotion/vim-easymotion'                        " Easymotion navigation
 Plug 'ekalinin/Dockerfile.vim'                          " Syntax highlighting for Dockerfiles
 Plug 'fatih/vim-go'                                     " Go development plugin for Vim
 Plug 'groenewege/vim-less'                              " Syntax highlighting for less files
