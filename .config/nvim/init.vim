@@ -21,6 +21,7 @@ Plug 'ekalinin/Dockerfile.vim'                          " Syntax highlighting fo
 Plug 'fatih/vim-go'                                     " Go development plugin for Vim
 Plug 'groenewege/vim-less'                              " Syntax highlighting for less files
 Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
+Plug 'jkassis/vim-chrome-devtools'                      " Chrome Debugger
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " fzf fuzzy search with fzf
 Plug 'junegunn/fzf.vim'                                 " fzf fuzzy search
 Plug 'kana/vim-operator-user'                           " Easy API for making new operators
@@ -39,7 +40,7 @@ Plug 'tpope/vim-commentary'                             " Code commenting
 Plug 'tpope/vim-unimpaired'                             " Paired bracket maps for navigation and more
 Plug 'tpope/vim-fugitive'                               " Git integration for vim
 Plug 'tyok/nerdtree-ack', { 'on': 'NERDTreeToggle' }    " search menu option for NERDTRee
-Plug 'vim-vdebug/vdebug'                                " DBGP debugger
+" Plug 'vim-vdebug/vdebug'                                " DBGP debugger
 Plug 'vim-airline/vim-airline'                          " Lightweight statusline (since powerline is deprecated)
 "Plug 'yuttie/comfortable-motion.vim'                   " Smooth, inertial scrolling
 call plug#end()
@@ -248,6 +249,7 @@ nnoremap <C-/> :%s/
 
 " Register Rotation
 " http://vim.wikia.com/wiki/Comfortable_handling_of_registers
+" https://stackoverflow.com/questions/54255/in-vim-is-there-a-way-to-delete-without-putting-text-in-the-register
 nnoremap <Leader>s :let @a=@" \| let @"=@+ \| let @+=@a<CR>
 
 " Syntax Highlighting
