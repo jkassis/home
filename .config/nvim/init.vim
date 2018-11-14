@@ -46,6 +46,13 @@ Plug 'vim-airline/vim-airline'                          " Lightweight statusline
 call plug#end()
 
 
+" Change Leader to <Space>
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+" Shortcuts to edit vimrc
+nnoremap gev :e ~/Home/init.vim<CR>
+nnoremap gsv :so ~/Home/init.vim<CR>
 
 " Default window splitting options
 " set splitbelow
@@ -63,9 +70,6 @@ let g:vdebug_options['break_on_open'] = 0
 let g:vdebug_options.port = 9001
 let g:vdebug_options.server = 'localhost'
 
-" Change Leader to <Space>
-nnoremap <SPACE> <Nop>
-let mapleader=" "
 
 " Tagbar shortcut
 nnoremap <Leader>t :TagbarToggle<CR>
