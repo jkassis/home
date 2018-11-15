@@ -84,7 +84,7 @@ au FileType gitcommit,gitrebase let g:gutentags_enabled=0
 " Multi-file search (ACK)
 " add .ignore file to project folder to control search paths
 " shortcut Ack searchs and ! prevents first result from opening
-nnoremap <C-f> :Ack!<Space>
+nnoremap <Leader>/ :Ack!<Space>
 " use Silver Surfer 
 if executable('ag')                                  " Have Silver Searcher?
   let g:ackprg = 'ag --vimgrep'                      " Use it
@@ -102,9 +102,8 @@ autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 " autocmd FileType qf autocmd BufDelete <buffer> echom "Hey"              " Console Log Example
 autocmd FileType qf autocmd BufDelete <buffer> :pc! 
 
-" Search for Files By Name (FZF)
-nnoremap <C-p> :FZF<CR>
-nnoremap <D-S-o> :FZF<CR>
+" Search for Files By Name and edit (FZF)
+nnoremap <Leader>e :FZF<CR>
 
 " Undo / Redo with uU
 nnoremap U <C-r>
