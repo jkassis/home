@@ -21,6 +21,7 @@ Plug 'ekalinin/Dockerfile.vim'                          " Syntax highlighting fo
 Plug 'fatih/vim-go'                                     " Go development plugin for Vim
 Plug 'groenewege/vim-less'                              " Syntax highlighting for less files
 Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
+Plug 'janko-m/vim-test'                                 " Test.vim framework
 Plug 'jkassis/vim-chrome-devtools', { 'do': 'npm install && npm run build' } 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " fzf fuzzy search with fzf
 Plug 'junegunn/fzf.vim'                                 " fzf fuzzy search
