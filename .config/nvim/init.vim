@@ -30,6 +30,7 @@ Plug 'ludovicchabant/vim-gutentags'                     " Gutentags
 Plug 'majutsushi/tagbar'                                " Tag based file outlines
 Plug 'mileszs/ack.vim'                                  " ACK full-text searching with quickfix window
 Plug 'moll/vim-bbye'                                    " Clear out buffers with \q shortcut without blowing up windows
+Plug 'neovim/node-host'                               " Node provider
 Plug 'pangloss/vim-javascript'                          " Syntax highlighting and improved indentation.
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " directory tree browser
 Plug 'scrooloose/syntastic'                             " Integration for external syntax checkers.
