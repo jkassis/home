@@ -117,6 +117,8 @@ alias kcdd='kubectl delete'
 alias kcd='kubectl describe'
 alias kcg='kubectl get'
 alias kce='kubectl get events --sort-by=.metadata.creationTimestamp'
+alias kct='kubectl run toolbox --rm -i --tty --image geowa4/coreos-toolbox -- sh'
+
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 if [ $commands[helm] ]; then source <(helm completion zsh); fi
 
