@@ -3,6 +3,7 @@
 " https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
 " http://fisadev.github.io/fisa-vim-config/
 
+
 " Startup Behavior
 set shellcmdflag=-ic        " Start in interactive mode
 
@@ -51,6 +52,10 @@ call plug#end()
 " Change Leader to <Space>
 nnoremap <SPACE> <Nop>
 let mapleader=" "
+
+" ChromeDevTools
+nnoremap <Leader><F5> :CDTToggle<CR>
+let g:ChromeDevTools_port = '9330'
 
 " Shortcuts to edit vimrc
 nnoremap gev :e ~/Home/init.vim<CR>
@@ -213,7 +218,7 @@ set tabstop=4           " Render TABs using this many spaces.
 set shiftwidth=2        " Indentation amount for < and > commands.
 vnoremap < <gv
 vnoremap > >gv
-noremap <F3> :Autoformat<CR>
+noremap <Leader><F3> :Autoformat<CR>
 
 " Visual Mode Selection Searches
 " See http://vim.wikia.com/wiki/Search_for_visually_selected_text
