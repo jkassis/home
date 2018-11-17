@@ -17,7 +17,7 @@ echo "Running .zshrc"
 export PATH="~/Home/bin:$PATH"
 
 # TERM IMPROVEMENTS
-alias cl=clear
+alias c=clear
 
 # OPT PACKAGES
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
