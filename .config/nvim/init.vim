@@ -46,6 +46,7 @@ Plug 'tyok/nerdtree-ack', { 'on': 'NERDTreeToggle' }    " search menu option for
 " Plug 'vim-vdebug/vdebug'                                " DBGP debugger
 Plug 'vim-airline/vim-airline'                          " Lightweight statusline (since powerline is deprecated)
 "Plug 'yuttie/comfortable-motion.vim'                   " Smooth, inertial scrolling
+Plug 'ryanoasis/vim-devicons'                           " Fancy icons compatible with certain plugins
 call plug#end()
 
 
@@ -273,11 +274,20 @@ set background=dark
 " colorscheme solarized
 
 " Fonts
-set gfn=Bitstream\ Vera\ Sans\ Mono:h10
+set encoding=utf8
+" guifont (aka gfn)
+" set guifont=Hack\ Nerd\ Font:h12
+" set guifont=Hack\ Nerd\ Font:h13
+" set guifont=Fira\ Code:h12
+" set guifont=DroidSansMono_Nerd_Font:h11
+" set guifont=Bitstream\ Vera\ Sans\ Mono:h10
+" set guifont=Hack\ Nerd\ Font:h12
+" set guifont=Hack\ Nerd\ Font:h13
+" set guifont=Fira\ Code:h12
+" set guifont=DroidSansMono\ Nerd\ Font:h11
 
 " File Formats
 set ffs=unix,dos,mac
-set encoding=utf8
 
 " Wildmenu (http://vim.wikia.com/wiki/Great_wildmode/wildmenu_and_console_mouse)
 set wildmenu

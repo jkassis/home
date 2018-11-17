@@ -136,7 +136,7 @@ brew cask install beyond-compare
 
 # font setup
 brew tap caskroom/fonts
-brew cask install font-fira-code
+brew cask install font-fira-code font-hack-nerd-font
 
 # disable guest account
 defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
