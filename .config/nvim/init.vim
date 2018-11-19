@@ -55,8 +55,9 @@ nnoremap <SPACE> <Nop>
 let mapleader=" "
 
 " ChromeDevTools
-nnoremap <Leader><F5> :CDTToggle<CR>
-let g:ChromeDevTools_port = '9330'
+nnoremap <Leader><F12> :CDTToggle<CR>
+" let g:ChromeDevTools_port = '52826'
+" let g:ChromeDevTools_port = '9330'
 
 " Shortcuts to edit vimrc
 nnoremap gev :e ~/Home/init.vim<CR>
@@ -94,7 +95,6 @@ au FileType gitcommit,gitrebase let g:gutentags_enabled=0
 nnoremap <Leader>/ :Ack!<Space>
 " use Silver Surfer 
 if executable('ag')                                  " Have Silver Searcher?
-  let g:ackprg = 'ag --vimgrep'                      " Use it
   let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik
 endif
 
@@ -129,8 +129,10 @@ nnoremap ˚ <C-w>K
 nnoremap ¬ <C-w>L
 
 " Easy Buffer Delete
-nnoremap <Leader>q :Bdelete!<CR>
-nnoremap <Leader>Q :bufdo :Bdelete<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :q!<CR>
+nnoremap <Leader>w :Bdelete!<CR>
+nnoremap <Leader>W :bufdo :Bdelete<CR>
 
 " Tab Navigation
 nnoremap <C-Left> gT
