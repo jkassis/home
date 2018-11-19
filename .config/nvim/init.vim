@@ -128,11 +128,13 @@ nnoremap ∆ <C-w>J
 nnoremap ˚ <C-w>K
 nnoremap ¬ <C-w>L
 
-" Easy Buffer Delete
+" Essential Buffer and Window Management
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
-nnoremap <Leader>w :Bdelete!<CR>
-nnoremap <Leader>W :bufdo :Bdelete<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>W :w!<CR>
+nnoremap <Leader>c :Bdelete!<CR>
+nnoremap <Leader>C :bufdo :Bdelete<CR>
 
 " Tab Navigation
 nnoremap <C-Left> gT
