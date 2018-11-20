@@ -14,7 +14,7 @@ echo "Running .zshrc"
 # export KEYTIMEOUT=1
 
 # Home Bin
-export PATH="~/Home/bin:$PATH"
+export PATH="$HOME/Home/bin:$PATH"
 
 # TERM IMPROVEMENTS
 alias c=clear
@@ -64,7 +64,7 @@ plugins=(git git-extras zsh-autosuggestions)
 
 # Fire it up
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # LANGUAGE
 # You may need to manually set your language environment
@@ -82,7 +82,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 # export ARCHFLAGS="-arch x86_64"
 
 # SSH
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+# export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
 # POSTGRES
 # list all current dbs
@@ -109,7 +109,7 @@ pdropdb() {
 
 
 # Kubernetes Stuff
-export KUBECONFIG=$KUBECONFIG:~/.kube/config
+export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
 alias kc='kubectl'
 alias kcl='kubectl logs -f'
 alias kcx='kubectl exec -it '
@@ -124,7 +124,7 @@ if [ $commands[helm] ]; then source <(helm completion zsh); fi
 
 
 # Local Config
-source ~/.zshrc.local
+source $HOME/.zshrc.local
 
 
 #alias rm='safe-rm'
