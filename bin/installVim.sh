@@ -1,3 +1,5 @@
+#!env bash
+
 # setup the config dir
 mkdir ~/.config
 ln -sf ~/Home/.config/nvim ~/.config

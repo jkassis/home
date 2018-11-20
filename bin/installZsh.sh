@@ -1,4 +1,4 @@
-#!/bin/bash
+#!env bash
 
 # make directories
 mkdir ~/.zsh

@@ -1,3 +1,4 @@
+#!env bash
 # Link everything
 ln -sf ~/Home/.zshrc ~
 ln -sf ~/Home/.gitconfig ~
