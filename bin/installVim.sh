@@ -20,6 +20,7 @@ pip3 install neovim --upgrade
 npm install -g neovim
 
 # Add link to nv
+echo "EUID is $EUID"
 if [ "$EUID" -ne 0 ]
   then ln -s $VIMDIR/nvim $VIMDIR/nv
   else sudo ln -s $VIMDIR/nvim $VIMDIR/nv 
