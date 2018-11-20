@@ -110,7 +110,8 @@ autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 autocmd FileType qf autocmd BufDelete <buffer> :pc! 
 
 " Search for Files By Name and edit (FZF)
-nnoremap <Leader>e :FZF<CR>
+" https://github.com/junegunn/fzf/blob/master/README-VIM.md
+nnoremap <Leader>e :FZF --multi<CR>
 
 " Undo / Redo with uU
 nnoremap U <C-r>
