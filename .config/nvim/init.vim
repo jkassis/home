@@ -3,13 +3,29 @@
 " https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
 " http://fisadev.github.io/fisa-vim-config/
 
+" THIS FILE: Shortcuts to edit
+nnoremap gev :e ~/Home/init.vim<CR>
+nnoremap gsv :so ~/Home/init.vim<CR>
 
-" Startup Behavior
+" STARTUP
 set shellcmdflag=-ic        " Start in interactive mode
 
-" Python Support
+" LANGUAGE: Python
 let g:python2_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
+
+" LANGUAGE: GO
+let g:go_version_warning = 0
+
+" LEADER
+" Change Leader to <Space>
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+" WINDOW SPLITTING
+" Default split behaviors
+" set splitbelow
+" set splitright
 
 " Run :PlugInstall from inside NeoVim
 call plug#begin('~/.config/nvim/plugged')
@@ -50,32 +66,19 @@ Plug 'ryanoasis/vim-devicons'                           " Fancy icons compatible
 call plug#end()
 
 
-" Change Leader to <Space>
-nnoremap <SPACE> <Nop>
-let mapleader=" "
-
-" Flip jump list navigation
+" JUMP LIST: Flip navigation
 nnoremap <C-o> <C-i>
 nnoremap <C-i> <C-o>
 
-" ChromeDevTools
+" UNDO / REDO: With uU
+nnoremap U <C-r>
+
+" DEBUGGERS: ChromeDevTools
 nnoremap <Leader><F12> :CDTToggle<CR>
 " let g:ChromeDevTools_port = '52826'
 " let g:ChromeDevTools_port = '9330'
 
-" Shortcuts to edit vimrc
-nnoremap gev :e ~/Home/init.vim<CR>
-nnoremap gsv :so ~/Home/init.vim<CR>
-
-" Default window splitting options
-" set splitbelow
-" set splitright
-
-" Open quickfix window at bottom of screen with full-width
-" :autocmd FileType qf wincmd J
-botright cwindow
-
-" Vim Debug Options
+" DEBUGGERS: VDebug
 if !exists('g:vdebug_options')
   let g:vdebug_options = {}
 endif
@@ -83,27 +86,16 @@ let g:vdebug_options['break_on_open'] = 0
 let g:vdebug_options.port = 9001
 let g:vdebug_options.server = 'localhost'
 
-
-" Tagbar shortcut
-nnoremap <Leader>t :TagbarToggle<CR>
-
-" vim-go
-let g:go_version_warning = 0
-
+" TAGS 
+" http://vim.wikia.com/wiki/Browsing_programs_with_tags
 " disable gutentags during gitcommit gitrebase
+nnoremap <Leader>t :TagbarToggle<CR>
 au FileType gitcommit,gitrebase let g:gutentags_enabled=0
 
-" Multi-file search (ACK)
-" add .ignore file to project folder to control search paths
-" shortcut Ack searchs and ! prevents first result from opening
-nnoremap <Leader>/ :Ack!<Space>
-" use Silver Surfer 
-if executable('ag')                                  " Have Silver Searcher?
-  let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik
-endif
-
-
-" QuickFix Window Enhancements 
+" QUICKFIX WINDOW
+" Open at bottom of screen with full-width
+" :autocmd FileType qf wincmd J
+botright cwindow
 " p to Open Preview Window
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
 " P to Close Preview Window
@@ -113,55 +105,67 @@ autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 " autocmd FileType qf autocmd BufDelete <buffer> echom "Hey"              " Console Log Example
 autocmd FileType qf autocmd BufDelete <buffer> :pc! 
 
-" Search for Files By Name and edit (FZF)
+" ACK (Search Files by Content)
+" add .ignore file to project folder to control search paths
+" shortcut Ack searchs and ! prevents first result from opening
+nnoremap <Leader>/ :Ack!<Space>
+" use Silver Surfer 
+if executable('ag')                                  " Have Silver Searcher?
+  let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik
+endif
+
+" FZF (Search Files by Name)
+" Search for Files By Name
 " https://github.com/junegunn/fzf/blob/master/README-VIM.md
 nnoremap <Leader>e :FZF --multi<CR>
 
-" Undo / Redo with uU
-nnoremap U <C-r>
-
-" Window Navigation
+" WINDOWS : Navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Window Rearrangement
-" Using alt-key combinations (just type the key combo in insert mode)
+" WINDOWS : Rearrangement
+" alt-key combinations inserted by typing combo in insert mode
 nnoremap ˙ <C-w>H
 nnoremap ∆ <C-w>J
 nnoremap ˚ <C-w>K
 nnoremap ¬ <C-w>L
 
-" Essential Buffer and Window Management
+" WINDOWS : Closing
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
+
+" BUFFERS: Save and Delete
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>W :w!<CR>
 nnoremap <Leader>c :Bdelete!<CR>
 nnoremap <Leader>C :bufdo :Bdelete<CR>
 
-" Tab Navigation
+" BUFFERS: Auto-Save / Read Options
+set autoread            " Automatically re-read the file when it changes on the filesystem and does not change in the buffer
+
+" TABS: Navigation
 nnoremap <C-Left> gT
 nnoremap <C-Right> gt
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 
-" Mouse Activated
+" MOUSE : Activate it
 set mouse=a
-map <ScrollWheelUp> <C-Y>         " Scroll one line up at a time
-map <ScrollWheelDown> <C-E>       " Scroll one line down at a time
 
-" Alt-Mouse Drag for Visual Block Selection
-" Not-Working
+" MOUSE : Scroll one line at a time
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
+" MOUSE: Alt-Mouse Drag for Visual Block Selection (Not-Working)
 " http://vim.wikia.com/wiki/Use_Alt-Mouse_to_select_blockwise
 noremap <M-LeftMouse> <LeftMouse><Esc><C-V>
 noremap <M-LeftDrag> <LeftDrag>
-
 noremap <S-RightMouse> <LeftMouse><Esc><C-V>
 noremap <S-RightDrag> <LeftDrag>
 
-" Mouse scrolling inertia (Comfortable Motion)
+" MOUSE: Scrolling inertia with Comfortable Motion
 " https://github.com/yuttie/comfortable-motion.vim
 " let g:comfortable_motion_no_default_key_mappings = 1
 " let g:comfortable_motion_scroll_down_key = "j"
@@ -171,13 +175,13 @@ noremap <S-RightDrag> <LeftDrag>
 " noremap <ScrollWheelDown> j
 " noremap <ScrollWheelUp> k
 
-" Smooth Scrolling (terryma/vim-smooth-scroll)
+" MOUSE: Smooth Scrolling (terryma/vim-smooth-scroll)
 " noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 " noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 " noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 " noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
-" NERDTree (C-n)
+" NERDTree
 nnoremap <C-n> :NERDTreeToggle<CR> 
 nnoremap <Leader>n :NERDTreeFind<CR>
 let g:NERDTreeMouseMode=3               " Use Mouse
@@ -185,32 +189,34 @@ let NERDTreeShowHidden=1                " Show hidden files
 " Highlight currently open buffer in NERDTree
 "autocmd BufEnter * :NERDTreeFind<CR>
 
-" Flashy Yank
+" REGISTERS: Flashy Yank
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
 
-" Yank to system clipboard
+" REGISTERS: Yank to system clipboard
 map <Leader>y "+y
 
-" Always yank and paste using system clipboard
+" REGISTERS: Always yank and paste using system clipboard
 " :set clipboard+=unnamedplus
 
-" Commenting
-set formatoptions+=o    " Continue comment marker in new lines.
+" REGISTERS: Rotation
+" http://vim.wikia.com/wiki/Comfortable_handling_of_registers
+" https://stackoverflow.com/questions/54255/in-vim-is-there-a-way-to-delete-without-putting-text-in-the-register
+nnoremap <Leader>s :let @a=@" \| let @"=@+ \| let @+=@a<CR>
 
-" Cursor Cues
+" CURSOR: Visual Cues
 set showmatch           " Show matching brackets when text indicator on top of one
 set cursorline          " Show highlight on current line
 
-" Status Bar / Title Bar
+" STATUS BAR / TITLE BAR
 set ruler               " Show current position
 set title               " Show the filename
 set showcmd             " Show commands when entered
 
-" Standard Line Numbering
+" LINE NUMBERS: Standard Line Numbering
 " :set number
 
-" Hybrid Line Numbering
+" LINE NUMBERS: Hybrid Line Numbering
 " https://jeffkreeftmeijer.com/vim-number/
 :set number relativenumber
 :augroup numbertoggle
@@ -219,31 +225,35 @@ set showcmd             " Show commands when entered
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
-" Buffer Auto-Save / Read Options
-set autoread            " Automatically re-read the file when it changes on the filesystem and does not change in the buffer
-
-" Tabbing and Shifting
+" FORMATTING: Tabbing and Shifting
 set expandtab           " Insert spaces when TAB is pressed.
 set tabstop=4           " Render TABs using this many spaces.
 set shiftwidth=2        " Indentation amount for < and > commands.
 vnoremap < <gv
 vnoremap > >gv
+
+" FORMATTING: Autoformat
 noremap <Leader>l :Autoformat<CR>
 
-" Visual Mode Selection Searches
+" FORMATTING: COMMENTS
+set formatoptions+=o    " Continue comment marker in new lines.
+
+" INTRA-FILE TEXT SEARCH: Visual Mode Selection Searches
 " See http://vim.wikia.com/wiki/Search_for_visually_selected_text
 vnoremap // y/\V<C-R>"<CR>
 "vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 vnoremap /? y/\V<C-R>"<CR> 
 
-" RegEXP Search Options
+" INTRA-FILE TEXT SEARCH: RegEXP Search Options
 "set magic              " Set magic on, for regexps
 set hlsearch            " Highlight search pattern matches
 set incsearch           " Make search look within strings
-" Goto next and prev regexp and center the screen on the match
+
+" INTRA-FILE TEXT SEARCH: Goto next and prev centers the screen
 nnoremap n nzz
 nnoremap N Nzz 
-" Shortcut for global search and replace
+
+" INTRA-FILE TEXT SEARCH: Shortcut for global search and replace
 nnoremap <C-/> :%s/
 
 " Arrow Keys (Disable)
@@ -267,22 +277,17 @@ nnoremap <C-/> :%s/
 "noremap <Space> mZo<Esc>`Z
 "noremap <C-Space> mZ:+1,+1s/^\s*$\n//<CR>:noh<CR>`Z
 
-" Register Rotation
-" http://vim.wikia.com/wiki/Comfortable_handling_of_registers
-" https://stackoverflow.com/questions/54255/in-vim-is-there-a-way-to-delete-without-putting-text-in-the-register
-nnoremap <Leader>s :let @a=@" \| let @"=@+ \| let @+=@a<CR>
-
-" Syntax Highlighting
+" THEME: Syntax Highlighting
 syntax enable           " enable syntax color schemes without overwriting existing highlighting rules
 
-" Colors
+" THEME: Colors
 set t_Co=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 set background=dark
 " colorscheme solarized
 
-" Fonts
+" THEME: Fonts
 set encoding=utf8
 " guifont (aka gfn)
 " set guifont=Hack\ Nerd\ Font:h12
@@ -295,14 +300,15 @@ set encoding=utf8
 " set guifont=Fira\ Code:h12
 " set guifont=DroidSansMono\ Nerd\ Font:h11
 
-" File Formats
+" FILE FORMATS
 set ffs=unix,dos,mac
 
-" Wildmenu (http://vim.wikia.com/wiki/Great_wildmode/wildmenu_and_console_mouse)
+" COMMAND LINE: Wildmenu
+" See http://vim.wikia.com/wiki/Great_wildmode/wildmenu_and_console_mouse
 set wildmenu
 set wildmode=longest:full,full
 
-" EasyMotion
+" MOTIONS: EasyMotion
 " https://github.com/easymotion/vim-easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
@@ -317,10 +323,10 @@ nmap s <Plug>(easymotion-overwin-f2)
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
 
-" JK motions: Line motions
+" Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
-" Terminal Mode
+" TERMINAL MODE
 " Use esc to exit
 :tnoremap <Esc> <C-\><C-n>
