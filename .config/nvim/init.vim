@@ -54,6 +54,10 @@ call plug#end()
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
+" Flip jump list navigation
+nnoremap <C-o> <C-i>
+nnoremap <C-i> <C-o>
+
 " ChromeDevTools
 nnoremap <Leader><F12> :CDTToggle<CR>
 " let g:ChromeDevTools_port = '52826'
