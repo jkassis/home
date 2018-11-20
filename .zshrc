@@ -34,7 +34,7 @@ alias python='python3'
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 # GO
-export GOPATH="$HOME/Projects/go"
+export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:/usr/local/go/bin:$PATH"
 
 # OH-MY-ZSH
