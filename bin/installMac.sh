@@ -83,7 +83,7 @@ brew cask install sublime-text3
 brew cask install emacs
 
 # vim
-brew install python python3 nvim fzf the_silver_searcher ctags
+brew install python python3 nvim fzf the_silver_searcher ctags fd
 ./installVim.sh
 
 # oni

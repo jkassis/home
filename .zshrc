@@ -70,6 +70,10 @@ source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+# FZF
+# Use fd instead of find (honors .gitignore files)
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
 # EDITOR
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -88,6 +92,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 # list all current dbs
 alias plistdb="psql -c 'select datname from pg_database where datistemplate=false;'"
 
+# Database aliases
 # usage: copydb (current db name) (new db name)
 pcopydb() {
   createdb -O $USERNAME -T $1 $2
