@@ -1,4 +1,4 @@
-#!env bash
+#!/usr/bin/env bash
 
 # binary link
 ln -sf $(which nvim) /usr/local/bin/nv

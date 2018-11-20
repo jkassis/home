@@ -1,4 +1,4 @@
-#!env bash
+#!/usr/bin/env bash
 # Home links
 ln -sf "$HOME/Home/.zshrc" "$HOME"
 ln -sf "$HOME/Home/.gitconfig" "$HOME"
