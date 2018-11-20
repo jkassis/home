@@ -117,6 +117,7 @@ endif
 " FZF (Search Files by Name)
 " Search for Files By Name
 " https://github.com/junegunn/fzf/blob/master/README-VIM.md
+let g:fzf_layout = { 'window': 'enew' }
 nnoremap <Leader>e :FZF --multi<CR>
 
 " WINDOWS : Navigation
