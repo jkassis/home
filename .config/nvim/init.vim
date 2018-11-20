@@ -244,16 +244,20 @@ vnoremap // y/\V<C-R>"<CR>
 "vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 vnoremap /? y/\V<C-R>"<CR> 
 
-" INTRA-FILE TEXT SEARCH: RegEXP Search Options
+" SEARCH: Formatting
 "set magic              " Set magic on, for regexps
 set hlsearch            " Highlight search pattern matches
-set incsearch           " Make search look within strings
 
-" INTRA-FILE TEXT SEARCH: Goto next and prev centers the screen
+" SEARCH: Matching Behavior
+set incsearch           " Make search look within strings
+set ignorecase          " Required for smartcase to work
+set smartcase           " Do case-sensitive search when target includes capitals
+
+" SEARCH: Goto next and prev centers the screen
 nnoremap n nzz
 nnoremap N Nzz 
 
-" INTRA-FILE TEXT SEARCH: Shortcut for global search and replace
+" SEARCH: Shortcut for global search and replace
 nnoremap <C-/> :%s/
 
 " Arrow Keys (Disable)
