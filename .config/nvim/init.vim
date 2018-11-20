@@ -223,7 +223,7 @@ set tabstop=4           " Render TABs using this many spaces.
 set shiftwidth=2        " Indentation amount for < and > commands.
 vnoremap < <gv
 vnoremap > >gv
-noremap <Leader><F3> :Autoformat<CR>
+noremap <Leader>l :Autoformat<CR>
 
 " Visual Mode Selection Searches
 " See http://vim.wikia.com/wiki/Search_for_visually_selected_text
