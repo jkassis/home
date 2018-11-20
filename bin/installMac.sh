@@ -63,7 +63,7 @@ brew cask install java8
 
 ## languages: go
 #brew install go --cross-compile-common
-#mkdir -p ~/Code/go
+#mkdir -p "$HOME/Code/go"
 
 ## build system
 #npm install -g webpack

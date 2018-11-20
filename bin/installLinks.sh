@@ -1,13 +1,11 @@
 #!env bash
-# Link everything
-ln -sf ~/Home/.zshrc ~
-ln -sf ~/Home/.gitconfig ~
-ln -sf ~/Home/.gitignore_global ~
-ln -sf ~/Home/.ideavimrc ~
-ln -sf ~/Home/.tmux.conf ~
-ln -sf ~/Home/.vim ~
-ln -sf ~/Home/.zshrc ~
-ln -sf ~/Home/bin ~
-ln -sf $(which nvim) /usr/local/bin/nv
+# Home links
+ln -sf "$HOME/Home/.zshrc" "$HOME"
+ln -sf "$HOME/Home/.gitconfig" "$HOME"
+ln -sf "$HOME/Home/.gitignore_global" "$HOME"
+ln -sf "$HOME/Home/.ideavimrc" "$HOME"
+ln -sf "$HOME/Home/.tmux.conf" "$HOME"
+ln -sf "$HOME/Home/.vim" "$HOME"
+ln -sf "$HOME/Home/.zshrc" "$HOME"
+ln -sf "$HOME/Home/bin" "$HOME"
 
-alias kcDashToken=~/Home/bin/kcDashToken.bash

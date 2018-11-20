@@ -133,4 +133,4 @@ source $HOME/.zshrc.local
 
 
 #alias rm='safe-rm'
-alias cl=clear
+alias c=clear

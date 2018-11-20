@@ -1,11 +1,14 @@
 #!env bash
 
+# binary link
+ln -sf $(which nvim) /usr/local/bin/nv
+
 # setup the config dir
-mkdir ~/.config
-ln -sf ~/Home/.config/nvim ~/.config
+mkdir "$HOME/.config"
+ln -sf "$HOME/Home/.config/nvim" "$HOME/config"
 
 # install vim-plug and install plugins
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo "$HOME/local/share/nvim/site/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim +PlugInstall +qall
 
 # set the env (for what?)
