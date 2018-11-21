@@ -37,6 +37,9 @@ export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:/usr/local/go/bin:$PATH"
 
+# FZF
+export PATH="$HOME/.fzf/bin/:$PATH"
+
 # OH-MY-ZSH
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
