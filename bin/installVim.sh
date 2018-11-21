@@ -5,7 +5,7 @@ ln -sf $(which nvim) /usr/local/bin/nv
 
 # setup the config dir
 mkdir "$HOME/.config"
-ln -sf "$HOME/Home/.config/nvim" "$HOME/config"
+ln -sf "$HOME/Home/.config/nvim" "$HOME/.config"
 
 # install vim-plug and install plugins
 curl -fLo "$HOME/local/share/nvim/site/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
