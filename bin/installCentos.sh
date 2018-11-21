@@ -1,7 +1,7 @@
 $!/usr/bin/env bash
 
 # Install developer tools
-yum install -y rsync bash zsh git ssh openssh-server openssh-clients the_silver_searcher python python3 fzf ctags python34-neovim less curl wget vim python-pip python34-pip php-xdebug golang gcc make perl-Error coreutils autoload node npm rust-toolset-7-cargo
+yum install -y rsync bash zsh git ssh openssh-server openssh-clients the_silver_searcher python python3 fzf ctags python34-neovim less curl wget vim python-pip python34-pip php-xdebug golang gcc make perl-Error coreutils autoload node npm cargo.x86_64
 
 # fd
 cargo install fd-find
