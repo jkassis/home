@@ -45,7 +45,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # RUST and CARGO
-export PATH="$HOME/.cargo/bin/fd:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 #export PATH="/usr/local/bin:$PATH"
 
