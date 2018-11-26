@@ -190,6 +190,11 @@ let NERDTreeShowHidden=1                " Show hidden files
 " Highlight currently open buffer in NERDTree
 "autocmd BufEnter * :NERDTreeFind<CR>
 
+" REGISTERS: Use System Clipboard as Default / Unnamed Register
+" Generally on Linux, + and  * are different: + corresponds to the desktop clipboard (XA_SECONDARY) that is accessed using CTRL-C, CTRL-X, and CTRL-V, while * corresponds to the X11 primary selection (XA_PRIMARY), which stores the mouse selection and is pasted using the middle mouse button in most applications.
+" set clipboard=unnamed
+set clipboard=unnamedplus
+
 " REGISTERS: Flashy Yank
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
