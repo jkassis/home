@@ -10,7 +10,8 @@ nnoremap gsv :so ~/Home/init.vim<CR>
 " STARTUP
 set shellcmdflag=-ic        " Start in interactive mode
 
-" LANGUAGE: Python
+" PLUGIN PROVIDERS/HOSTS: Python
+" Run :checkhealth to make sure these work
 let g:python2_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
