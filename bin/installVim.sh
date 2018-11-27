@@ -15,8 +15,8 @@ nvim +PlugInstall +qall
 VIMDIR=$(dirname $(which nvim))
 
 # install plugin providers
-pip install neovim --upgrade
-pip3 install neovim --upgrade
+python -m pip install --upgrade neovim 
+python3 -m pip install --upgrade neovim 
 npm install -g neovim
 
 # Add link to nv
