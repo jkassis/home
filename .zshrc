@@ -13,6 +13,9 @@ echo "Running .zshrc"
 # zle -N zle-keymap-select
 # export KEYTIMEOUT=1
 
+# Disable auto-setting terminal title. 
+DISABLE_AUTO_TITLE="true"
+
 # Home Bin
 export PATH="$HOME/Home/bin:$PATH"
 
