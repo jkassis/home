@@ -217,7 +217,7 @@ set cursorline          " Show highlight on current line
 
 " STATUS BAR / TITLE BAR
 set ruler               " Show current position
-set title               " Show the filename
+set notitle               " Set the title of the screen (iterm tab)
 set showcmd             " Show commands when entered
 
 " LINE NUMBERS: Standard Line Numbering
