@@ -1,9 +1,8 @@
 $!/usr/bin/env bash
 
 # Install developer tools
-yum install -y rsync bash zsh git ssh openssh-server openssh-clients the_silver_searcher fzf ctags less curl wget vim python-pip php-xdebug golang gcc make perl-Error coreutils autoload node npm cargo.x86_64
-yum install https://centos7.iuscommunity.org/ius-release.rpm
-yum install python36u-pip python36u-devel
+yum install -y https://centos7.iuscommunity.org/ius-release.rpm
+yum install -y rsync bash zsh git ssh openssh-server openssh-clients the_silver_searcher fzf ctags less curl wget vim python-pip php-xdebug golang gcc make perl-Error coreutils autoload node npm cargo.x86_64 neovim.x86_64 python36u-pip python36u-devel
 
 # fd
 cargo install fd-find
