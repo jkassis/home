@@ -357,3 +357,6 @@ map <Leader>k <Plug>(easymotion-k)
 " TERMINAL MODE
 " Use esc to exit
 :tnoremap <Esc> <C-\><C-n>
+
+" SORT A COMMA-SEPARATED LIST
+:vnoremap µ '<,'>s/\%V.*\%V\@!/\=join(sort(split(submatch(0), '\s*,\s*')), ', ')

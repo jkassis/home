@@ -107,8 +107,8 @@ autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 " autocmd FileType qf autocmd BufDelete <buffer> echom "Hey"              " Console Log Example
 autocmd FileType qf autocmd BufDelete <buffer> :pc! 
 
-
-
+" SORT A COMMA-SEPARATED LIST
+:xnoremap µ '<,'>s/\%V.*\%V\@!/\=join(sort(split(submatch(0), '\s*,\s*')), ', ')
 
 
 
