@@ -25,18 +25,41 @@ let mapleader=" "
 
 " WINDOW SPLITTING
 " Default split behaviors
-" set splitbelow
-" set splitright
+set nosplitbelow
+set nosplitright
+
+" ACK (Search Files by Content)
+" do this before loading plugins because of the way that the plugin deals with
+" autoclose.
+" be sure to add .ignore file to project folder to control search paths
+" shortcut LAck searchs with location list (Ack searches with Quickfix)
+" ! prevents first result from opening
+nnoremap <Leader>/ :Ack!<Space>
+" nnoremap <Leader>/ :LAck!<Space>
+" splits current window (https://github.com/mileszs/ack.vim/issues/219)
+let g:ackhighlight = 1
+let g:ackpreview = 1
+let g:ack_apply_qmappings = 1
+" let g:ack_apply_lmappings = 1
+let g:ack_autoclose = 1
+let g:ack_autofold_results = 1
+let g:ack_qhandler = 'copen'
+" let g:ack_lhandler = 'copen'
+" let g:ack_use_dispatch = 1
+" use Silver Surfer 
+if executable('ag')                                  " Have Silver Searcher?
+  let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik
+endif
 
 " Run :PlugInstall from inside NeoVim
 call plug#begin('~/.config/nvim/plugged')
 " Plug '/usr/local/opt/fzf'                               " fzf fuzzy search with fzf
 Plug 'avakhov/vim-yaml'                                 " VIM yaml formatter
 Plug 'Chiel92/vim-autoformat'                           " Code autoformatting
-Plug 'christoomey/vim-tmux-navigator'                   " Use same shortcuts for tmux and vim pane navigation
+" Plug 'christoomey/vim-tmux-navigator'                   " Use same shortcuts for tmux and vim pane navigation
 Plug 'easymotion/vim-easymotion'                        " Easymotion navigation
 Plug 'ekalinin/Dockerfile.vim'                          " Syntax highlighting for Dockerfiles
-Plug 'fatih/vim-go'                                     " Go development plugin for Vim
+" Plug 'fatih/vim-go'                                     " Go development plugin for Vim
 Plug 'groenewege/vim-less'                              " Syntax highlighting for less files
 Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
 Plug 'janko-m/vim-test'                                 " Test.vim framework
@@ -48,14 +71,14 @@ Plug 'ludovicchabant/vim-gutentags'                     " Gutentags
 Plug 'majutsushi/tagbar'                                " Tag based file outlines
 Plug 'mileszs/ack.vim'                                  " ACK full-text searching with quickfix window
 Plug 'moll/vim-bbye'                                    " Clear out buffers with \q shortcut without blowing up windows
-Plug 'neovim/node-host'                               " Node provider
+Plug 'neovim/node-host'                                 " Node provider
 Plug 'pangloss/vim-javascript'                          " Syntax highlighting and improved indentation.
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " directory tree browser
 Plug 'scrooloose/syntastic'                             " Integration for external syntax checkers.
 " Plug 'scrooloose/nerdcommenter'                        " Code commenting
-Plug 'skywind3000/vim-preview'                          " advanced preview window management
-Plug 'tbastos/vim-lua'                                  " Improved Lua 5.3 syntax and indentation support for Vim
-Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
+" Plug 'skywind3000/vim-preview'                          " advanced preview window management
+" Plug 'tbastos/vim-lua'                                  " Improved Lua 5.3 syntax and indentation support for Vim
+" Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
 Plug 'tpope/vim-commentary'                             " Code commenting
 Plug 'tpope/vim-unimpaired'                             " Paired bracket maps for navigation and more
 Plug 'tpope/vim-fugitive'                               " Git integration for vim
@@ -96,7 +119,8 @@ au FileType gitcommit,gitrebase let g:gutentags_enabled=0
 " QUICKFIX WINDOW
 " Open at bottom of screen with full-width
 " :autocmd FileType qf wincmd J
-botright cwindow
+" botright cwindow
+" vert cwindow
 " p to Open Preview Window
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
 " P to Close Preview Window
@@ -106,14 +130,6 @@ autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 " autocmd FileType qf autocmd BufDelete <buffer> echom "Hey"              " Console Log Example
 autocmd FileType qf autocmd BufDelete <buffer> :pc! 
 
-" ACK (Search Files by Content)
-" add .ignore file to project folder to control search paths
-" shortcut Ack searchs and ! prevents first result from opening
-nnoremap <Leader>/ :Ack!<Space>
-" use Silver Surfer 
-if executable('ag')                                  " Have Silver Searcher?
-  let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik
-endif
 
 " FZF (Search Files by Name)
 " Search for Files By Name
