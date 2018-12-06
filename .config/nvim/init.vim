@@ -68,7 +68,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " fzf fuzzy s
 Plug 'junegunn/fzf.vim'                                 " fzf fuzzy search
 Plug 'kana/vim-operator-user'                           " Easy API for making new operators
 Plug 'ludovicchabant/vim-gutentags'                     " Gutentags
-Plug 'majutsushi/tagbar'                                " Tag based file outlines
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }      " Tag based file outlines
 Plug 'mileszs/ack.vim'                                  " ACK full-text searching with quickfix window
 Plug 'moll/vim-bbye'                                    " Clear out buffers with \q shortcut without blowing up windows
 Plug 'neovim/node-host'                                 " Node provider
