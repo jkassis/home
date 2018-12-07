@@ -45,7 +45,7 @@ let g:ack_autoclose = 1
 let g:ack_autofold_results = 1
 let g:ack_qhandler = 'copen'
 " let g:ack_lhandler = 'copen'
-" let g:ack_use_dispatch = 1
+let g:ack_use_dispatch = 1
 " use Silver Surfer 
 if executable('ag')                                  " Have Silver Searcher?
   let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik
@@ -76,9 +76,10 @@ Plug 'pangloss/vim-javascript'                          " Syntax highlighting an
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " directory tree browser
 Plug 'scrooloose/syntastic'                             " Integration for external syntax checkers.
 " Plug 'scrooloose/nerdcommenter'                        " Code commenting
-" Plug 'skywind3000/vim-preview'                          " advanced preview window management
+Plug 'skywind3000/vim-preview'                          " advanced preview window management
 " Plug 'tbastos/vim-lua'                                  " Improved Lua 5.3 syntax and indentation support for Vim
 " Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
+Plug 'tpope/vim-dispatch'                               " Asynchronous job adapters 
 Plug 'tpope/vim-commentary'                             " Code commenting
 Plug 'tpope/vim-unimpaired'                             " Paired bracket maps for navigation and more
 Plug 'tpope/vim-fugitive'                               " Git integration for vim
