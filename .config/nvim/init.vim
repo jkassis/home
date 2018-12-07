@@ -4,8 +4,8 @@
 " http://fisadev.github.io/fisa-vim-config/
 
 " THIS FILE: Shortcuts to edit
-nnoremap gev :e ~/Home/init.vim<CR>
-nnoremap gsv :so ~/Home/init.vim<CR>
+nnoremap gev :e ~/home/init.vim<CR>
+nnoremap gsv :so ~/home/init.vim<CR>
 
 " STARTUP
 set shellcmdflag=-ic        " Start in interactive mode

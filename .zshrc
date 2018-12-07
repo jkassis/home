@@ -17,7 +17,7 @@ echo "Running .zshrc"
 DISABLE_AUTO_TITLE="true"
 
 # Home Bin
-export PATH="$HOME/Home/bin:$PATH"
+export PATH="$HOME/home/bin:$PATH"
 
 # TERM IMPROVEMENTS
 alias c=clear

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Home links
-ln -sf "$HOME/Home/.zshrc" "$HOME"
-ln -sf "$HOME/Home/.gitconfig" "$HOME"
-ln -sf "$HOME/Home/.gitignore_global" "$HOME"
-ln -sf "$HOME/Home/.ideavimrc" "$HOME"
-ln -sf "$HOME/Home/.tmux.conf" "$HOME"
-ln -sf "$HOME/Home/.vim" "$HOME"
-ln -sf "$HOME/Home/.zshrc" "$HOME"
-ln -sf "$HOME/Home/bin" "$HOME"
+ln -sf "$HOME/home/.zshrc" "$HOME"
+ln -sf "$HOME/home/.gitconfig" "$HOME"
+ln -sf "$HOME/home/.gitignore_global" "$HOME"
+ln -sf "$HOME/home/.ideavimrc" "$HOME"
+ln -sf "$HOME/home/.tmux.conf" "$HOME"
+ln -sf "$HOME/home/.vim" "$HOME"
+ln -sf "$HOME/home/.zshrc" "$HOME"
+ln -sf "$HOME/home/bin" "$HOME"
 

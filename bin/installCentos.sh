@@ -14,8 +14,8 @@ ln -s /usr/bin/python3.6 /usr/local/bin/python3
 cd ~
 
 # Install everything else
-Home/bin/installZsh.sh || true
-Home/bin/installVim.sh || true
-Home/bin/installLinks.sh || true
-Home/bin/installLemonade.sh || true
+~/home/bin/installZsh.sh || true
+~/home/bin/installVim.sh || true
+~/home/bin/installLinks.sh || true
+~/home/bin/installLemonade.sh || true
 

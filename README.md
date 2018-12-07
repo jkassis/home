@@ -1,7 +1,7 @@
 # Installation
 cd ~
 ssh-keygen -t rsa # make keys
-git clone git@github.com:jkassis/Home.git
+git clone git@github.com:jkassis/home.git
 
 # Home Folder
 Configuration for my home folder. Mostly dotfiles, but perhaps more.
@@ -13,4 +13,4 @@ https://github.com/statico/dotfiles/
 
 
 ## Installation
-./Home/install.sh
+./home/install.sh
