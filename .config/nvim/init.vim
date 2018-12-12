@@ -261,9 +261,9 @@ set showcmd             " Show commands when entered
 :augroup END
 
 " FORMATTING: Tabbing and Shifting
-set expandtab           " Insert spaces when TAB is pressed.
-set tabstop=4           " Render TABs using this many spaces.
-set shiftwidth=2        " Indentation amount for < and > commands.
+set expandtab                       " Insert spaces when TAB is pressed.
+let tabstop = $SHIFTWIDTH           " Render TABs using this many spaces.
+let shiftwidth = $SHIFTWIDTH        " Indentation amount for < and > commands.
 vnoremap < <gv
 vnoremap > >gv
 
