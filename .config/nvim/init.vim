@@ -1,3 +1,4 @@
+
 " CONFIGURATION HOWTO
 " http://learnvimscriptthehardway.stevelosh.com
 " https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
@@ -201,8 +202,18 @@ noremap <S-RightDrag> <LeftDrag>
 " noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR> 
-nnoremap <Leader>n :NERDTreeFind<CR>
+"nnoremap <C-n> :NERDTreeToggle<CR> 
+function! NERDTreeToggleOrFind()
+    if !exists('g:NERDTree') 
+      exec ":NERDTreeToggle"
+    elseif !g:NERDTree.IsOpen()
+      exec ":NERDTreeToggle"
+    else
+      exec ":NERDTreeFind"
+    endif
+endfunction
+command! NERDTreeToggleOrFind :call NERDTreeToggleOrFind()<CR>
+nnoremap <Leader>n :NERDTreeToggleOrFind<CR>
 let g:NERDTreeMouseMode=3               " Use Mouse
 let NERDTreeShowHidden=1                " Show hidden files
 " Highlight currently open buffer in NERDTree
