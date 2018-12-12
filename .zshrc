@@ -130,16 +130,16 @@ alias kcx='kubectl exec -it '
 alias kcdd='kubectl delete'
 alias kcd='kubectl describe'
 alias kcg='kubectl get'
-alias kce='kubectl get events --sort-by=.metadata.creationTimestamp'
+alias kce='kubectl edit'
+alias kcge='kubectl get events --sort-by=.metadata.creationTimestamp'
 alias kct='kubectl run toolbox --rm -i --tty --image jkassis/nettools:latest -- bash'
 
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 if [ $commands[helm] ]; then source <(helm completion zsh); fi
 
+#alias rm='safe-rm'
+alias c=clear
 
 # Local Config
 source $HOME/.zshrc.local
 
-
-#alias rm='safe-rm'
-alias c=clear
