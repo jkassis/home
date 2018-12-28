@@ -58,8 +58,8 @@ brew cask install java8
 #npm install -g karma karma-jasmine karma-coverage karma-webpack karma-sourcemap-loader karma-chrome-launcher
 
 ## languages: python
-#brew install python
-#pip2 install virtualenv virtualenvwrapper flake8
+brew install python@2
+pip2 install virtualenv virtualenvwrapper flake8
 
 ## languages: go
 #brew install go --cross-compile-common

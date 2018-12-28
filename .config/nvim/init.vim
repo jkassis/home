@@ -43,9 +43,10 @@ let g:ackpreview = 1
 let g:ack_apply_qmappings = 1
 " let g:ack_apply_lmappings = 1
 let g:ack_autoclose = 1
-let g:ack_autofold_results = 1
+"let g:ack_autofold_results = 1
 let g:ack_qhandler = 'copen'
 " let g:ack_lhandler = 'copen'
+" ACK Dispatch: this is annoying cause it causes a warning window to pop open in iterm
 let g:ack_use_dispatch = 1
 " use Silver Surfer 
 if executable('ag')                                  " Have Silver Searcher?
@@ -105,6 +106,10 @@ nnoremap <Leader><F12> :CDTToggle<CR>
 " let g:ChromeDevTools_port = '9330'
 
 " DEBUGGERS: VDebug
+" For Python:
+"    pip install komodo-python-dbgp (in the virtualenv)
+"    then run the script with pydbgp
+"
 if !exists('g:vdebug_options')
   let g:vdebug_options = {}
 endif
