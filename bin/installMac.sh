@@ -133,7 +133,7 @@ brew services start elasticsearch@5.6
 # brew cask install pgadmin4
 # brew services start postgresql
 
-# git setup
+brew install kubernetes-helm
 
 # sourcetree
 brew cask install sourcetree
