@@ -96,6 +96,11 @@ defaults write com.extropy.oni ApplePressAndHoldEnabled -bool false
 xcode-select --install
 sudo xcodebuild -license accept # agree to xcode license
 
+# vs code
+brew cask install visual-studio-code
+rm ~/Library/Application\ Support/Code/User/settings.json
+ln ~/home/.vs.code.settings ~/Library/Application\ Support/Code/User/settings.json
+
 # hosting : heroku
 brew install heroku-toolbelt
 
