@@ -69,7 +69,7 @@ pip2 install virtualenv virtualenvwrapper flake8
 #npm install -g webpack
 
 # editors : atom
-brew cask install atom
+# brew cask install atom
 # TODO: atom package setup...
 # ex-mode
 # linter
@@ -89,8 +89,8 @@ brew install python python3 nvim fzf the_silver_searcher ctags fd
 ./installVim.sh
 
 # oni
-brew cask install oni
-defaults write com.extropy.oni ApplePressAndHoldEnabled -bool false
+# brew cask install oni
+# defaults write com.extropy.oni ApplePressAndHoldEnabled -bool false
 
 # ides
 xcode-select --install
@@ -120,8 +120,7 @@ brew install zsh
 # shell : directory environments
 brew install direnv
 
-# search
-brew install the_silver_searcher
+# elasticsearch
 brew install elasticsearch@5.6
 brew services start elasticsearch@5.6
 
@@ -132,7 +131,8 @@ brew services start elasticsearch@5.6
 # brew cask install pgadmin4
 # brew services start postgresql
 
-brew install kubernetes-helm
+# kubernetes
+brew install kubernetes-helm terraform
 
 # sourcetree
 brew cask install sourcetree
@@ -147,6 +147,9 @@ brew cask install font-fira-code font-hack-nerd-font
 # disable guest account
 defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
 defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
+
+# network monitoring
+brew install little-snitch
 
 echo "Post installation tips:"
 echo "- Set fira-code font in iterm2"
