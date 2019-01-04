@@ -167,6 +167,9 @@ nnoremap <Leader>W :w!<CR>
 nnoremap <Leader>c :Bdelete!<CR>
 nnoremap <Leader>C :bufdo :Bdelete<CR>
 
+" BUFFERS: Switch by number
+:nnoremap <Leader>b :ls<CR>:b<SPACE>
+
 " BUFFERS: Auto-Save / Read Options
 set autoread            " Automatically re-read the file when it changes on the filesystem and does not change in the buffer
 
