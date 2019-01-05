@@ -22,20 +22,20 @@
       },
       {
         "before": ["U"],
-        "commands": ["<C-r>"]
+        "after": ["<C-r>"]
       },
       {
         "before": ["<C-i>"],
-        "commands": ["<C-o>"]
+        "after": ["<C-o>"]
       },
       {
         "before": ["<C-o>"],
-        "commands": ["<C-i>"]
+        "after": ["<C-i>"]
       }
     ],
     "vim.leader": "<space>",
     "vim.handleKeys": {
       "<C-a>": false,
       "<C-f>": false
-    }
+    },
   }
