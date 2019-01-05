@@ -155,3 +155,5 @@ echo "Post installation tips:"
 echo "- Set fira-code font in iterm2"
 echo "- Set itermcolor scheme (file is OneDark.itermcolors)"
 
+# tools for single board computers
+brew cask install balenaetcher kekka angry-ip-scanner
