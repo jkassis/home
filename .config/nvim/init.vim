@@ -47,7 +47,7 @@ let g:ack_autoclose = 1
 let g:ack_qhandler = 'copen'
 " let g:ack_lhandler = 'copen'
 " ACK Dispatch: this is annoying cause it causes a warning window to pop open in iterm
-let g:ack_use_dispatch = 1
+" let g:ack_use_dispatch = 1
 " use Silver Surfer 
 if executable('ag')                                  " Have Silver Searcher?
   let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik

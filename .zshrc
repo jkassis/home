@@ -114,6 +114,9 @@ pdropdb() {
 }
 
 
+# Docker aliases
+alias dockerip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
+
 # Kubernetes Stuff
 export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
 alias kc='kubectl'

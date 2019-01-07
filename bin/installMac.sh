@@ -104,7 +104,7 @@ mkdir -p ~/Library/Application\ Support/Code/User ; rm ~/Library/Application\ Su
 brew install heroku-toolbelt
 
 # hosting : docker
-brew cask install docker
+brew cask install docker jq
 
 # file transfer
 brew install httpie
@@ -132,7 +132,8 @@ brew services start elasticsearch@5.6
 # brew services start postgresql
 
 # kubernetes
-brew install kubernetes-helm terraform
+brew install kubernetes-helm terraform cfssl
+pip3 install yq
 
 # sourcetree
 brew cask install sourcetree
@@ -157,3 +158,6 @@ echo "- Set itermcolor scheme (file is OneDark.itermcolors)"
 
 # tools for single board computers
 brew cask install balenaetcher kekka angry-ip-scanner
+
+# tools for amazon aws
+brew install amazoncli
