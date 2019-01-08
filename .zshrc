@@ -121,12 +121,12 @@ alias dockerip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddre
 export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
 alias kc='kubectl'
 alias kcl='kubectl logs -f'
-alias kcx='kubectl exec -it '
-alias kcdd='kubectl delete'
-alias kcd='kubectl describe'
+alias kcex='kubectl exec -it '
+alias kcdel='kubectl delete'
+alias kcdes='kubectl describe'
 alias kcg='kubectl get'
-alias kce='kubectl edit'
-alias kcge='kubectl get events --sort-by=.metadata.creationTimestamp'
+alias kced='kubectl edit'
+alias kcgev='kubectl get events --sort-by=.metadata.creationTimestamp'
 alias kct='kubectl run toolbox --rm -i --tty --image jkassis/nettools:latest -- bash'
 
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
