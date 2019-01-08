@@ -145,10 +145,10 @@ let g:fzf_layout = { 'window': 'enew' }
 nnoremap <Leader>e :FZF --multi<CR>
 
 " WINDOWS : Navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <Leader>H <C-w>h
+nnoremap <Leader>J <C-w>j
+nnoremap <Leader>K <C-w>k
+nnoremap <Leader>L <C-w>l
 
 " WINDOWS : Rearrangement
 " alt-key combinations inserted by typing combo in insert mode
@@ -169,6 +169,11 @@ nnoremap <Leader>C :bufdo :Bdelete<CR>
 
 " BUFFERS: Switch by number
 :nnoremap <Leader>b :ls<CR>:b<SPACE>
+
+" BUFFERS: Switch left / right
+:nnoremap <Leader>h :bp<CR>
+:nnoremap <Leader>l :bn<CR>
+
 
 " BUFFERS: Auto-Save / Read Options
 set autoread            " Automatically re-read the file when it changes on the filesystem and does not change in the buffer
@@ -276,7 +281,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " FORMATTING: Autoformat
-noremap <Leader>l :Autoformat<CR>
+noremap <Leader>f :Autoformat<CR>
 
 " FORMATTING: COMMENTS
 set formatoptions+=o    " Continue comment marker in new lines.
