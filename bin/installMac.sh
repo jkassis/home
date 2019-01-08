@@ -104,7 +104,8 @@ mkdir -p ~/Library/Application\ Support/Code/User ; rm ~/Library/Application\ Su
 brew install heroku-toolbelt
 
 # hosting : docker
-brew cask install docker jq
+brew cask install docker
+brew install jq
 
 # file transfer
 brew install httpie
