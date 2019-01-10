@@ -274,9 +274,14 @@ set showcmd             " Show commands when entered
 :augroup END
 
 " FORMATTING: Tabbing and Shifting
-set expandtab                       " Insert spaces when TAB is pressed.
-let tabstop = $SHIFTWIDTH           " Render TABs using this many spaces.
-let shiftwidth = $SHIFTWIDTH        " Indentation amount for < and > commands.
+" tabstop       Num columns to render per tab character.
+" softtabstop   Just set this to tabstop for sanity. 
+" shiftwidth    Num spaces to shift for shift commands ('<' and '>')
+" expandtab     Always insert spaces for TAB key (when set).
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+au! FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+
+" automatically shift the visual selection in visual mode
 vnoremap < <gv
 vnoremap > >gv
 
