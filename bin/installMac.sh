@@ -135,6 +135,9 @@ brew services start elasticsearch@5.6
 # kubernetes
 brew install kubernetes-helm terraform cfssl
 pip3 install yq
+brew install jsonnet
+go get github.com/brancz/gojsontoyaml
+
 
 # sourcetree
 brew cask install sourcetree
