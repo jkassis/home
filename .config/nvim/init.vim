@@ -62,6 +62,7 @@ Plug 'Chiel92/vim-autoformat'                           " Code autoformatting
 Plug 'easymotion/vim-easymotion'                        " Easymotion navigation
 Plug 'ekalinin/Dockerfile.vim'                          " Syntax highlighting for Dockerfiles
 " Plug 'fatih/vim-go'                                     " Go development plugin for Vim
+Plug 'gcmt/taboo.vim'                                   " Ease the way you set the vim tabline
 Plug 'groenewege/vim-less'                              " Syntax highlighting for less files
 Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
 Plug 'janko-m/vim-test'                                 " Test.vim framework
@@ -183,10 +184,27 @@ nnoremap <Leader>C :bufdo :Bdelete<CR>
 set autoread            " Automatically re-read the file when it changes on the filesystem and does not change in the buffer
 
 " TABS: Navigation
-nnoremap <C-Left> gT
-nnoremap <C-Right> gt
-nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+nnoremap <Leader>u :tabfirst<CR>
+nnoremap <Leader>i :tabp<CR>
+nnoremap <Leader>o :tabn<CR>
+nnoremap <Leader>p :tablast<CR>
+
+" TABS: Organization
+let g:taboo_renamed_tab_format = ' %l '
+nnoremap <Leader>tn :tabnew<CR>
+nnoremap <Leader>tr :TabooRename 
+nnoremap <Leader>tc :tabclose<CR>
+nnoremap <Leader>U :tabm 0<CR>
+nnoremap <Leader>I :tabm -1<CR>
+nnoremap <Leader>O :tabm +1<CR>
+nnoremap <Leader>P :tabm<CR>
+
+
+" nnoremap <Leader>ii :tabm
+" nnoremap <C-Left> gT
+" nnoremap <C-Right> gt
+" nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+" nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 
 " MOUSE : Activate it
 set mouse=a
