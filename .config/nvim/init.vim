@@ -146,9 +146,13 @@ nnoremap <Leader>e :FZF --multi<CR>
 
 " WINDOWS : Navigation
 nnoremap <Leader>H <C-w>h
+nnoremap <C-h> <C-w>h
 nnoremap <Leader>J <C-w>j
+nnoremap <C-j> <C-w>j
 nnoremap <Leader>K <C-w>k
+nnoremap <C-k> <C-w>k
 nnoremap <Leader>L <C-w>l
+nnoremap <C-l> <C-w>l
 
 " WINDOWS : Rearrangement
 " alt-key combinations inserted by typing combo in insert mode
