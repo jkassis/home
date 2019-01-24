@@ -146,13 +146,13 @@ let g:fzf_layout = { 'window': 'enew' }
 nnoremap <Leader>e :FZF --multi<CR>
 
 " WINDOWS : Navigation
-nnoremap <Leader>H <C-w>h
+nnoremap <Leader>h <C-w>h
 nnoremap <C-h> <C-w>h
-nnoremap <Leader>J <C-w>j
+nnoremap <Leader>j <C-w>j
 nnoremap <C-j> <C-w>j
-nnoremap <Leader>K <C-w>k
+nnoremap <Leader>k <C-w>k
 nnoremap <C-k> <C-w>k
-nnoremap <Leader>L <C-w>l
+nnoremap <Leader>l <C-w>l
 nnoremap <C-l> <C-w>l
 
 " WINDOWS : Rearrangement
@@ -176,8 +176,8 @@ nnoremap <Leader>C :bufdo :Bdelete<CR>
 :nnoremap <Leader>b :ls<CR>:b<SPACE>
 
 " BUFFERS: Switch left / right
-:nnoremap <Leader>h :bp<CR>
-:nnoremap <Leader>l :bn<CR>
+:nnoremap <Leader>H :bp<CR>
+:nnoremap <Leader>L :bn<CR>
 
 
 " BUFFERS: Auto-Save / Read Options

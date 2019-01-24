@@ -1,6 +1,9 @@
 # Say hello
 echo "Running .zshrc"
 
+# Set terminal
+export TERM=xterm-256color
+
 # Use vi
 # https://dougblack.io/words/zsh-vi-mode.html
 # bindkey -v
