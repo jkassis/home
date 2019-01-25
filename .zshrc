@@ -38,26 +38,14 @@ export PATH="$GOPATH/bin:/usr/local/go/bin:$PATH"
 # FZF
 export PATH="$HOME/.fzf/bin/:$PATH"
 
-# OH-MY-ZSH
-export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="robbyrussell"
-
 # RUST and CARGO
 export PATH="$HOME/.cargo/bin:$PATH"
 
-#export PATH="/usr/local/bin:$PATH"
-
+# OH-MY-ZSH CONFIGURATION
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -67,6 +55,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 plugins=(git git-extras zsh-autosuggestions)
 
 # Fire it up
+export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
