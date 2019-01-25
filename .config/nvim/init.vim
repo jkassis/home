@@ -191,6 +191,7 @@ nnoremap <Leader>p :tablast<CR>
 
 " TABS: Organization
 let g:taboo_renamed_tab_format = ' %l '
+nnoremap <Leader>te :tabe %<CR>
 nnoremap <Leader>tn :tabnew<CR>
 nnoremap <Leader>tr :TabooRename 
 nnoremap <Leader>tc :tabclose<CR>
