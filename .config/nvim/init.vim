@@ -78,14 +78,16 @@ Plug 'neovim/node-host'                                 " Node provider
 Plug 'pangloss/vim-javascript'                          " Syntax highlighting and improved indentation.
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " directory tree browser
 Plug 'scrooloose/syntastic'                             " Integration for external syntax checkers.
+Plug 'sidoraras/node-vim-debugger'
 " Plug 'scrooloose/nerdcommenter'                        " Code commenting
 Plug 'skywind3000/vim-preview'                          " advanced preview window management
 " Plug 'tbastos/vim-lua'                                  " Improved Lua 5.3 syntax and indentation support for Vim
 " Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
-Plug 'tpope/vim-dispatch'                               " Asynchronous job adapters 
 Plug 'tpope/vim-commentary'                             " Code commenting
-Plug 'tpope/vim-unimpaired'                             " Paired bracket maps for navigation and more
+Plug 'tpope/vim-dispatch'                               " Asynchronous job adapters 
 Plug 'tpope/vim-fugitive'                               " Git integration for vim
+Plug 'tpope/vim-surround'                               " easily delete, change, and add surroundings in pairs.
+Plug 'tpope/vim-unimpaired'                             " Paired bracket maps for navigation and more
 Plug 'tyok/nerdtree-ack', { 'on': 'NERDTreeToggle' }    " search menu option for NERDTRee
 " Plug 'vim-vdebug/vdebug'                                " DBGP debugger
 Plug 'vim-airline/vim-airline'                          " Lightweight statusline (since powerline is deprecated)
