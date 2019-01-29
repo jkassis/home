@@ -2,15 +2,15 @@
 	br = branch
 	ch = checkout
 	co = commit
-    coa = commit --amend -C HEAD
-    cop = commit -p
-    di = diff
+  coa = commit --amend -C HEAD
+  cop = commit -p
+  di = diff
 	fe = fetch
 	me = merge
-    ps = push
-    pl = pull
+  ps = push
+  pl = pull
 	re = reset
-    rb = rebase
+  rb = rebase
 	st = status
   dt = difftool
 [branch]
@@ -26,12 +26,12 @@
 [difftool.ydiff]
   cmd = ydiff -s -w 0 --wrap
 [filter "lfs"]
-    process = git-lfs filter-process
-    required = true
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
 [include]
-    path = ~/.gitconfig.local
+  path = ~/.gitconfig.local
 [merge]
 	defaulttoupstream = true
 	tool = bc3
@@ -41,9 +41,6 @@
 [push]
 	default = current
 [pull]
-    rebase = true
+  rebase = true
 [user]
 	name = Jeremy Kassis
-
-[difftool "ydiff"]
-	cmd = ydiff -s

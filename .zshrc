@@ -59,6 +59,10 @@ export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Git
+alias gcoa="g coa"
+alias gcop="g cop"
+
 # LANGUAGE
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
