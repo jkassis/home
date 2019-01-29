@@ -145,6 +145,9 @@ brew cask install sourcetree
 # beyond compare
 brew cask install beyond-compare
 
+# ydiff
+brew install ydiff
+
 # font setup
 brew tap caskroom/fonts
 brew cask install font-fira-code font-hack-nerd-font

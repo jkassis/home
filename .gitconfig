@@ -12,6 +12,7 @@
 	re = reset
     rb = rebase
 	st = status
+  dt = difftool
 [branch]
 	autosetuprebase = always
 [color]
@@ -20,10 +21,10 @@
 	editor = nvim
 	excludesfile = ~/.gitignore_global
 [diff]
-	tool = bc3
-	guitool = bc3
-[difftool]
-	prompt = false
+	tool = ydiff
+	guitool = ydiff
+[difftool.ydiff]
+  cmd = ydiff -s
 [filter "lfs"]
     process = git-lfs filter-process
     required = true
@@ -44,3 +45,5 @@
 [user]
 	name = Jeremy Kassis
 
+[difftool "ydiff"]
+	cmd = ydiff -s
