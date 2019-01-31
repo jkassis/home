@@ -38,4 +38,5 @@
       "<C-a>": false,
       "<C-f>": false
     },
+    "vim.visualstar": true,
   }
