@@ -142,10 +142,6 @@ autocmd FileType qf autocmd BufDelete <buffer> :pc!
 
 
 " FZF (Search Files by Name)
-" Search for Files By Name
-" https://github.com/junegunn/fzf/blob/master/README-VIM.md
-let g:fzf_layout = { 'window': 'enew' }
-nnoremap <Leader>e :FZF --multi<CR>
 
 " WINDOWS : Navigation
 nnoremap <Leader>h <C-w>h
@@ -168,11 +164,16 @@ nnoremap ¬ <C-w>L
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
 
-" BUFFERS: Save and Delete
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>W :w!<CR>
-nnoremap <Leader>c :Bdelete!<CR>
-nnoremap <Leader>C :bufdo :Bdelete<CR>
+" BUFFERS: Open New (Using junegunn/fzf)
+let g:fzf_layout = { 'window': 'enew' }
+nnoremap <Leader>e :FZF --multi<CR>
+nnoremap <Leader>p :FZF --multi<CR>
+" BUFFERS: Save / Write
+nnoremap <Leader>s :w<CR>
+nnoremap <Leader>S :w!<CR>
+" BUFFERS: Close
+nnoremap <Leader>w :Bdelete!<CR>
+nnoremap <Leader>W :bufdo :Bdelete<CR>
 
 " BUFFERS: Switch by number
 :nnoremap <Leader>b :ls<CR>:b<SPACE>
@@ -189,7 +190,7 @@ set autoread            " Automatically re-read the file when it changes on the 
 nnoremap <Leader>u :tabfirst<CR>
 nnoremap <Leader>i :tabp<CR>
 nnoremap <Leader>o :tabn<CR>
-nnoremap <Leader>p :tablast<CR>
+"nnoremap <Leader>p :tablast<CR>
 
 " TABS: Organization
 let g:taboo_renamed_tab_format = ' %l '
@@ -261,21 +262,18 @@ let NERDTreeShowHidden=1                " Show hidden files
 " Generally on Linux, + and  * are different: + corresponds to the desktop clipboard (XA_SECONDARY) that is accessed using CTRL-C, CTRL-X, and CTRL-V, while * corresponds to the X11 primary selection (XA_PRIMARY), which stores the mouse selection and is pasted using the middle mouse button in most applications.
 " set clipboard=unnamed
 set clipboard=unnamedplus
+nnoremap <Leader>c "+y
+nnoremap <Leader>v "+p
+nnoremap <Leader>V "+P
 
 " REGISTERS: Flashy Yank
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
 
-" REGISTERS: Yank to system clipboard
-map <Leader>y "+y
-
-" REGISTERS: Always yank and paste using system clipboard
-" :set clipboard+=unnamedplus
-
 " REGISTERS: Rotation
 " http://vim.wikia.com/wiki/Comfortable_handling_of_registers
 " https://stackoverflow.com/questions/54255/in-vim-is-there-a-way-to-delete-without-putting-text-in-the-register
-nnoremap <Leader>s :let @a=@" \| let @"=@+ \| let @+=@a<CR>
+" nnoremap <Leader>s :let @a=@" \| let @"=@+ \| let @+=@a<CR>
 
 " CURSOR: Visual Cues
 set showmatch           " Show matching brackets when text indicator on top of one
