@@ -1,4 +1,5 @@
 {
+  "workbench.tree.horizontalScrolling": true,
   "vim.easymotion": true,
   "vim.sneak": true,
   "vim.incsearch": true,
