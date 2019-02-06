@@ -40,15 +40,6 @@
     {
       "before": [
         "<leader>",
-        "/"
-      ],
-      "commands": [
-        "workbench.action.findInFiles"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
         "h"
       ],
       "commands": [
