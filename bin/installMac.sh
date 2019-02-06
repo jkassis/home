@@ -91,6 +91,7 @@ sudo xcodebuild -license accept # agree to xcode license
 brew cask install visual-studio-code
 mkdir -p ~/Library/Application\ Support/Code/User 
 rm ~/Library/Application\ Support/Code/User/settings.json 
+rm ~/Library/Application\ Support/Code/User/keybindings.json 
 ln ~/home/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln ~/home/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 
