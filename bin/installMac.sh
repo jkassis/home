@@ -89,7 +89,10 @@ sudo xcodebuild -license accept # agree to xcode license
 
 # ides : vscode
 brew cask install visual-studio-code
-mkdir -p ~/Library/Application\ Support/Code/User ; rm ~/Library/Application\ Support/Code/User/settings.json ; ln ~/home/.vs.code.settings.json ~/Library/Application\ Support/Code/User/settings.json
+mkdir -p ~/Library/Application\ Support/Code/User 
+rm ~/Library/Application\ Support/Code/User/settings.json 
+ln ~/home/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln ~/home/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 
 # cloud 
 brew install heroku-toolbelt
