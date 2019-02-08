@@ -160,6 +160,7 @@ brew cask install font-fira-code font-hack-nerd-font
 
 # network monitoring
 brew install little-snitch
+brew install iperf
 
 # sbc tools
 brew cask install balenaetcher kekka angry-ip-scanner
