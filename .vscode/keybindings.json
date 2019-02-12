@@ -9,5 +9,21 @@
         "key": "cmd+r",
         "command": "workbench.action.debug.start",
         "when": "!inDebugMode"
+    },
+    {
+        "key": "shift+cmd+h",
+        "command": "workbench.action.replaceInFiles"
+    },
+    {
+        "key": "shift+cmd+h",
+        "command": "-workbench.action.replaceInFiles"
+    },
+    {
+        "key": "cmd+h",
+        "command": "editor.action.startFindReplaceAction"
+    },
+    {
+        "key": "alt+cmd+f",
+        "command": "-editor.action.startFindReplaceAction"
     }
 ]
