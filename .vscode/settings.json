@@ -176,4 +176,11 @@
     "<C-f>": false
   },
   "vim.visualstar": true,
+  "vim.history": 100,
+  "vim.statusBarColorControl": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f"
+  },
 }
