@@ -184,4 +184,6 @@
     "statusBar.debuggingBackground": "#005f5f"
   },
   "go.formatTool": "gofmt",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
 }
