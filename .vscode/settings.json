@@ -188,4 +188,7 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "debug.toolBarLocation": "docked",
   "debug.inlineValues": true,
+  "php.suggest.basic": false,
+  "php.validate.enable": false,
+  "breadcrumbs.enabled": true,
 }
