@@ -1,6 +1,6 @@
 {
-  "workbench.list.horizontalScrolling": true,
-  "vim.sneak": true,
+  "workbench.tree.horizontalScrolling": true,
+  "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
@@ -109,10 +109,22 @@
   "php.suggest.basic": false,
   "php.validate.enable": false,
   "breadcrumbs.enabled": true,
-  "files.exclude": {
-    "**/tags": true
-  },
   "prettier.semi": false,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.enableNeovim": true
+  "coverage-gutters.xmlname": "coverage.xml",
+  "coverage-gutters.showLineCoverage": true,
+  "coverage-gutters.showRulerCoverage": true,
+  "coverage-gutters.lcovname": "",
+  "coverage-gutters.coverageReportFileName": "",
+  "coverage-gutters.showGutterCoverage": false,
+  "python.coverageView.highlightMode": "covered",
+  "explorer.sortOrder": "mixed",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/tags": true
+  },
+  "search.exclude": {
+    "**/tags": true
+  },
 }
