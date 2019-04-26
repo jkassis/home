@@ -7,88 +7,200 @@
   "vim.hlsearch": true,
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "c"],
-      "commands": ["editor.action.clipboardCopyAction"]
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "editor.action.clipboardCopyAction"
+      ]
     },
     {
-      "before": ["<leader>", "v"],
-      "commands": ["editor.action.clipboardPasteAction"]
+      "before": [
+        "<leader>",
+        "v"
+      ],
+      "commands": [
+        "editor.action.clipboardPasteAction"
+      ]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "h"],
-      "commands": ["workbench.action.navigateLeft"]
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.navigateLeft"
+      ]
     },
     {
-      "before": ["<leader>", "l"],
-      "commands": ["workbench.action.navigateRight"]
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.navigateRight"
+      ]
     },
     {
-      "before": ["<leader>", "k"],
-      "commands": ["workbench.action.navigateUp"]
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.navigateUp"
+      ]
     },
     {
-      "before": ["<leader>", "j"],
-      "commands": ["workbench.action.navigateDown"]
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.navigateDown"
+      ]
     },
     {
-      "before": ["<leader>", "c"],
-      "commands": ["editor.action.clipboardCopyAction"]
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "editor.action.clipboardCopyAction"
+      ]
     },
     {
-      "before": ["<leader>", "v"],
-      "commands": ["editor.action.clipboardPasteAction"]
+      "before": [
+        "<leader>",
+        "v"
+      ],
+      "commands": [
+        "editor.action.clipboardPasteAction"
+      ]
     },
     {
-      "before": ["<leader>", "f"],
-      "commands": ["editor.action.formatDocument"]
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
     },
     {
-      "before": ["<leader>", "n"],
-      "commands": ["workbench.files.action.showActiveFileInExplorer"]
+      "before": [
+        "<leader>",
+        "n"
+      ],
+      "commands": [
+        "workbench.files.action.showActiveFileInExplorer"
+      ]
     },
     {
-      "before": ["<leader>", "s"],
-      "commands": [":w"]
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "commands": [
+        ":w"
+      ]
     },
     {
-      "before": ["<leader>", "w"],
-      "commands": [":q"]
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        ":q"
+      ]
     },
     {
-      "before": ["<leader>", "p"],
-      "commands": ["workbench.action.quickOpen"]
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
     },
     {
-      "before": ["<C-n>"],
-      "commands": [":nohl"]
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
     },
     {
-      "before": ["U"],
-      "after": ["<C-r>"]
+      "before": [
+        "u"
+      ],
+      "commands": [
+        "undo"
+      ]
     },
     {
-      "before": ["<C-i>"],
-      "after": ["<C-o>"]
+      "before": [
+        "<C-r>"
+      ],
+      "commands": [
+        "redo"
+      ]
     },
     {
-      "before": ["<C-o>"],
-      "after": ["<C-i>"]
+      "before": [
+        "U"
+      ],
+      "commands": [
+        "redo"
+      ]
     },
     {
-      "before": ["N"],
-      "after": ["N", "zz"]
+      "before": [
+        "<C-i>"
+      ],
+      "after": [
+        "<C-o>"
+      ]
     },
     {
-      "before": ["n"],
-      "after": ["n", "zz"]
+      "before": [
+        "<C-o>"
+      ],
+      "after": [
+        "<C-i>"
+      ]
+    },
+    {
+      "before": [
+        "N"
+      ],
+      "after": [
+        "N",
+        "zz"
+      ]
+    },
+    {
+      "before": [
+        "n"
+      ],
+      "after": [
+        "n",
+        "zz"
+      ]
     }
   ],
   "vim.leader": "<space>",
@@ -96,10 +208,14 @@
     "<C-a>": false,
     "<C-f>": false
   },
-  "vim.debug.loggingLevelForConsole": "debug",
+  "vim.debug.loggingLevelForConsole": "info",
   "vim.debug.loggingLevelForAlert": "error",
-  "vim.visualstar": true, "vim.history": 100,
-  "workbench.colorCustomizations": { "statusBar.background": "#5f00af", "statusBar.noFolderBackground": "#5f00af", "statusBar.debuggingBackground": "#5f00af"
+  "vim.visualstar": true,
+  "vim.history": 100,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#5f00af",
+    "statusBar.noFolderBackground": "#5f00af",
+    "statusBar.debuggingBackground": "#5f00af"
   },
   "go.formatTool": "gofmt",
   "workbench.editor.enablePreview": false,
@@ -111,7 +227,7 @@
   "breadcrumbs.enabled": true,
   "prettier.semi": false,
   "vim.neovimPath": "/usr/local/bin/nvim",
-  "vim.enableNeovim": true
+  "vim.enableNeovim": true,
   "coverage-gutters.xmlname": "coverage.xml",
   "coverage-gutters.showLineCoverage": true,
   "coverage-gutters.showRulerCoverage": true,
@@ -119,7 +235,6 @@
   "coverage-gutters.coverageReportFileName": "",
   "coverage-gutters.showGutterCoverage": false,
   "python.coverageView.highlightMode": "covered",
-  "explorer.sortOrder": "mixed",
   "files.exclude": {
     "**/__pycache__": true,
     "**/tags": true
@@ -127,4 +242,7 @@
   "search.exclude": {
     "**/tags": true
   },
+  "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.US",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
 }
