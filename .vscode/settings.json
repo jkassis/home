@@ -262,4 +262,5 @@
   "search.showLineNumbers": true,
   "search.useGlobalIgnoreFiles": true,
   "search.useReplacePreview": false,
+  "vim.statusBarColorControl": true,
 }
