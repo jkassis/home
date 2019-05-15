@@ -263,4 +263,7 @@
   "search.useGlobalIgnoreFiles": true,
   "search.useReplacePreview": false,
   "vim.statusBarColorControl": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
