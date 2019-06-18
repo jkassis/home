@@ -1,4 +1,8 @@
 {
+  "editor.fontSize": 14,
+  "editor.fontWeight": "bold",
+  "terminal.integrated.fontSize": 14,
+  "debug.console.fontSize": 14,
   "workbench.tree.horizontalScrolling": true,
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -7,200 +11,96 @@
   "vim.hlsearch": true,
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>",
-        "c"
-      ],
-      "commands": [
-        "editor.action.clipboardCopyAction"
-      ]
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.clipboardCopyAction"]
     },
     {
-      "before": [
-        "<leader>",
-        "v"
-      ],
-      "commands": [
-        "editor.action.clipboardPasteAction"
-      ]
+      "before": ["<leader>", "v"],
+      "commands": ["editor.action.clipboardPasteAction"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>",
-        "h"
-      ],
-      "commands": [
-        "workbench.action.navigateLeft"
-      ]
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.navigateLeft"]
     },
     {
-      "before": [
-        "<leader>",
-        "l"
-      ],
-      "commands": [
-        "workbench.action.navigateRight"
-      ]
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.navigateRight"]
     },
     {
-      "before": [
-        "<leader>",
-        "k"
-      ],
-      "commands": [
-        "workbench.action.navigateUp"
-      ]
+      "before": ["<leader>", "k"],
+      "commands": ["workbench.action.navigateUp"]
     },
     {
-      "before": [
-        "<leader>",
-        "j"
-      ],
-      "commands": [
-        "workbench.action.navigateDown"
-      ]
+      "before": ["<leader>", "j"],
+      "commands": ["workbench.action.navigateDown"]
     },
     {
-      "before": [
-        "<leader>",
-        "c"
-      ],
-      "commands": [
-        "editor.action.clipboardCopyAction"
-      ]
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.clipboardCopyAction"]
     },
     {
-      "before": [
-        "<leader>",
-        "v"
-      ],
-      "commands": [
-        "editor.action.clipboardPasteAction"
-      ]
+      "before": ["<leader>", "v"],
+      "commands": ["editor.action.clipboardPasteAction"]
     },
     {
-      "before": [
-        "<leader>",
-        "f"
-      ],
-      "commands": [
-        "editor.action.formatDocument"
-      ]
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatDocument"]
     },
     {
-      "before": [
-        "<leader>",
-        "n"
-      ],
-      "commands": [
-        "workbench.files.action.showActiveFileInExplorer"
-      ]
+      "before": ["<leader>", "n"],
+      "commands": ["workbench.files.action.showActiveFileInExplorer"]
     },
     {
-      "before": [
-        "<leader>",
-        "s"
-      ],
-      "commands": [
-        ":w"
-      ]
+      "before": ["<leader>", "s"],
+      "commands": [":w"]
     },
     {
-      "before": [
-        "<leader>",
-        "w"
-      ],
-      "commands": [
-        ":q"
-      ]
+      "before": ["<leader>", "w"],
+      "commands": [":q"]
     },
     {
-      "before": [
-        "<leader>",
-        "p"
-      ],
-      "commands": [
-        "workbench.action.quickOpen"
-      ]
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.quickOpen"]
     },
     {
-      "before": [
-        "<C-n>"
-      ],
-      "commands": [
-        ":nohl"
-      ]
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
     },
     {
-      "before": [
-        "u"
-      ],
-      "commands": [
-        "undo"
-      ]
+      "before": ["u"],
+      "commands": ["undo"]
     },
     {
-      "before": [
-        "<C-r>"
-      ],
-      "commands": [
-        "redo"
-      ]
+      "before": ["<C-r>"],
+      "commands": ["redo"]
     },
     {
-      "before": [
-        "U"
-      ],
-      "commands": [
-        "redo"
-      ]
+      "before": ["U"],
+      "commands": ["redo"]
     },
     {
-      "before": [
-        "<C-i>"
-      ],
-      "after": [
-        "<C-o>"
-      ]
+      "before": ["<C-i>"],
+      "after": ["<C-o>"]
     },
     {
-      "before": [
-        "<C-o>"
-      ],
-      "after": [
-        "<C-i>"
-      ]
+      "before": ["<C-o>"],
+      "after": ["<C-i>"]
     },
     {
-      "before": [
-        "N"
-      ],
-      "after": [
-        "N",
-        "zz"
-      ]
+      "before": ["N"],
+      "after": ["N", "zz"]
     },
     {
-      "before": [
-        "n"
-      ],
-      "after": [
-        "n",
-        "zz"
-      ]
+      "before": ["n"],
+      "after": ["n", "zz"]
     }
   ],
   "vim.leader": "<space>",
@@ -266,4 +166,5 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "workbench.colorTheme": "Material Theme Ocean High Contrast"
 }

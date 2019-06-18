@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 
 # homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap caskroom/versions
 
 # browsers
 brew cask install google-chrome
-brew cask install firefoxdeveloperedition
+brew cask install firefox-developer-edition
 
 # display and window management 
 # brew cask install spectacle
-brew cask install magnet
-brew cask install duet
+brew cask install magnet pbcopy
+#brew cask install duet
 
 # osx : dock setting
 # "Set Dock to auto-hide and remove the auto-hiding delay? (y/n)"
-#defaults write com.apple.dock autohide-delay -float 0
-#defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
 
 # osx : disable guest account
 defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
@@ -24,7 +24,7 @@ defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server All
 
 # osx : special key access
 # "Disabling press-and-hold for special keys in favor of key repeat"
-#defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # TODO: look into https://gist.github.com/brandonb927/3195465 and related for more tweaks
 
 # markup redlining
@@ -37,7 +37,7 @@ brew cask install vlc
 
 # passwords
 brew cask install 1password
-brew cask install keeper
+# brew cask install keeper
 brew cask install lastpass
 # TODO: can we automate 1password setup/config?
 
@@ -46,7 +46,7 @@ brew cask install slack
 # TODO: slack - auto add my specific servers?
 
 # languages : java
-brew cask install java8
+brew cask install java
 
 ## language : javascript
 #brew install node
@@ -55,12 +55,12 @@ brew cask install java8
 #npm install -g webpack
 
 ## languages: python
-brew install python@2
-pip2 install virtualenv virtualenvwrapper flake8
+#brew install python@2
+#pip2 install virtualenv virtualenvwrapper flake8
 
 ## languages: go
-#brew install go --cross-compile-common
-#mkdir -p "$HOME/Code/go"
+brew install golang 
+mkdir -p "$HOME/Code/go"
 
 
 # editors : atom
@@ -74,13 +74,13 @@ pip2 install virtualenv virtualenvwrapper flake8
 # vim-mode-plus
 
 # editors : sublime
-brew cask install sublime-text3
+brew cask install sublime-text
 
 # editors : emacs
 brew cask install emacs
 
 # editors : vim
-brew install python python3 nvim fzf the_silver_searcher ctags fd
+brew install python3 nvim fzf the_silver_searcher ctags fd
 ./installVim.sh
 
 # ides : xcode
@@ -92,12 +92,12 @@ brew cask install visual-studio-code
 mkdir -p ~/Library/Application\ Support/Code/User 
 rm ~/Library/Application\ Support/Code/User/settings.json 
 rm ~/Library/Application\ Support/Code/User/keybindings.json 
-ln -s ~/home/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/home/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+ln -s ~/Home/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/Home/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 
 # cloud 
-brew install heroku-toolbelt
-brew install amazoncli
+#brew install heroku-toolbelt
+brew install aws-cli
 
 # containers : vm hosts
 brew cask install virtualbox
@@ -119,13 +119,13 @@ brew install httpie
 # protocol clients : ws
 go get -u github.com/hashrocket/ws
 # protocol client : TCP/UDP
-brew install ncat
+brew install netcat
 # protocol clients : dns
 brew install dig
 
 
 # file sharing
-brew cask install dropbox
+#brew cask install dropbox
 
 # terminal emulators
 brew cask install iterm2
@@ -142,11 +142,14 @@ brew install elasticsearch@5.6
 brew services start elasticsearch@5.6
 
 # db : neo4j
-brew install cockroachdb
-brew install neo4j
+brew install cockroach
+brew services start cockroach
+brew install redis
+brew services start redis
+# brew install neo4j
 # brew install postgresql
 # brew cask install postgres
-brew cask install pgadmin4
+# brew cask install pgadmin4
 # brew services start postgresql
 
 # source control
@@ -162,7 +165,7 @@ brew cask install font-fira-code font-hack-nerd-font
 brew install little-snitch
 brew install iperf
 
-# sbc tools
+# single board computer tools
 brew cask install balenaetcher kekka angry-ip-scanner
 
 echo "Post installation tips:"
