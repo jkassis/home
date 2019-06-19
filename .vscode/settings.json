@@ -1,6 +1,5 @@
 {
   "editor.fontSize": 14,
-  "editor.fontWeight": "bold",
   "terminal.integrated.fontSize": 14,
   "debug.console.fontSize": 14,
   "workbench.tree.horizontalScrolling": true,
