@@ -4,17 +4,6 @@ echo "Running .zshrc"
 # Set terminal
 export TERM=xterm-256color
 
-# Use vi
-# https://dougblack.io/words/zsh-vi-mode.html
-# bindkey -v
-# function zle-line-init zle-keymap-select {
-#     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]% %{$reset_color%}"
-#     RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $(git_custom_status) $EPS1"
-#     zle reset-prompt
-# }
-# zle -N zle-line-init
-# zle -N zle-keymap-select
-# export KEYTIMEOUT=1
 
 # Disable auto-setting terminal title. 
 DISABLE_AUTO_TITLE="true"
@@ -47,13 +36,17 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # STATUS LINE
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode dir vcs)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status node_version background_jobs history time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history time)
+POWERLEVEL9K_VI_INSERT_MODE_STRING='I'
+POWERLEVEL9K_VI_COMMAND_MODE_STRING='N'
 
 #POWERLEVEL9K_TIME_FORMAT="%D{%H:%M %m.%d.%y}"
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S}"
 POWERLEVEL9K_STATUS_VERBOSE=false
+
 
 #POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_NODE_VERSION_BACKGROUND='022'
@@ -74,9 +67,21 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git-extras heroku jira django)
-plugins=(git git-extras zsh-autosuggestions)
+plugins=(vi-mode git git-extras zsh-autosuggestions)
 
-# Fire it up
+# Tweak VI Mode
+# https://dougblack.io/words/zsh-vi-mode.html
+export KEYTIMEOUT=1
+
+# function zle-line-init zle-keymap-select {
+#     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]% %{$reset_color%}"
+#     RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $(git_custom_status) $EPS1"
+#     zle reset-prompt
+# }
+# zle -N zle-line-init
+# zle -N zle-keymap-select
+
+# fire up oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
