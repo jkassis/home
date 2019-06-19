@@ -20,6 +20,7 @@
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore_global
+	preloadindex = true
 [diff]
 	tool = ydiff
 	guitool = ydiff

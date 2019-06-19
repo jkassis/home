@@ -162,9 +162,20 @@
   "search.showLineNumbers": true,
   "search.useGlobalIgnoreFiles": true,
   "search.useReplacePreview": false,
-  "vim.statusBarColorControl": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Material Theme Ocean High Contrast"
+  "debug.allowBreakpointsEverywhere": true,
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "gitlens.advanced.blame.delayAfterEdit": 0,
+  "gitlens.blame.avatars": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.liveshare.allowGuestAccess": false,
+  "gitlens.statusBar.enabled": false,
+  "workbench.colorTheme": "Monokai-Contrast",
 }
