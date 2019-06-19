@@ -158,6 +158,8 @@ brew cask install beyond-compare
 brew install ydiff
 
 # fonts
+# brew tap sambadevi/powerlevel9k
+# brew install powerlevel9k
 brew tap caskroom/fonts
 brew cask install font-fira-code font-hack-nerd-font
 

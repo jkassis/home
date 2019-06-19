@@ -42,7 +42,8 @@ export PATH="$HOME/.fzf/bin/:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # OH-MY-ZSH CONFIGURATION
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
