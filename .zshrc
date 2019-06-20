@@ -162,3 +162,4 @@ alias c=clear
 # Local Config
 source $HOME/.zshrc.local
 
+export P4CONFIG=.p4config
