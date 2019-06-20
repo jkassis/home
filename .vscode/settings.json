@@ -1,5 +1,4 @@
 {
-  "debug.console.fontSize": 14,
   "workbench.tree.horizontalScrolling": true,
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -174,7 +173,7 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.liveshare.allowGuestAccess": false,
   "gitlens.statusBar.enabled": false,
-  "workbench.colorTheme": "Monokai-Contrast",
+  "workbench.colorTheme": "Black Ocean",
   "editor.fontFamily": "FuraCode Nerd Font Mono",
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
 }
