@@ -158,10 +158,13 @@ brew cask install beyond-compare
 brew install ydiff
 
 # fonts
-# brew tap sambadevi/powerlevel9k
-# brew install powerlevel9k
-brew tap caskroom/fonts
-brew cask install font-fira-code font-hack-nerd-font
+# These aren't really necessary
+#    brew tap sambadevi/powerlevel9k
+#    brew install powerlevel9k
+# Because these have PowerLine Icons...
+# https://github.com/Homebrew/homebrew-cask-fonts 
+brew tap homebrew/cask-fonts
+brew cask install font-firacode-nerd-font font-firacode-nerd-font-mono font-hack-nerd-font font-hack-nerd-font-mono
 
 # network monitoring
 brew install little-snitch

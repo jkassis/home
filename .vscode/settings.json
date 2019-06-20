@@ -176,4 +176,5 @@
   "gitlens.liveshare.allowGuestAccess": false,
   "gitlens.statusBar.enabled": false,
   "workbench.colorTheme": "Monokai-Contrast",
+  "editor.fontSize": 14,
 }
