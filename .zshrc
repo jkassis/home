@@ -8,6 +8,7 @@ export TERM=xterm-256color
 # Disable auto-setting terminal title. 
 DISABLE_AUTO_TITLE="true"
 
+
 # Home Bin
 export PATH="$HOME/home/bin:$PATH"
 
@@ -15,7 +16,7 @@ export PATH="$HOME/home/bin:$PATH"
 alias c=clear
 
 # OPT PACKAGES
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # POSTGRESS
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
@@ -29,6 +30,8 @@ export PATH="$HOME/.fzf/bin/:$PATH"
 
 # RUST and CARGO
 export PATH="$HOME/.cargo/bin:$PATH"
+
+echo $PATH
 
 # OH-MY-ZSH CONFIGURATION
 # ZSH_THEME="robbyrussell"
