@@ -176,4 +176,5 @@
   "workbench.colorTheme": "Black Ocean",
   "editor.fontFamily": "FuraCode Nerd Font Mono",
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "terminal.integrated.shellArgs.osx": []
 }

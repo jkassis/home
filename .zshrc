@@ -1,43 +1,58 @@
 # Say hello
 echo "Running .zshrc"
 
+# set -e      # Exit on errors
+# set -v     # Verbose output
+
+
 # Set terminal
 export TERM=xterm-256color
 
-
-# Disable auto-setting terminal title. 
+# Disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
 
-
-# Home Bin
-export PATH="$HOME/home/bin:$PATH"
-
-# TERM IMPROVEMENTS
+# Basic Aliases
 alias c=clear
+#alias rm='safe-rm'
 
-# OPT PACKAGES
-# export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
-# POSTGRESS
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+# PATH MANIPULATION FUNCTIONS
+pathadd() {
+  newelement=${1%/}
+  if [ ! -d "$1" ] ; then
+    echo " PATHADD SKIPPED:   $1 (does not exist)"
+    return 1
+  fi
+  if ! echo $PATH | grep -E -q "(^|:)$newelement($|:)" ; then
+    if [ "$2" = "after" ] ; then
+      echo " PATHADD APPENDED:  $1"
+      export PATH="$PATH:$newelement"
+    else
+      echo " PATHADD PREPENDED: $1"
+      export PATH="$newelement:$PATH"
+    fi
+  else
+    echo " PATHADD SKIPPED:   $1 (already in path)"
+  fi
+}
 
-# GO
-export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:/usr/local/go/bin:$PATH"
+pathrm() {
+  export PATH="$(echo $PATH | sed -e "s;\(^\|:\)${1%/}\(:\|\$\);\1\2;g" -e 's;^:\|:$;;g' -e 's;::;:;g')"
+}
 
-# FZF
-export PATH="$HOME/.fzf/bin/:$PATH"
 
-# RUST and CARGO
-export PATH="$HOME/.cargo/bin:$PATH"
 
-echo $PATH
+# PROFILE BINARIES (Checked in)
+pathadd "$HOME/home/bin"
 
-# OH-MY-ZSH CONFIGURATION
+# PROFILE BINARIES (Local)
+pathadd "$HOME/bin"
+
+
+# POWERLEVEL STATUS LINE
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-# POWERLEVEL STATUS LINE
 # PL TEXT / GLYPH MODE
 POWERLEVEL9K_MODE='nerdfont-complete'
 
@@ -88,75 +103,74 @@ plugins=(vi-mode git git-extras zsh-autosuggestions)
 # https://dougblack.io/words/zsh-vi-mode.html
 export KEYTIMEOUT=1
 
-# function zle-line-init zle-keymap-select {
-#     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]% %{$reset_color%}"
-#     RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $(git_custom_status) $EPS1"
-#     zle reset-prompt
-# }
-# zle -N zle-line-init
-# zle -N zle-keymap-select
 
-# fire up oh-my-zsh
+# OH-MY-ZSH
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Git
+
+# GIT
 alias gcoa="g coa"
 alias gcop="g cop"
 alias gdi="g di"
 
-# LANGUAGE
+# i18N
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # FZF
 # Use fd instead of find (honors .gitignore files)
+pathadd "$HOME/.fzf/bin/" 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # EDITOR
-# Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='nvim'
- fi
+  export EDITOR='vim'    # For remote sessions
+else
+  export EDITOR='nvim'   # For local sessions
+fi
 
-# C LANG
+# LANG: C
 # export ARCHFLAGS="-arch x86_64"
+
+# LANG: GO
+export GOPATH="$HOME/go"
+pathadd "$GOPATH/bin"
+pathadd "/usr/local/go/bin"
+
+# LANG: RUST
+pathadd "$HOME/.cargo/bin"
 
 # SSH
 # export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
 # POSTGRES
 # list all current dbs
+pathadd "/Applications/Postgres.app/Contents/Versions/latest/bin"
 alias plistdb="psql -c 'select datname from pg_database where datistemplate=false;'"
-
-# Database aliases
-# usage: copydb (current db name) (new db name)
 pcopydb() {
+  # usage: copydb (current db name) (new db name)
   createdb -O $USERNAME -T $1 $2
 }
-
-# sets current active db, tricky part is it is only for that terminal so if you have multiple open it can get fun
 psetdb() {
+  # sets current active db, tricky part is it is only for that terminal so if you have multiple open it can get fun
   export DATABASE_URL=postgresql://$USERNAME@localhost:5432/$1
 }
-
-# which db is currently set as my active db
 pwhichdb() {
+  # which db is currently set as my active db
   echo $DATABASE_URL
 }
-
 pdropdb() {
   psql -c "DROP DATABASE \"$1\""
 }
 
 
-# Docker aliases
+# DOCKER
 alias dockerip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
 
-# Kubernetes Stuff
+
+# KUBERNETES
 export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
 alias kc='kubectl'
 alias kcl='kubectl logs -f'
@@ -167,14 +181,18 @@ alias kcg='kubectl get'
 alias kced='kubectl edit'
 alias kcgev='kubectl get events --sort-by=.metadata.creationTimestamp'
 alias kct='kubectl run toolbox --rm -i --tty --image jkassis/nettools:latest -- bash'
-
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
+
+
+# HELM
 if [ $commands[helm] ]; then source <(helm completion zsh); fi
 
-#alias rm='safe-rm'
-alias c=clear
 
-# Local Config
+# PERFORCE
+export P4CONFIG=.p4config
+
+
+# LOCAL CONF
 source $HOME/.zshrc.local
 
-export P4CONFIG=.p4config
+
