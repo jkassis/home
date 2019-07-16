@@ -25,6 +25,7 @@ defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server All
 # osx : special key access
 # "Disabling press-and-hold for special keys in favor of key repeat"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+brew cask install karabiner-elements
 # TODO: look into https://gist.github.com/brandonb927/3195465 and related for more tweaks
 
 # markup redlining
