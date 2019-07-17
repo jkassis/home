@@ -20,15 +20,15 @@ alias c=clear
 pathadd() {
   newelement=${1%/}
   if [ ! -d "$1" ] ; then
-    echo " PATHADD SKIPPED:   $1 (does not exist)"
+    # echo " PATHADD SKIPPED:   $1 (does not exist)"
     return 1
   fi
   if ! echo $PATH | grep -E -q "(^|:)$newelement($|:)" ; then
     if [ "$2" = "after" ] ; then
-      echo " PATHADD APPENDED:  $1"
+      # echo " PATHADD APPENDED:  $1"
       export PATH="$PATH:$newelement"
     else
-      echo " PATHADD PREPENDED: $1"
+      # echo " PATHADD PREPENDED: $1"
       export PATH="$newelement:$PATH"
     fi
   else
