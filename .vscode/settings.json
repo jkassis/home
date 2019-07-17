@@ -111,7 +111,8 @@
   "workbench.colorCustomizations": {
     "statusBar.background": "#005f5f",
     "statusBar.noFolderBackground": "#005f5f",
-    "statusBar.debuggingBackground": "#005f5f"
+    "statusBar.debuggingBackground": "#005f5f",
+    "editor.background": "#161515"
   },
   "go.formatTool": "gofmt",
   "workbench.editor.enablePreview": false,
