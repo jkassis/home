@@ -1,29 +1,39 @@
 // Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "cmd+r",
-        "command": "workbench.action.debug.restart",
-        "when": "inDebugMode"
-    },
-    {
-        "key": "cmd+r",
-        "command": "workbench.action.debug.start",
-        "when": "!inDebugMode"
-    },
-    {
-        "key": "shift+cmd+h",
-        "command": "workbench.action.replaceInFiles"
-    },
-    {
-        "key": "shift+cmd+h",
-        "command": "-workbench.action.replaceInFiles"
-    },
-    {
-        "key": "cmd+h",
-        "command": "editor.action.startFindReplaceAction"
-    },
-    {
-        "key": "alt+cmd+f",
-        "command": "-editor.action.startFindReplaceAction"
-    }
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.debug.restart",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.debug.start",
+    "when": "!inDebugMode"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "workbench.action.replaceInFiles"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "-workbench.action.replaceInFiles"
+  },
+  {
+    "key": "cmd+h",
+    "command": "editor.action.startFindReplaceAction"
+  },
+  {
+    "key": "alt+cmd+f",
+    "command": "-editor.action.startFindReplaceAction"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  }
 ]
