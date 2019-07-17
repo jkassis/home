@@ -128,7 +128,7 @@
   "coverage-gutters.showLineCoverage": true,
   "coverage-gutters.showRulerCoverage": true,
   "coverage-gutters.lcovname": "",
-  "coverage-gutters.coverageReportFileName": "",
+  "coverage-gutters.coverageReportFileName": "coverage/tmp/*.json",
   "coverage-gutters.showGutterCoverage": false,
   "python.coverageView.highlightMode": "covered",
   "files.exclude": {
@@ -173,8 +173,11 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.liveshare.allowGuestAccess": false,
   "gitlens.statusBar.enabled": false,
-  "workbench.colorTheme": "Black Ocean",
-  "editor.fontFamily": "FuraCode Nerd Font Mono",
+  "workbench.colorTheme": "Monokai",
+  "editor.fontFamily": "Hack Nerd Font Mono",
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-  "terminal.integrated.shellArgs.osx": []
+  "terminal.integrated.shellArgs.osx": [],
+  "terminal.integrated.fontSize": 14,
+  "editor.fontSize": 14,
+  "window.zoomLevel": 0
 }

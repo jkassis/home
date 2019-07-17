@@ -5,8 +5,8 @@
 brew tap caskroom/versions
 
 # browsers
-brew cask install google-chrome
-brew cask install firefox-developer-edition
+brew cask install google-chrome firefox-developer-edition
+brew install wget
 
 # display and window management 
 # brew cask install spectacle
