@@ -25,8 +25,12 @@ defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server All
 # osx : special key access
 # "Disabling press-and-hold for special keys in favor of key repeat"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-brew cask install karabiner-elements
+# brew cask install karabiner-elements
 # TODO: look into https://gist.github.com/brandonb927/3195465 and related for more tweaks
+
+# https://apple.stackexchange.com/questions/10467/how-to-increase-keyboard-key-repeat-rate-on-os-x
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 # markup redlining
 brew cask install skitch
