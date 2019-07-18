@@ -164,6 +164,12 @@ brew install ydiff
 # https://github.com/Homebrew/homebrew-cask-fonts 
 brew tap homebrew/cask-fonts
 brew cask install font-firacode-nerd-font font-firacode-nerd-font-mono font-hack-nerd-font font-hack-nerd-font-mono
+# Apple has disabled Subpixel antialiasing for text in macOS Mojave. Re-enable with
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
+# undo that with
+# defaults delete -g CGFontRenderingFontSmoothingDisabled
+#
+
 
 # network monitoring
 brew install little-snitch
