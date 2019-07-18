@@ -100,19 +100,15 @@ rm ~/Library/Application\ Support/Code/User/keybindings.json
 ln -s ~/Home/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/Home/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 
-# cloud 
+# cloud service providers
 #brew install heroku-toolbelt
 brew install aws-cli
 
-# containers : vm hosts
-brew cask install virtualbox
+# container n vms
+brew cask install docker virtualbox
 
-# container : hosts
-brew cask install docker
-
-# container : orchestration : kubernetes
-brew install kubernetes-helm terraform cfssl
-brew install jsonnet
+# k8s 
+brew install kubernetes-helm terraform cfssl stern jsonnet
 
 # format utils : yaml json
 pip3 install yq
@@ -142,11 +138,9 @@ brew install zsh
 # shell : directory environments
 brew install direnv
 
-# db : elasticsearch
+# dbs 
 brew install elasticsearch@5.6
 brew services start elasticsearch@5.6
-
-# db : neo4j
 brew install cockroach
 brew services start cockroach
 brew install redis
