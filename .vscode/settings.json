@@ -174,11 +174,11 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.liveshare.allowGuestAccess": false,
   "gitlens.statusBar.enabled": false,
-  "workbench.colorTheme": "Monokai",
+  "workbench.colorTheme": "Material Ocean Next Theme +",
   "editor.fontFamily": "Hack Nerd Font Mono",
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
   "terminal.integrated.shellArgs.osx": [],
-  "terminal.integrated.fontSize": 14,
-  "editor.fontSize": 14,
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "markdown.preview.fontSize": 12,
+  "vim.easymotionMarkerFontSize": "12"
 }
