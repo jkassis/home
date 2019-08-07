@@ -1,4 +1,5 @@
 {
+  "diffEditor.originalEditable": true,
   "workbench.tree.horizontalScrolling": true,
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -180,5 +181,6 @@
   "terminal.integrated.shellArgs.osx": [],
   "window.zoomLevel": 0,
   "markdown.preview.fontSize": 12,
-  "vim.easymotionMarkerFontSize": "12"
+  "vim.easymotionMarkerFontSize": "12",
+  "explorer.confirmDragAndDrop": false
 }
