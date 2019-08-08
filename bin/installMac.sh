@@ -32,6 +32,9 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
+# gags
+brew install sl
+
 # markup redlining
 brew cask install skitch
 brew cask install licecap
@@ -54,6 +57,9 @@ brew cask install slack
 brew cask install java
 
 ## language : javascript
+brew install n
+n latest
+
 #brew install node
 #npm install -g jasmine-core
 #npm install -g karma karma-jasmine karma-coverage karma-webpack karma-sourcemap-loader karma-chrome-launcher
