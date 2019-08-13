@@ -139,7 +139,7 @@ brew cask install iterm2
 # curl "https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/master/scheme/iterm/One%20Dark.itermcolors" > ~/Downloads/OneDark.itermcolors
 
 # shell : zsh and oh-my-zsh
-brew install zsh
+brew install zsh fish
 
 # shell : directory environments
 brew install direnv
