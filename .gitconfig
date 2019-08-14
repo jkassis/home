@@ -14,7 +14,7 @@
 	st = status
   dt = difftool
   hist = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lol = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   mylog = log --pretty=format:'%h %s [%an]' --graph
 [branch]
 	autosetuprebase = always
