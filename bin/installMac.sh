@@ -111,7 +111,7 @@ ln -s ~/Home/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/k
 brew install aws-cli
 
 # container n vms
-brew cask install docker virtualbox
+brew cask install docker podman virtualbox
 
 # k8s 
 brew install kubernetes-helm terraform cfssl stern jsonnet
