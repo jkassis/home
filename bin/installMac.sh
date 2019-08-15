@@ -140,6 +140,12 @@ brew cask install iterm2
 
 # shell : zsh and oh-my-zsh
 brew install zsh fish
+echo Make sure you do the followin...
+echo sudo su -
+echo cat "/usr/local/bin/fish" >> /etc/shells
+echo exit
+echo chsh -s /usr/local/bin/fish jkassis
+
 
 # shell : directory environments
 brew install direnv
