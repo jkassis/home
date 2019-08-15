@@ -182,5 +182,6 @@
   "window.zoomLevel": 0,
   "markdown.preview.fontSize": 12,
   "vim.easymotionMarkerFontSize": "12",
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.scrollback": 10000
 }
