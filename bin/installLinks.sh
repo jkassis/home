@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Home links
+mkdir -p "$HOME/.config"
+ln -sf "$HOME/home/.config/fish" "$HOME/.config"
 ln -sf "$HOME/home/.zshrc" "$HOME"
 ln -sf "$HOME/home/.gitconfig" "$HOME"
 ln -sf "$HOME/home/.gitignore_global" "$HOME"

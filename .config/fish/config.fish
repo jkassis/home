@@ -30,9 +30,6 @@ alias c=clear
 
 
 # GIT
-alias gcoa="g coa"
-alias gcop="g cop"
-alias gdi="g di"
 source $HOME/.config/fish/git.aliases
 
 # i18N
