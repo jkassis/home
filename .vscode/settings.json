@@ -135,14 +135,16 @@
   "python.coverageView.highlightMode": "covered",
   "files.exclude": {
     "**/__pycache__": true,
-    "**/tags": true
+    "**/tags": true,
+    "**/node_modules": true
   },
   "search.exclude": {
     "**/tags": true
   },
   "prettier.singleQuote": true,
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.autoClosingBrackets": "never"
   },
   "[less]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -183,5 +185,6 @@
   "markdown.preview.fontSize": 12,
   "vim.easymotionMarkerFontSize": "12",
   "explorer.confirmDragAndDrop": false,
-  "terminal.integrated.scrollback": 10000
+  "terminal.integrated.scrollback": 10000,
+  "vim.replaceWithRegister": true
 }
