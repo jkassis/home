@@ -183,9 +183,10 @@ defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 #
 
 
-# network monitoring
-brew install little-snitch
-brew install iperf
+# system resource monitoring
+brew install little-snitch iperf htop
+
+
 
 # single board computer tools
 brew cask install balenaetcher kekka angry-ip-scanner
