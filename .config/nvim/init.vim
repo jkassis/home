@@ -93,6 +93,7 @@ Plug 'tyok/nerdtree-ack', { 'on': 'NERDTreeToggle' }    " search menu option for
 Plug 'vim-airline/vim-airline'                          " Lightweight statusline (since powerline is deprecated)
 "Plug 'yuttie/comfortable-motion.vim'                   " Smooth, inertial scrolling
 Plug 'ryanoasis/vim-devicons'                           " Fancy icons compatible with certain plugins
+Plug 'vim-scripts/ReplaceWithRegister'                  " Enables 'gr' command to replace with a register (better than change or paste)
 call plug#end()
 
 
