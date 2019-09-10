@@ -57,7 +57,7 @@ pathadd "$HOME/.cargo/bin"
 
 # DOCKER
 alias dockerip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
-alias docker=podman
+# alias docker=podman
 
 
 # KUBERNETES

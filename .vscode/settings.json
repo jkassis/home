@@ -179,6 +179,7 @@
   "gitlens.statusBar.enabled": false,
   "workbench.colorTheme": "Material Ocean Next Theme +",
   "editor.fontFamily": "Hack Nerd Font Mono",
+  "editor.rulers": [ 100 ],
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
   "terminal.integrated.shellArgs.osx": [],
   "window.zoomLevel": 0,
@@ -187,4 +188,7 @@
   "explorer.confirmDragAndDrop": false,
   "terminal.integrated.scrollback": 10000,
   "vim.replaceWithRegister": true
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
