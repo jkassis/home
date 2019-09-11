@@ -135,10 +135,12 @@
   "python.coverageView.highlightMode": "covered",
   "files.exclude": {
     "**/__pycache__": true,
-    "**/tags": true,
-    "**/node_modules": true
+    "**/.docker": true,
+    "**/node_modules": true,
+    "**/tags": true
   },
   "search.exclude": {
+    "**/.docker": true,
     "**/tags": true
   },
   "prettier.singleQuote": true,
