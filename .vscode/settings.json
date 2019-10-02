@@ -138,6 +138,7 @@
     "**/.docker": true,
     "**/node_modules": true,
     "**/tags": true
+    "**/*.pyc": true
   },
   "search.exclude": {
     "**/.docker": true,
@@ -189,7 +190,7 @@
   "vim.easymotionMarkerFontSize": "12",
   "explorer.confirmDragAndDrop": false,
   "terminal.integrated.scrollback": 10000,
-  "vim.replaceWithRegister": true
+  "vim.replaceWithRegister": true,
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
