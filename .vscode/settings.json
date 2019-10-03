@@ -136,7 +136,6 @@
   "files.exclude": {
     "**/__pycache__": true,
     "**/.docker": true,
-    "**/node_modules": true,
     "**/tags": true
     "**/*.pyc": true
   },
