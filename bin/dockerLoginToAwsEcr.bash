@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-$(aws ecr get-login --no-include-email --profile $1)
+CMD=`aws ecr get-login --no-include-email --profile $1`
+echo $CMD
+$($CMD)
 
