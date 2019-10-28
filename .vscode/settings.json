@@ -22,6 +22,7 @@
       "commands": ["editor.action.clipboardPasteAction"]
     }
   ],
+  "vim.mouseSelectionGoesIntoVisualMode": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "h"],
