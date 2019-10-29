@@ -117,6 +117,18 @@
     "editor.background": "#161515"
   },
   "go.formatTool": "gofmt",
+  "go.delveConfig": {
+    "dlvLoadConfig": {
+      "followPointers": true,
+      "maxVariableRecurse": 3,
+      "maxStringLen": 255,
+      "maxArrayValues": 255,
+      "maxStructFields": -1,
+    },
+    "apiVersion": 2,
+    "showGlobalVariables": true,
+
+  },
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "debug.toolBarLocation": "docked",
@@ -125,6 +137,8 @@
   "php.validate.enable": false,
   "breadcrumbs.enabled": true,
   "prettier.semi": false,
+  "prettier.jsxSingleQuote": false,
+  "prettier.quoteProps": "consistent",
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.enableNeovim": true,
   "coverage-gutters.xmlname": "coverage.xml",
