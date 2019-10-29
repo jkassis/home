@@ -18,9 +18,12 @@ end
 pathadd "$HOME/bin" "$HOME/home/bin"
 
 # Use VI Mode
-fish_vi_key_bindings
+set -U fish_cursor_default block
 set -U fish_cursor_insert line
 set -U fish_cursor_replace_one underscore
+set -U fish_cursor_visual block
+fish_vi_key_bindings
+
 
 # Set terminal
 export TERM=xterm-256color
