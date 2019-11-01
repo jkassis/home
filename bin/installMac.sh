@@ -165,7 +165,7 @@ brew services start redis
 
 # source control
 brew cask install sourcetree beyond-compare
-brew install ydiff bfg
+brew install ydiff bfg tig
 
 # fonts
 # These aren't really necessary
