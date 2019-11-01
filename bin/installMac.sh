@@ -164,9 +164,8 @@ brew services start redis
 # brew services start postgresql
 
 # source control
-brew cask install sourcetree
-brew cask install beyond-compare
-brew install ydiff
+brew cask install sourcetree beyond-compare
+brew install ydiff bfg
 
 # fonts
 # These aren't really necessary
