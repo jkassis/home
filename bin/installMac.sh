@@ -133,6 +133,7 @@ brew install dig
 
 # file sharing
 #brew cask install dropbox
+brew cask install mountain-duck grandperspective
 
 # terminal emulators
 brew cask install iterm2
