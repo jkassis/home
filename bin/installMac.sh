@@ -119,7 +119,7 @@ brew install kubernetes-helm terraform cfssl stern jsonnet
 # format utils : yaml json
 pip3 install yq
 go get github.com/brancz/gojsontoyaml
-brew install jq
+brew install jq jp jid
 
 # protocol clients : http
 brew install httpie
