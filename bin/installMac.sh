@@ -73,6 +73,8 @@ n latest
 brew install golang 
 mkdir -p "$HOME/Code/go"
 
+## languages: clojure
+brew install clojure leiningen
 
 # editors : atom
 # brew cask install atom
