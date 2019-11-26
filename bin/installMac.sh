@@ -132,8 +132,8 @@ brew install dig
 
 
 # file sharing
-#brew cask install dropbox
-brew cask install mountain-duck grandperspective
+brew cask install dropbox google-drive-file-stream
+brew cask install mountain-duck grandperspective disk-inventory-x daisydisk
 
 # terminal emulators
 brew cask install iterm2

@@ -1,6 +1,6 @@
 {
   "diffEditor.originalEditable": true,
-  "workbench.tree.horizontalScrolling": true,
+  "workbench.list.horizontalScrolling": true,
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
@@ -131,6 +131,7 @@
   },
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
+  "debug.openDebug": "openOnDebugBreak",
   "debug.toolBarLocation": "docked",
   "debug.inlineValues": true,
   "php.suggest.basic": false,
@@ -264,5 +265,6 @@
       "name": "Vue Green",
       "value": "#42b883"
     }
-  ]
+  ],
+  "git.confirmSync": false
 }
