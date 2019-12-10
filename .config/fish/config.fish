@@ -85,4 +85,8 @@ set -gx P4CONFIG .p4config
 # LOCAL CONF
 source $HOME/.config/fish/config.local.fish
 
+# use direnv
+direnv hook fish | source
+
 # echo PATH is $PATH
+
