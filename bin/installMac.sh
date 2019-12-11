@@ -107,6 +107,8 @@ rm ~/Library/Application\ Support/Code/User/settings.json
 rm ~/Library/Application\ Support/Code/User/keybindings.json 
 ln -s ~/Home/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/Home/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled -bool NO
+
 
 # cloud service providers
 #brew install heroku-toolbelt
