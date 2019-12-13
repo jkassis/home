@@ -176,6 +176,9 @@
     "**/tags": true
   },
   "prettier.singleQuote": true,
+  "[go]": {
+    "editor.autoClosingBrackets": "never"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.autoClosingBrackets": "never"
