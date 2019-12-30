@@ -129,7 +129,7 @@
     "documentSymbols": true,
     "workspaceSymbols": true,
     "findReferences": true,
-    "diagnostics": true,
+    "diagnostics": false,
     "documentLink": true
   },
   "go.formatTool": "gofmt",
@@ -143,7 +143,6 @@
     },
     "apiVersion": 2,
     "showGlobalVariables": true,
-
   },
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
