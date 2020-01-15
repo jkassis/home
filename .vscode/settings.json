@@ -142,7 +142,7 @@
       "maxStructFields": -1,
     },
     "apiVersion": 2,
-    "showGlobalVariables": true,
+    "showGlobalVariables": false,
   },
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -285,5 +285,8 @@
     }
   ],
   "git.confirmSync": false,
-  "workbench.fontAliasing": "auto"
+  "workbench.fontAliasing": "auto",
+  "editor.acceptSuggestionOnEnter": "off",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.trimTrailingWhitespace": true
 }
