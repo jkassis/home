@@ -53,7 +53,7 @@
       "commands": ["editor.action.formatDocument"]
     },
     {
-      "before": ["<leader>", "n"],
+      "before": ["<leader>", "g"],
       "commands": ["workbench.files.action.showActiveFileInExplorer"]
     },
     {
@@ -114,7 +114,8 @@
     "statusBar.background": "#005f5f",
     "statusBar.noFolderBackground": "#005f5f",
     "statusBar.debuggingBackground": "#005f5f",
-    "editor.background": "#161515"
+    "editor.background": "#161515",
+    "editor.lineHighlightBackground": "#44475a"
   },
   "go.useLanguageServer": true,
   "go.languageServerExperimentalFeatures": {
@@ -213,7 +214,6 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.liveshare.allowGuestAccess": false,
   "gitlens.statusBar.enabled": false,
-  "workbench.colorTheme": "Material Ocean Next Theme +",
   "editor.fontFamily": "Hack Nerd Font Mono",
   "editor.rulers": [ 100 ],
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
@@ -288,5 +288,8 @@
   "workbench.fontAliasing": "auto",
   "editor.acceptSuggestionOnEnter": "off",
   "diffEditor.ignoreTrimWhitespace": false,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "workbench.colorTheme": "Community Material Theme High Contrast",
+  "materialTheme.accent": "Tomato",
+
 }
