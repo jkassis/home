@@ -253,7 +253,7 @@ function! NERDTreeToggleOrFind()
     endif
 endfunction
 command! NERDTreeToggleOrFind :call NERDTreeToggleOrFind()<CR>
-nnoremap <Leader>n :NERDTreeToggleOrFind<CR>
+nnoremap <Leader>g :NERDTreeToggleOrFind<CR>
 let g:NERDTreeMouseMode=3               " Use Mouse
 let NERDTreeShowHidden=1                " Show hidden files
 " Highlight currently open buffer in NERDTree
