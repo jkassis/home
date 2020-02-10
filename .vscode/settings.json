@@ -192,7 +192,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "search.location": "panel",
   "search.smartCase": true,
   "search.collapseResults": "alwaysExpand",
   "search.runInExtensionHost": true,
@@ -286,7 +285,7 @@
   ],
   "git.confirmSync": false,
   "workbench.fontAliasing": "auto",
-  "editor.acceptSuggestionOnEnter": "off",
+  "editor.acceptSuggestionOnEnter": "on",
   "diffEditor.ignoreTrimWhitespace": false,
   "files.trimTrailingWhitespace": true,
   "workbench.colorTheme": "Community Material Theme High Contrast",
