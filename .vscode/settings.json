@@ -288,7 +288,6 @@
   "editor.acceptSuggestionOnEnter": "on",
   "diffEditor.ignoreTrimWhitespace": false,
   "files.trimTrailingWhitespace": true,
-  "workbench.colorTheme": "Community Material Theme High Contrast",
   "materialTheme.accent": "Tomato",
 
 }
