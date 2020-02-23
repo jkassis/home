@@ -136,6 +136,9 @@
       "command":"references-view.find",
       "when":"editorHasReferenceProvider"
    },
+
+
+   // Debugger control
    {
       "key":"cmd+r",
       "command":"workbench.action.debug.restart",
@@ -147,14 +150,14 @@
       "when":"!inDebugMode"
    },
    {
-      "key":"f3",
-      "command":"workbench.action.debug.stepOut",
+      "key":"f2",
+      "command":"workbench.action.debug.stop",
       "when":"debugState == 'stopped'"
    },
    {
       "key":"f3",
-      "command":"workbench.action.debug.pause",
-      "when":"debugState == 'running'"
+      "command":"workbench.action.debug.stepOut",
+      "when":"debugState == 'stopped'"
    },
    {
       "key":"f4",
@@ -162,17 +165,12 @@
       "when":"debugState == 'stopped'"
    },
    {
-      "key":"f4",
-      "command":"workbench.action.debug.pause",
-      "when":"debugState == 'running'"
-   },
-   {
       "key":"f5",
       "command":"workbench.action.debug.stepInto",
       "when":"debugState == 'stopped'"
    },
    {
-      "key":"f5",
+      "key":"f6",
       "command":"workbench.action.debug.pause",
       "when":"debugState == 'running'"
    },
@@ -186,6 +184,9 @@
       "command":"editor.action.marker.next",
       "when":"editorFocus && !editorReadonly"
    },
+
+
+   // Nexting
    {
       "key":"shift+f7",
       "command":"editor.action.marker.nextInFiles",
@@ -201,6 +202,9 @@
       "command":"editor.action.marker.prevInFiles",
       "when":"editorFocus && !editorReadonly"
    },
+
+
+   // Rename
    {
       "key":"f9",
       "command":"editor.action.rename",

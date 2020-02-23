@@ -117,6 +117,10 @@
     "editor.background": "#161515",
     "editor.lineHighlightBackground": "#44475a"
   },
+  "go.enableCodeLens": {
+    "references": false,
+    "runtest": false
+  },
   "go.useLanguageServer": true,
   "go.languageServerExperimentalFeatures": {
     "format": true,
