@@ -165,18 +165,28 @@
       "when":"debugState == 'stopped'"
    },
    {
-      "key":"f5",
-      "command":"workbench.action.debug.stepInto",
-      "when":"debugState == 'stopped'"
+      "key":"cmd+f5",
+      "command":"workbench.action.debug.restart",
+      "when":"inDebugMode"
    },
    {
-      "key":"f6",
+      "key":"cmd+f5",
+      "command":"workbench.action.debug.start",
+      "when":"!inDebugMode"
+   },
+   {
+      "key":"f5",
       "command":"workbench.action.debug.pause",
       "when":"debugState == 'running'"
    },
    {
-      "key":"f6",
+      "key":"f5",
       "command":"workbench.action.debug.continue",
+      "when":"debugState == 'stopped'"
+   },
+   {
+      "key":"f6",
+      "command":"workbench.action.debug.stepInto",
       "when":"debugState == 'stopped'"
    },
    {
