@@ -293,5 +293,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "files.trimTrailingWhitespace": true,
   "materialTheme.accent": "Tomato",
+  "editor.accessibilitySupport": "off",
 
 }
