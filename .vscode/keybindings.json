@@ -82,24 +82,9 @@
       "when":"editorHasReferenceProvider"
    },
    {
-      "key":"f10",
-      "command":"extension.node-debug.startWithStopOnEntry",
-      "when":"!inDebugMode && debugConfigurationType == 'node'"
-   },
-   {
-      "key":"f11",
-      "command":"extension.node-debug.startWithStopOnEntry",
-      "when":"!inDebugMode && debugConfigurationType == 'node'"
-   },
-   {
       "key":"shift+f10",
       "command":"editor.action.showContextMenu",
       "when":"textInputFocus"
-   },
-   {
-      "key":"f11",
-      "command":"extension.node-debug.startWithStopOnEntry",
-      "when":"!inDebugMode && debugConfigurationType == 'node'"
    },
    {
       "key":"cmd+f12",
@@ -150,53 +135,44 @@
       "when":"!inDebugMode"
    },
    {
-      "key":"f2",
+      "key":"f1",
       "command":"workbench.action.debug.stop",
       "when":"debugState == 'stopped'"
    },
    {
-      "key":"f3",
+      "key":"f1",
+      "command":"workbench.action.debug.pause",
+      "when":"debugState == 'running'"
+   },
+   {
+      "key":"f2",
       "command":"workbench.action.debug.stepOut",
       "when":"debugState == 'stopped'"
    },
    {
-      "key":"f4",
+      "key":"f3",
       "command":"workbench.action.debug.stepOver",
       "when":"debugState == 'stopped'"
    },
    {
-      "key":"cmd+f5",
-      "command":"workbench.action.debug.restart",
-      "when":"inDebugMode"
-   },
-   {
-      "key":"cmd+f5",
-      "command":"workbench.action.debug.start",
-      "when":"!inDebugMode"
-   },
-   {
-      "key":"f5",
-      "command":"workbench.action.debug.pause",
-      "when":"debugState == 'running'"
+      "key":"f4",
+      "command":"workbench.action.debug.stepInto",
+      "when":"debugState == 'stopped'"
    },
    {
       "key":"f5",
       "command":"workbench.action.debug.continue",
       "when":"debugState == 'stopped'"
    },
-   {
-      "key":"f6",
-      "command":"workbench.action.debug.stepInto",
-      "when":"debugState == 'stopped'"
-   },
+
+
+
+   // Nexting
    {
       "key":"f7",
       "command":"editor.action.marker.next",
       "when":"editorFocus && !editorReadonly"
    },
-
-
-   // Nexting
    {
       "key":"shift+f7",
       "command":"editor.action.marker.nextInFiles",
