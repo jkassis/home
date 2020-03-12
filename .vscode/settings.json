@@ -294,5 +294,6 @@
   "files.trimTrailingWhitespace": true,
   "materialTheme.accent": "Tomato",
   "editor.accessibilitySupport": "off",
-
+  "workbench.colorTheme": "Material Theme",
+  "explorer.confirmDelete": false,
 }
