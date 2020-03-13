@@ -169,10 +169,6 @@
 
 
 
-
-
-
-
    // F4
    {
       "key":"f4",
@@ -180,18 +176,33 @@
       "when":"debugState == 'stopped'"
    },
    {
-      "key": "cmd+f4",
-      "command": "-extension.node-debug.pickLoadedScript",
-      "when": "debugType == 'node'"
-   },
-   {
-      "key": "shift+f4",
-      "command": "-references-view.prev",
+      "key": "f4",
+      "command": "-references-view.next",
       "when": "reference-list.hasResult"
    },
    {
       "key": "f4",
-      "command": "-references-view.next",
+      "command": "-goToNextReference",
+      "when": "inReferenceSearchEditor || referenceSearchVisible"
+   },
+   {
+      "key": "f4",
+      "command": "-search.action.focusNextSearchResult",
+      "when": "hasSearchResult"
+   },
+   {
+      "key": "f4",
+      "command": "-search.action.focusNextSearchResult",
+      "when": "hasSearchResult || inSearchEditor"
+   },
+   {
+      "key": "shift+f4",
+      "command": "-search.action.focusPreviousSearchResult",
+      "when": "hasSearchResult"
+   },
+   {
+      "key": "shift+f4",
+      "command": "-references-view.prev",
       "when": "reference-list.hasResult"
    },
    {
@@ -200,19 +211,9 @@
       "when": "inReferenceSearchEditor || referenceSearchVisible"
    },
    {
-      "key": "f4",
-      "command": "-goToNextReference",
-      "when": "inReferenceSearchEditor || referenceSearchVisible"
-   },
-   {
       "key": "shift+f4",
       "command": "-search.action.focusPreviousSearchResult",
-      "when": "hasSearchResult"
-   },
-   {
-      "key": "f4",
-      "command": "-search.action.focusNextSearchResult",
-      "when": "hasSearchResult"
+      "when": "hasSearchResult || inSearchEditor"
    },
    {
       "key": "cmd+f4",
@@ -231,12 +232,16 @@
    },
 
 
-
    // F5
    {
       "key":"f5",
       "command":"workbench.action.debug.continue",
       "when":"inDebugMode && debugState == 'stopped'"
+   },
+   {
+      "key": "f5",
+      "command": "-workbench.action.debug.continue",
+      "when": "inDebugMode"
    },
    {
       "key": "f5",
@@ -263,12 +268,15 @@
       "when": "editorTextFocus"
    },
    {
+      "key": "alt+f5",
+      "command": "-workbench.action.compareEditor.nextChange",
+      "when": "textCompareEditorVisible"
+   },
+   {
       "key": "shift+alt+f5",
       "command": "-workbench.action.editor.previousChange",
       "when": "editorTextFocus"
    },
-
-
 
 
    // F6
@@ -497,6 +505,9 @@
       "command":"references-view.find",
       "when":"editorHasReferenceProvider"
    },
+
+
+
 
 
 
