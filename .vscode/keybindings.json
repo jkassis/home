@@ -103,7 +103,11 @@
       "command": "-togglePeekWidgetFocus",
       "when": "inReferenceSearchEditor || referenceSearchVisible"
    },
-
+   {
+      "key": "cmd+f2",
+      "command": "-editor.action.changeAll",
+      "when": "editorTextFocus && editorTextFocus && !editorReadonly"
+   },
 
 
    // F3
@@ -273,45 +277,76 @@
       "command": "-workbench.action.debug.pause",
       "when": "debugState == 'running'"
    },
-   {
-      "key": "cmd+f2",
-      "command": "-editor.action.changeAll",
-      "when": "editorTextFocus && editorTextFocus && !editorReadonly"
-   },
-
-
 
 
    // F7
    {
-      "key":"f7",
-      "command":"editor.action.marker.next",
-      "when":"editorFocus && !editorReadonly"
+      "key": "f7",
+      "command": "-editor.action.diffReview.next",
+      "when": "isInDiffEditor"
    },
    {
-      "key":"shift+f7",
-      "command":"editor.action.marker.nextInFiles",
-      "when":"editorFocus && !editorReadonly"
+      "key": "f7",
+      "command": "-editor.action.wordHighlight.next",
+      "when": "editorTextFocus && hasWordHighlights"
    },
+   {
+      "key": "shift+f7",
+      "command": "-editor.action.diffReview.prev",
+      "when": "isInDiffEditor"
+   },
+   {
+      "key": "shift+f7",
+      "command": "-editor.action.wordHighlight.prev",
+      "when": "editorTextFocus && hasWordHighlights"
+   },
+
 
    // F8
    {
       "key":"f8",
-      "command":"editor.action.marker.prev",
+      "command":"editor.action.marker.next",
       "when":"editorFocus && !editorReadonly"
    },
    {
+      "key": "f8",
+      "command": "-editor.action.marker.nextInFiles",
+      "when": "editorFocus && !editorReadonly"
+   },
+   {
       "key":"shift+f8",
-      "command":"editor.action.marker.prevInFiles",
+      "command":"editor.action.marker.nextInFiles",
       "when":"editorFocus && !editorReadonly"
    },
+   {
+      "key": "shift+f8",
+      "command": "-editor.action.marker.prevInFiles",
+      "when": "editorFocus && !editorReadonly"
+   },
+   {
+      "key": "alt+f8",
+      "command": "-editor.action.marker.next",
+      "when": "editorFocus && !editorReadonly"
+   },
+
+   {
+      "key": "shift+alt+f8",
+      "command": "-editor.action.marker.prev",
+      "when": "editorFocus && !editorReadonly"
+   },
+
 
 
    // F9
    {
       "key":"f9",
-      "command":"editor.action.rename",
-      "when":"editorHasRenameProvider && editorTextFocus && !editorReadonly"
+      "command":"editor.action.marker.prev",
+      "when":"editorFocus && !editorReadonly"
+   },
+   {
+      "key":"shift+f9",
+      "command":"editor.action.marker.prevInFiles",
+      "when":"editorFocus && !editorReadonly"
    },
    {
       "key": "f9",
@@ -323,8 +358,19 @@
       "command": "-editor.debug.action.toggleInlineBreakpoint",
       "when": "editorTextFocus"
    },
+   {
+      "key": "shift+f9",
+      "command": "-settings.action.showContextMenu",
+      "when": "inSettingsEditor"
+   },
+
 
    // F10
+   {
+      "key":"f10",
+      "command":"editor.action.rename",
+      "when":"editorHasRenameProvider && editorTextFocus && !editorReadonly"
+   },
    {
       "key": "f10",
       "command": "-extension.node-debug.startWithStopOnEntry",
@@ -451,5 +497,7 @@
       "command":"references-view.find",
       "when":"editorHasReferenceProvider"
    },
+
+
 
 ]
