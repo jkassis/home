@@ -313,7 +313,16 @@
       "command":"editor.action.rename",
       "when":"editorHasRenameProvider && editorTextFocus && !editorReadonly"
    },
-
+   {
+      "key": "f9",
+      "command": "-editor.debug.action.toggleBreakpoint",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "shift+f9",
+      "command": "-editor.debug.action.toggleInlineBreakpoint",
+      "when": "editorTextFocus"
+   },
 
    // F10
    {
@@ -442,4 +451,5 @@
       "command":"references-view.find",
       "when":"editorHasReferenceProvider"
    },
+
 ]
