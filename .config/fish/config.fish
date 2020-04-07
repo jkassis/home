@@ -2,7 +2,7 @@
 echo "Running .config/fish/config.fish"
 
 function fish_right_prompt -d "Write out the right prompt"
-    date '+%H:%M'
+    date '+%m.%d %H:%M'
 end
 
 # PATH Setup
