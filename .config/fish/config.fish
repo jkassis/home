@@ -1,6 +1,9 @@
 # Say hello
 echo "Running .config/fish/config.fish"
 
+function fish_right_prompt -d "Write out the right prompt"
+    date '+%H:%M'
+end
 
 # PATH Setup
 # Function for cleaning up duplicates

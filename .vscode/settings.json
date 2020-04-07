@@ -137,6 +137,7 @@
     "diagnostics": false,
     "documentLink": true
   },
+  "go.lintTool": "revive",
   "go.formatTool": "gofmt",
   "go.delveConfig": {
     "dlvLoadConfig": {
@@ -160,8 +161,8 @@
   "prettier.semi": false,
   "prettier.jsxSingleQuote": false,
   "prettier.quoteProps": "consistent",
-  "vim.neovimPath": "/usr/local/bin/nvim",
-  "vim.enableNeovim": true,
+  // "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.enableNeovim": false,
   "coverage-gutters.xmlname": "coverage.xml",
   "coverage-gutters.showLineCoverage": true,
   "coverage-gutters.showRulerCoverage": true,
