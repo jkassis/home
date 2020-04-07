@@ -153,7 +153,6 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "debug.openDebug": "openOnDebugBreak",
-  "debug.toolBarLocation": "docked",
   "debug.inlineValues": false,
   "php.suggest.basic": false,
   "php.validate.enable": false,
@@ -297,4 +296,8 @@
   "editor.accessibilitySupport": "off",
   "workbench.colorTheme": "Material Theme",
   "explorer.confirmDelete": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.autoClosingTags": false,
+  "typescript.autoClosingTags": false,
+  "debug.toolBarLocation": "docked",
 }
