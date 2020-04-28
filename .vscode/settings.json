@@ -300,4 +300,7 @@
   "javascript.autoClosingTags": false,
   "typescript.autoClosingTags": false,
   "debug.toolBarLocation": "docked",
+  "python.linting.enabled": false,
+  "python.linting.lintOnSave": false,
+  "python.linting.pylintEnabled": false,
 }

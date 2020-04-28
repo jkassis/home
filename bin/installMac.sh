@@ -109,6 +109,9 @@ ln -s ~/Home/.vscode/settings.json ~/Library/Application\ Support/Code/User/sett
 ln -s ~/Home/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled -bool NO
 
+# build tools
+brew install upx
+
 
 # cloud service providers
 #brew install heroku-toolbelt
