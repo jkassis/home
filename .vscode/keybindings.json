@@ -44,14 +44,6 @@
 
 
 
-
-
-
-
-
-
-
-
    // Debugger control
    {
       "key":"cmd+r",
@@ -310,21 +302,24 @@
    },
 
 
-   // F8
+   // F8 - enabled
    {
       "key":"f8",
       "command":"editor.action.marker.next",
       "when":"editorFocus && !editorReadonly"
    },
    {
+      "key":"shift+f8",
+      "command": "editor.action.marker.prev",
+      "when":"editorFocus && !editorReadonly"
+   },
+
+
+   // F8 - disabled
+   {
       "key": "f8",
       "command": "-editor.action.marker.nextInFiles",
       "when": "editorFocus && !editorReadonly"
-   },
-   {
-      "key":"shift+f8",
-      "command":"editor.action.marker.nextInFiles",
-      "when":"editorFocus && !editorReadonly"
    },
    {
       "key": "shift+f8",
@@ -336,7 +331,6 @@
       "command": "-editor.action.marker.next",
       "when": "editorFocus && !editorReadonly"
    },
-
    {
       "key": "shift+alt+f8",
       "command": "-editor.action.marker.prev",
@@ -345,17 +339,19 @@
 
 
 
-   // F9
+   // F9 - enabled
    {
       "key":"f9",
-      "command":"editor.action.marker.prev",
-      "when":"editorFocus && !editorReadonly"
+      "command":"search.action.focusNextSearchResult",
+      // "when":"editorFocus && !editorReadonly"
    },
    {
       "key":"shift+f9",
-      "command":"editor.action.marker.prevInFiles",
-      "when":"editorFocus && !editorReadonly"
+      "command":"search.action.focusPreviousSearchResult",
+      // "when":"editorFocus && !editorReadonly"
    },
+
+   // F9 - disabled
    {
       "key": "f9",
       "command": "-editor.debug.action.toggleBreakpoint",

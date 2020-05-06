@@ -173,18 +173,22 @@
     "**/__pycache__": true,
     "**/.docker": true,
     "**/tags": true,
-    "**/*.pyc": true
+    "**/*.pyc": true,
+    "**/*.js": {"when": "$(basename).ts"},
+    "**/*.js.map": true
   },
   "search.exclude": {
     "**/.docker": true,
-    "**/tags": true
+    "**/tags": true,
+    "**/*.js": {"when": "$(basename).ts"},
+    "**/*.js.map": true
   },
   "prettier.singleQuote": true,
   "[go]": {
     "editor.autoClosingBrackets": "never"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.autoClosingBrackets": "never"
   },
   "[less]": {
@@ -289,6 +293,7 @@
   ],
   "git.confirmSync": false,
   "workbench.fontAliasing": "auto",
+  "workbench.editor.revealIfOpen": true,
   "editor.acceptSuggestionOnEnter": "on",
   "diffEditor.ignoreTrimWhitespace": false,
   "files.trimTrailingWhitespace": true,
@@ -303,4 +308,14 @@
   "python.linting.enabled": false,
   "python.linting.lintOnSave": false,
   "python.linting.pylintEnabled": false,
+  "debug.onTaskErrors": "debugAnyway",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.visual": "line",
+  "vim.cursorStylePerMode.visualblock": "line",
+  "vim.cursorStylePerMode.visualline": "line",
 }
