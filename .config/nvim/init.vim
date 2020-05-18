@@ -266,6 +266,7 @@ set clipboard=unnamedplus
 nnoremap <Leader>c "+y
 nnoremap <Leader>v "+p
 nnoremap <Leader>V "+P
+nnoremap Y y$
 
 " REGISTERS: Flashy Yank
 map y <Plug>(operator-flashy)

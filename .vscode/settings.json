@@ -1,11 +1,142 @@
 {
-  "diffEditor.originalEditable": true,
-  "workbench.list.horizontalScrolling": true,
+  "breadcrumbs.enabled": true,
+  "coverage-gutters.coverageReportFileName": "coverage/tmp/*.json",
+  "coverage-gutters.lcovname": "",
+  "coverage-gutters.showGutterCoverage": false,
+  "coverage-gutters.showLineCoverage": true,
+  "coverage-gutters.showRulerCoverage": true,
+  "coverage-gutters.xmlname": "coverage.xml",
+  "debug.allowBreakpointsEverywhere": true,
+  "debug.inlineValues": false,
+  // "debug.javascript.usePreview": true,
+  "debug.onTaskErrors": "debugAnyway",
+  "debug.openDebug": "openOnDebugBreak",
+  "debug.toolBarLocation": "docked",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.accessibilitySupport": "off",
+  "editor.fontFamily": "Hack Nerd Font Mono",
+  "editor.rulers": [100],
+  "editor.semanticHighlighting.enabled": true,
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true, // enable semantic highlighting for all themes
+    "rules": {
+      // different color for all constants
+      "property.readonly": "#35166d",
+
+      // make all symbol declarations bold
+      "*.declaration": { "bold": true }
+    }
+  },
+  "editor.snippetSuggestions": "bottom",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.docker": true,
+    "**/tags": true,
+    "**/*.pyc": true,
+    "**/*.js": { "when": "$(basename).ts" },
+    "**/*.js.map": true
+  },
+  "git.confirmSync": false,
+  "gitlens.advanced.blame.delayAfterEdit": 0,
+  "gitlens.blame.avatars": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.liveshare.allowGuestAccess": false,
+  "gitlens.statusBar.enabled": false,
+  "go.enableCodeLens": {
+    "references": false,
+    "runtest": false
+  },
+  "go.useLanguageServer": true,
+  "go.languageServerExperimentalFeatures": {
+    "format": true,
+    "autoComplete": true,
+    "rename": true,
+    "goToDefinition": true,
+    "hover": true,
+    "signatureHelp": true,
+    "goToTypeDefinition": true,
+    "goToImplementation": true,
+    "documentSymbols": true,
+    "workspaceSymbols": true,
+    "findReferences": true,
+    "diagnostics": false,
+    "documentLink": true
+  },
+  "go.lintTool": "revive",
+  "go.formatTool": "gofmt",
+  "go.delveConfig": {
+    "dlvLoadConfig": {
+      "followPointers": true,
+      "maxVariableRecurse": 3,
+      "maxStringLen": 150,
+      "maxArrayValues": 150,
+      "maxStructFields": -1
+    },
+    "apiVersion": 2,
+    "showGlobalVariables": false
+  },
+  "javascript.autoClosingTags": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "markdown.preview.fontSize": 12,
+  "materialTheme.accent": "Tomato",
+  "php.suggest.basic": false,
+  "php.validate.enable": false,
+
+  "prettier.jsxSingleQuote": true,
+  "prettier.quoteProps": "as-needed",
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "python.coverageView.highlightMode": "covered",
+  "python.linting.enabled": false,
+  "python.linting.lintOnSave": false,
+  "python.linting.pylintEnabled": false,
+  "search.collapseResults": "alwaysExpand",
+  "search.runInExtensionHost": true,
+  "search.showLineNumbers": true,
+  "search.smartCase": true,
+  "search.useGlobalIgnoreFiles": true,
+  "search.useReplacePreview": false,
+  "search.exclude": {
+    "**/.docker": true,
+    "**/tags": true,
+    "**/*.js": { "when": "$(basename).ts" },
+    "**/*.js.map": true
+  },
+  "task.slowProviderWarning": ["typescript"],
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "terminal.integrated.shellArgs.osx": [],
+  "typescript.autoClosingTags": false,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+  "typescript.tsserver.maxTsServerMemory": 30720,
+  "typescript.format.enable": true,
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.visual": "line",
+  "vim.cursorStylePerMode.visualblock": "line",
+  "vim.cursorStylePerMode.visualline": "line",
+  "vim.debug.loggingLevelForAlert": "error",
+  "vim.debug.loggingLevelForConsole": "info",
   "vim.easymotion": true,
-  "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
+  "vim.easymotionMarkerFontSize": "12",
+  "vim.enableNeovim": false,
+  "vim.history": 100,
   "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.leader": "<space>",
+  // "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.replaceWithRegister": true,
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
+  "vim.visualstar": true,
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
@@ -69,6 +200,10 @@
       "commands": ["workbench.action.quickOpen"]
     },
     {
+      "before": ["Y"],
+      "after": ["y", "$"]
+    },
+    {
       "before": ["<C-n>"],
       "commands": [":nohl"]
     },
@@ -101,15 +236,17 @@
       "after": ["n", "zz"]
     }
   ],
-  "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false
   },
-  "vim.debug.loggingLevelForConsole": "info",
-  "vim.debug.loggingLevelForAlert": "error",
-  "vim.visualstar": true,
-  "vim.history": 100,
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Material Theme",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.revealIfOpen": true,
+  "workbench.fontAliasing": "auto",
+  "workbench.list.horizontalScrolling": true,
   "workbench.colorCustomizations": {
     "statusBar.background": "#005f5f",
     "statusBar.noFolderBackground": "#005f5f",
@@ -117,73 +254,14 @@
     "editor.background": "#161515",
     "editor.lineHighlightBackground": "#44475a"
   },
-  "go.enableCodeLens": {
-    "references": false,
-    "runtest": false
+  "workbench.settings.editor": "json",
+
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "go.useLanguageServer": true,
-  "go.languageServerExperimentalFeatures": {
-    "format": true,
-    "autoComplete": true,
-    "rename": true,
-    "goToDefinition": true,
-    "hover": true,
-    "signatureHelp": true,
-    "goToTypeDefinition": true,
-    "goToImplementation": true,
-    "documentSymbols": true,
-    "workspaceSymbols": true,
-    "findReferences": true,
-    "diagnostics": false,
-    "documentLink": true
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "go.lintTool": "revive",
-  "go.formatTool": "gofmt",
-  "go.delveConfig": {
-    "dlvLoadConfig": {
-      "followPointers": true,
-      "maxVariableRecurse": 3,
-      "maxStringLen": 150,
-      "maxArrayValues": 150,
-      "maxStructFields": -1,
-    },
-    "apiVersion": 2,
-    "showGlobalVariables": false,
-  },
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "debug.openDebug": "openOnDebugBreak",
-  "debug.inlineValues": false,
-  "php.suggest.basic": false,
-  "php.validate.enable": false,
-  "breadcrumbs.enabled": true,
-  "prettier.semi": false,
-  "prettier.jsxSingleQuote": false,
-  "prettier.quoteProps": "consistent",
-  // "vim.neovimPath": "/usr/local/bin/nvim",
-  "vim.enableNeovim": false,
-  "coverage-gutters.xmlname": "coverage.xml",
-  "coverage-gutters.showLineCoverage": true,
-  "coverage-gutters.showRulerCoverage": true,
-  "coverage-gutters.lcovname": "",
-  "coverage-gutters.coverageReportFileName": "coverage/tmp/*.json",
-  "coverage-gutters.showGutterCoverage": false,
-  "python.coverageView.highlightMode": "covered",
-  "files.exclude": {
-    "**/__pycache__": true,
-    "**/.docker": true,
-    "**/tags": true,
-    "**/*.pyc": true,
-    "**/*.js": {"when": "$(basename).ts"},
-    "**/*.js.map": true
-  },
-  "search.exclude": {
-    "**/.docker": true,
-    "**/tags": true,
-    "**/*.js": {"when": "$(basename).ts"},
-    "**/*.js.map": true
-  },
-  "prettier.singleQuote": true,
   "[go]": {
     "editor.autoClosingBrackets": "never"
   },
@@ -200,122 +278,10 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "search.smartCase": true,
-  "search.collapseResults": "alwaysExpand",
-  "search.runInExtensionHost": true,
-  "search.showLineNumbers": true,
-  "search.useGlobalIgnoreFiles": true,
-  "search.useReplacePreview": false,
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "debug.allowBreakpointsEverywhere": true,
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
-  "gitlens.advanced.blame.delayAfterEdit": 0,
-  "gitlens.blame.avatars": false,
-  "gitlens.codeLens.authors.enabled": false,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.codeLens.recentChange.enabled": false,
-  "gitlens.currentLine.enabled": false,
-  "gitlens.liveshare.allowGuestAccess": false,
-  "gitlens.statusBar.enabled": false,
-  "editor.fontFamily": "Hack Nerd Font Mono",
-  "editor.rulers": [ 100 ],
-  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-  "terminal.integrated.shellArgs.osx": [],
-  "window.zoomLevel": 0,
-  "markdown.preview.fontSize": 12,
-  "vim.easymotionMarkerFontSize": "12",
-  "explorer.confirmDragAndDrop": false,
-  "terminal.integrated.scrollback": 10000,
-  "vim.replaceWithRegister": true,
-  "[yaml]": {
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "task.slowProviderWarning": [
-    "typescript"
-  ],
-  "peacock.favoriteColors": [
-    {
-      "name": "Angular Red",
-      "value": "#b52e31"
-    },
-    {
-      "name": "Auth0 Orange",
-      "value": "#eb5424"
-    },
-    {
-      "name": "Azure Blue",
-      "value": "#007fff"
-    },
-    {
-      "name": "C# Purple",
-      "value": "#68217A"
-    },
-    {
-      "name": "Gatsby Purple",
-      "value": "#639"
-    },
-    {
-      "name": "Go Cyan",
-      "value": "#5dc9e2"
-    },
-    {
-      "name": "Java Blue-Gray",
-      "value": "#557c9b"
-    },
-    {
-      "name": "JavaScript Yellow",
-      "value": "#f9e64f"
-    },
-    {
-      "name": "Mandalorian Blue",
-      "value": "#1857a4"
-    },
-    {
-      "name": "Node Green",
-      "value": "#215732"
-    },
-    {
-      "name": "React Blue",
-      "value": "#00b3e6"
-    },
-    {
-      "name": "Something Different",
-      "value": "#832561"
-    },
-    {
-      "name": "Vue Green",
-      "value": "#42b883"
-    }
-  ],
-  "git.confirmSync": false,
-  "workbench.fontAliasing": "auto",
-  "workbench.editor.revealIfOpen": true,
-  "editor.acceptSuggestionOnEnter": "on",
-  "diffEditor.ignoreTrimWhitespace": false,
-  "files.trimTrailingWhitespace": true,
-  "materialTheme.accent": "Tomato",
-  "editor.accessibilitySupport": "off",
-  "workbench.colorTheme": "Material Theme",
-  "explorer.confirmDelete": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.autoClosingTags": false,
-  "typescript.autoClosingTags": false,
-  "debug.toolBarLocation": "docked",
-  "python.linting.enabled": false,
-  "python.linting.lintOnSave": false,
-  "python.linting.pylintEnabled": false,
-  "debug.onTaskErrors": "debugAnyway",
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-  "vim.cursorStylePerMode.insert": "line",
-  "vim.cursorStylePerMode.normal": "block",
-  "vim.cursorStylePerMode.visual": "line",
-  "vim.cursorStylePerMode.visualblock": "line",
-  "vim.cursorStylePerMode.visualline": "line",
+  }
 }
