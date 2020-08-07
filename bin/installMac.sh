@@ -171,9 +171,9 @@ brew services start redis
 # brew cask install pgadmin4
 # brew services start postgresql
 
-# source control
+# source / version control
 brew cask install sourcetree beyond-compare
-brew install ydiff bfg tig
+brew install ydiff bfg tig git-filter-repo
 
 # fonts
 # These aren't really necessary

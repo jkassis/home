@@ -14,8 +14,21 @@
   "debug.toolBarLocation": "docked",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.acceptSuggestionOnEnter": "on",
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.accessibilitySupport": "off",
+  "editor.autoClosingBrackets": "languageDefined",
   "editor.fontFamily": "Hack Nerd Font Mono",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.quickSuggestionsDelay": 10,
   "editor.rulers": [100],
   "editor.semanticHighlighting.enabled": true,
   "editor.semanticTokenColorCustomizations": {
@@ -82,6 +95,17 @@
     "apiVersion": 2,
     "showGlobalVariables": false
   },
+  "go.coverOnSave": true,
+  "go.coverOnTestPackage": true,
+  "go.coverageDecorator": {
+    "type": "gutter",
+    "coveredHighlightColor": "rgba(64,128,128,0.5)",
+    "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+    "coveredGutterStyle": "blockgreen",
+    "uncoveredGutterStyle": "blockred"
+  },
+  "go.coverOnSingleTest": false,
+  "go.testEnvVars": { "LOG_LEVEL": "INFO", "WORK_DIR": "${workspaceFolder}" },
   "javascript.autoClosingTags": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "markdown.preview.fontSize": 12,
@@ -107,7 +131,9 @@
     "**/.docker": true,
     "**/tags": true,
     "**/*.js": { "when": "$(basename).ts" },
-    "**/*.js.map": true
+    "**/*.js.map": true,
+    "**/node_modules": true,
+    "**/tsconfig.tsbuildinfo": true
   },
   "task.slowProviderWarning": ["typescript"],
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
@@ -118,6 +144,7 @@
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "typescript.tsserver.maxTsServerMemory": 30720,
   "typescript.format.enable": true,
+  "typescript.updateImportsOnFileMove.enabled": "never",
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.visual": "line",
@@ -125,11 +152,14 @@
   "vim.cursorStylePerMode.visualline": "line",
   "vim.debug.loggingLevelForAlert": "error",
   "vim.debug.loggingLevelForConsole": "info",
-  "vim.easymotion": true,
+  "vim.easymotion": false,
   "vim.easymotionMarkerFontSize": "12",
   "vim.enableNeovim": false,
   "vim.history": 100,
   "vim.hlsearch": true,
+  "vim.highlightedyank.enable": true,
+  "vim.searchHighlightColor": "#bb0",
+  "vim.searchHighlightTextColor": "#333",
   "vim.incsearch": true,
   "vim.leader": "<space>",
   // "vim.neovimPath": "/usr/local/bin/nvim",
@@ -151,10 +181,18 @@
     {
       "before": ["<leader>", "v"],
       "commands": ["editor.action.clipboardPasteAction"]
-    }
+    },
+    {
+      "before": ["<leader>", "s"],
+      "after": [":", "s", "o", "r", "t", "<cr>"]
+    },
   ],
   "vim.mouseSelectionGoesIntoVisualMode": true,
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<esc>"],
+      "after": ["<esc>", ":", "n", "o", "h", "l", "<cr>"]
+    },
     {
       "before": ["<leader>", "h"],
       "commands": ["workbench.action.navigateLeft"]
@@ -170,6 +208,10 @@
     {
       "before": ["<leader>", "j"],
       "commands": ["workbench.action.navigateDown"]
+    },
+    {
+      "before": ["<leader>", "s"],
+      "after": [":", "s", "o", "r", "t", "<cr>"]
     },
     {
       "before": ["<leader>", "c"],
@@ -229,11 +271,11 @@
     },
     {
       "before": ["N"],
-      "after": ["N", "zz"]
+      "after": ["N", "z", "z"]
     },
     {
       "before": ["n"],
-      "after": ["n", "zz"]
+      "after": ["n", "z", "z"]
     }
   ],
   "vim.handleKeys": {
@@ -260,7 +302,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.autoClosingBrackets": "never"
   },
   "[go]": {
     "editor.autoClosingBrackets": "never"
@@ -283,5 +326,5 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
 }
