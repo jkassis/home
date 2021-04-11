@@ -28,7 +28,7 @@
     "comments": false,
     "strings": false
   },
-  "editor.quickSuggestionsDelay": 10,
+  "editor.quickSuggestionsDelay": 750,
   "editor.rulers": [100],
   "editor.semanticHighlighting.enabled": true,
   "editor.semanticTokenColorCustomizations": {
@@ -42,6 +42,7 @@
     }
   },
   "editor.snippetSuggestions": "bottom",
+  "workbench.editor.decorations.badges": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.trimTrailingWhitespace": true,
@@ -68,34 +69,23 @@
   },
   "go.useLanguageServer": true,
   "go.languageServerExperimentalFeatures": {
-    "format": true,
-    "autoComplete": true,
-    "rename": true,
-    "goToDefinition": true,
-    "hover": true,
-    "signatureHelp": true,
-    "goToTypeDefinition": true,
-    "goToImplementation": true,
-    "documentSymbols": true,
-    "workspaceSymbols": true,
-    "findReferences": true,
-    "diagnostics": false,
-    "documentLink": true
+    "diagnostics": false
   },
   "go.lintTool": "revive",
   "go.formatTool": "gofmt",
   "go.delveConfig": {
     "dlvLoadConfig": {
       "followPointers": true,
-      "maxVariableRecurse": 3,
-      "maxStringLen": 150,
-      "maxArrayValues": 150,
-      "maxStructFields": -1
+      "maxVariableRecurse": 0,
+      "maxStringLen": 100,
+      "maxArrayValues": 64,
+      "maxStructFields": 50,
+      "showGlobalVariables": false
     },
     "apiVersion": 2,
     "showGlobalVariables": false
   },
-  "go.coverOnSave": true,
+  "go.coverOnSave": false,
   "go.coverOnTestPackage": true,
   "go.coverageDecorator": {
     "type": "gutter",
@@ -130,7 +120,7 @@
   "search.exclude": {
     "**/.docker": true,
     "**/tags": true,
-    "**/*.js": { "when": "$(basename).ts" },
+    // "**/*.js": { "when": "$(basename).ts" },
     "**/*.js.map": true,
     "**/node_modules": true,
     "**/tsconfig.tsbuildinfo": true
@@ -145,6 +135,7 @@
   "typescript.tsserver.maxTsServerMemory": 30720,
   "typescript.format.enable": true,
   "typescript.updateImportsOnFileMove.enabled": "never",
+  "typescript.tsdk": "~/.config/yarn/global/node_modules/typescript/lib",
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.visual": "line",
@@ -153,12 +144,11 @@
   "vim.debug.loggingLevelForAlert": "error",
   "vim.debug.loggingLevelForConsole": "info",
   "vim.easymotion": false,
-  "vim.easymotionMarkerFontSize": "12",
   "vim.enableNeovim": false,
   "vim.history": 100,
   "vim.hlsearch": true,
   "vim.highlightedyank.enable": true,
-  "vim.searchHighlightColor": "#bb0",
+  "vim.searchHighlightColor": "#990",
   "vim.searchHighlightTextColor": "#333",
   "vim.incsearch": true,
   "vim.leader": "<space>",
@@ -185,7 +175,7 @@
     {
       "before": ["<leader>", "s"],
       "after": [":", "s", "o", "r", "t", "<cr>"]
-    },
+    }
   ],
   "vim.mouseSelectionGoesIntoVisualMode": true,
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -282,7 +272,6 @@
     "<C-a>": false,
     "<C-f>": false
   },
-  "window.zoomLevel": 0,
   "workbench.colorTheme": "Material Theme",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -301,6 +290,10 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[markdown]": {
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 80
+  },
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.autoClosingBrackets": "never"
@@ -316,7 +309,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -327,4 +320,8 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "go.toolsManagement.autoUpdate": true
 }

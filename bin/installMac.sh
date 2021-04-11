@@ -44,13 +44,12 @@ brew cask install spotify
 brew cask install vlc
 
 # passwords
-brew cask install 1password
+brew cask install 1password lastpass
 # brew cask install keeper
-brew cask install lastpass
 # TODO: can we automate 1password setup/config?
 
 # messaging
-brew cask install slack
+brew cask install slack telegram
 # TODO: slack - auto add my specific servers?
 
 # languages : java
@@ -59,6 +58,9 @@ brew cask install java
 ## language : javascript
 brew install n
 n latest
+
+## language : hammerspoon
+brew install hammerspoon
 
 #brew install node
 #npm install -g jasmine-core
@@ -90,7 +92,7 @@ brew install clojure leiningen
 brew cask install sublime-text
 
 # editors : emacs
-brew cask install emacs
+# brew cask install emacs
 
 # editors : vim
 brew install python3 nvim fzf the_silver_searcher ctags fd
@@ -140,7 +142,8 @@ brew install dig
 
 # file sharing
 brew cask install dropbox google-drive-file-stream
-brew cask install mountain-duck grandperspective disk-inventory-x daisydisk
+brew cask install mountain-duck grandperspective disk-inventory-x daisydisk grandperspective ipartition
+
 
 # terminal emulators
 brew cask install iterm2
@@ -173,7 +176,7 @@ brew services start redis
 
 # source / version control
 brew cask install sourcetree beyond-compare
-brew install ydiff bfg tig git-filter-repo
+brew install ydiff bfg tig git-filter-repo sourcetree
 
 # fonts
 # These aren't really necessary
@@ -201,4 +204,12 @@ brew cask install balenaetcher kekka angry-ip-scanner
 echo "Post installation tips:"
 echo "- Set fira-code font in iterm2"
 echo "- Set itermcolor scheme (file is OneDark.itermcolors)"
+
+
+# trading software
+brew install tradingview
+
+# 3d printing
+brew instal slic3r openscad
+
 

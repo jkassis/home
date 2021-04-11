@@ -1,6 +1,7 @@
 # Say hello
 echo "Running .config/fish/config.fish"
 
+set -x fish_prompt_pwd_dir_length 2
 function fish_right_prompt -d "Write out the right prompt"
     date '+%m.%d %H:%M'
 end
