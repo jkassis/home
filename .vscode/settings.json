@@ -74,14 +74,14 @@
   "go.lintTool": "revive",
   "go.formatTool": "gofmt",
   "go.delveConfig": {
-    "dlvLoadConfig": {
-      "followPointers": true,
-      "maxVariableRecurse": 0,
-      "maxStringLen": 100,
-      "maxArrayValues": 64,
-      "maxStructFields": 50,
-      "showGlobalVariables": false
-    },
+    // "dlvLoadConfig": {
+    //   "followPointers": true,
+    //   "maxVariableRecurse": 0,
+    //   "maxStringLen": 100,
+    //   "maxArrayValues": 64,
+    //   "maxStructFields": 50,
+    //   "showGlobalVariables": false
+    // },
     "apiVersion": 2,
     "showGlobalVariables": false
   },
@@ -96,6 +96,7 @@
   },
   "go.coverOnSingleTest": false,
   "go.testEnvVars": { "LOG_LEVEL": "INFO", "WORK_DIR": "${workspaceFolder}" },
+  "html.autoClosingTags": false,
   "javascript.autoClosingTags": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "markdown.preview.fontSize": 12,
@@ -103,6 +104,8 @@
   "php.suggest.basic": false,
   "php.validate.enable": false,
 
+  "prettier.goTemplateBracketSpacing": false,
+  "prettier.resolveGlobalModules": true,
   "prettier.jsxSingleQuote": true,
   "prettier.quoteProps": "as-needed",
   "prettier.semi": false,
@@ -127,7 +130,7 @@
   },
   "task.slowProviderWarning": ["typescript"],
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.scrollback": 100000,
   "terminal.integrated.shell.osx": "/usr/local/bin/fish",
   "terminal.integrated.shellArgs.osx": [],
   "typescript.autoClosingTags": false,
@@ -160,7 +163,7 @@
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
-      "after": ["<Esc>"]
+      "after": ["<esc>"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -180,7 +183,7 @@
   "vim.mouseSelectionGoesIntoVisualMode": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<esc>"],
+      "before": ["<esc>", "<cr>"],
       "after": ["<esc>", ":", "n", "o", "h", "l", "<cr>"]
     },
     {
@@ -272,7 +275,6 @@
     "<C-a>": false,
     "<C-f>": false
   },
-  "workbench.colorTheme": "Material Theme",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.revealIfOpen": true,
@@ -309,7 +311,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "vscode.html-language-features",
+    // "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.autoSurround": "never"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -323,5 +327,25 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "go.toolsManagement.autoUpdate": true
+  "go.toolsManagement.autoUpdate": true,
+  "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "ITerm.app",
+  "terminal.integrated.allowChords": false,
+  "workbench.colorTheme": "Material Theme",
+  "workbench.editorAssociations": {
+    "*.png": "imagePreview.previewEditor"
+  },
+  "files.associations": {
+    "*.gohtml": "html"
+  },
+  "overrides": [
+    {
+      "files": ["*.gohtml"],
+      "options": {
+        "parser": "go-template"
+      }
+    }
+  ],
+  "debug.javascript.unmapMissingSources": true,
+  "cmake.configureOnOpen": false
 }

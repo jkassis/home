@@ -110,6 +110,7 @@ rm ~/Library/Application\ Support/Code/User/keybindings.json
 ln -s ~/Home/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/Home/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled -bool NO
+sudo /usr/sbin/DevToolsSecurity --enable
 
 # build tools
 brew install upx
@@ -210,6 +211,7 @@ echo "- Set itermcolor scheme (file is OneDark.itermcolors)"
 brew install tradingview
 
 # 3d printing
-brew instal slic3r openscad
+brew install slic3r openscad
 
-
+# network tools
+brew install nmap

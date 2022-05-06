@@ -57,6 +57,10 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 set -gx GOPATH "$HOME/go" $GOPATH
 pathadd "$GOPATH/bin" "/usr/local/go/bin"
 
+# LANG: PYTHON
+alias python=python3
+alias pip=pip3
+
 # LANG: RUST
 pathadd "$HOME/.cargo/bin"
 
@@ -87,10 +91,12 @@ set -gx P4CONFIG .p4config
 
 
 # LOCAL CONF
+echo Running config.local.fish
 source $HOME/.config/fish/config.local.fish
 
 # use direnv
-direnv hook fish | source
+#direnv hook fish | source
 
 # echo PATH is $PATH
 
+echo all done with local.fish

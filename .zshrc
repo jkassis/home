@@ -143,6 +143,9 @@ pathadd "/usr/local/go/bin"
 # LANG: RUST
 pathadd "$HOME/.cargo/bin"
 
+# LANG: PYTHON
+alias python=python3
+
 # SSH
 # export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
