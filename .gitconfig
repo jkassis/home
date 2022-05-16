@@ -54,3 +54,6 @@
 	trustExitCode = true
 [url "ssh://git@github.com"]
 	insteadOf = https://github.com/jkassis
+[user]
+	name = Jeremy Kassis
+	email = jkassis@gmail.com

@@ -7,7 +7,7 @@
   "coverage-gutters.showRulerCoverage": true,
   "coverage-gutters.xmlname": "coverage.xml",
   "debug.allowBreakpointsEverywhere": true,
-  "debug.inlineValues": false,
+  "debug.inlineValues": "auto",
   // "debug.javascript.usePreview": true,
   "debug.onTaskErrors": "debugAnyway",
   "debug.openDebug": "openOnDebugBreak",
@@ -17,7 +17,7 @@
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.accessibilitySupport": "off",
   "editor.autoClosingBrackets": "languageDefined",
-  "editor.fontFamily": "Hack Nerd Font Mono",
+  "editor.fontFamily": "Source Code Pro",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
@@ -100,7 +100,6 @@
   "javascript.autoClosingTags": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "markdown.preview.fontSize": 12,
-  "materialTheme.accent": "Tomato",
   "php.suggest.basic": false,
   "php.validate.enable": false,
 
@@ -115,7 +114,6 @@
   "python.linting.lintOnSave": false,
   "python.linting.pylintEnabled": false,
   "search.collapseResults": "alwaysExpand",
-  "search.runInExtensionHost": true,
   "search.showLineNumbers": true,
   "search.smartCase": true,
   "search.useGlobalIgnoreFiles": true,
@@ -129,10 +127,15 @@
     "**/tsconfig.tsbuildinfo": true
   },
   "task.slowProviderWarning": ["typescript"],
-  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "terminal.integrated.fontFamily": "Source Code Pro",
   "terminal.integrated.scrollback": 100000,
-  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-  "terminal.integrated.shellArgs.osx": [],
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.profiles.osx": {
+    "fish": {
+      "path": "/usr/local/bin/fish",
+      "args": ["-l"]
+    }
+  },
   "typescript.autoClosingTags": false,
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "typescript.tsserver.maxTsServerMemory": 30720,
@@ -318,9 +321,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -331,21 +331,12 @@
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "ITerm.app",
   "terminal.integrated.allowChords": false,
-  "workbench.colorTheme": "Material Theme",
   "workbench.editorAssociations": {
     "*.png": "imagePreview.previewEditor"
   },
   "files.associations": {
     "*.gohtml": "html"
   },
-  "overrides": [
-    {
-      "files": ["*.gohtml"],
-      "options": {
-        "parser": "go-template"
-      }
-    }
-  ],
   "debug.javascript.unmapMissingSources": true,
   "cmake.configureOnOpen": false
 }

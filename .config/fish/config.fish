@@ -89,14 +89,8 @@ alias kct='kubectl run toolbox --rm -i --tty --image jkassis/nettools:latest -- 
 # PERFORCE
 set -gx P4CONFIG .p4config
 
-
-# LOCAL CONF
-echo Running config.local.fish
-source $HOME/.config/fish/config.local.fish
-
 # use direnv
 #direnv hook fish | source
 
-# echo PATH is $PATH
+echo PATH is $PATH
 
-echo all done with local.fish

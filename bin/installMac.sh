@@ -2,16 +2,16 @@
 
 # homebrew
 #/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap caskroom/versions
+brew tap homebrew/cask-versions
 
 # browsers
-brew cask install google-chrome firefox-developer-edition
+brew install --cask google-chrome firefox-developer-edition
 brew install wget
 
 # display and window management 
-# brew cask install spectacle
-brew cask install magnet pbcopy
-#brew cask install duet
+# brew install --cask spectacle
+# brew install --cask magnet pbcopy
+# brew install --cask duet
 
 # osx : dock setting
 # "Set Dock to auto-hide and remove the auto-hiding delay? (y/n)"
@@ -25,7 +25,7 @@ defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server All
 # osx : special key access
 # "Disabling press-and-hold for special keys in favor of key repeat"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-# brew cask install karabiner-elements
+# brew install --cask karabiner-elements
 # TODO: look into https://gist.github.com/brandonb927/3195465 and related for more tweaks
 
 # https://apple.stackexchange.com/questions/10467/how-to-increase-keyboard-key-repeat-rate-on-os-x
@@ -36,24 +36,24 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 brew install sl
 
 # markup redlining
-brew cask install skitch
-brew cask install licecap
+brew install --cask skitch
+brew install --cask licecap
 
 # music and media
-brew cask install spotify
-brew cask install vlc
+brew install --cask spotify
+brew install --cask vlc
 
 # passwords
-brew cask install 1password lastpass
-# brew cask install keeper
+brew install --cask 1password lastpass
+# brew install --cask keeper
 # TODO: can we automate 1password setup/config?
 
 # messaging
-brew cask install slack telegram
+brew install --cask slack telegram
 # TODO: slack - auto add my specific servers?
 
 # languages : java
-brew cask install java
+brew install java
 
 ## language : javascript
 brew install n
@@ -62,7 +62,8 @@ n latest
 ## language : hammerspoon
 brew install hammerspoon
 
-#brew install node
+brew install node yarn typescript
+yarn global add less
 #npm install -g jasmine-core
 #npm install -g karma karma-jasmine karma-coverage karma-webpack karma-sourcemap-loader karma-chrome-launcher
 #npm install -g webpack
@@ -79,7 +80,7 @@ mkdir -p "$HOME/Code/go"
 brew install clojure leiningen
 
 # editors : atom
-# brew cask install atom
+# brew install --cask atom
 # TODO: atom package setup...
 # ex-mode
 # linter
@@ -89,10 +90,10 @@ brew install clojure leiningen
 # vim-mode-plus
 
 # editors : sublime
-brew cask install sublime-text
+brew install --cask sublime-text
 
 # editors : emacs
-# brew cask install emacs
+# brew install --cask emacs
 
 # editors : vim
 brew install python3 nvim fzf the_silver_searcher ctags fd
@@ -103,7 +104,7 @@ xcode-select --install
 sudo xcodebuild -license accept # agree to xcode license
 
 # ides : vscode
-brew cask install visual-studio-code
+brew install --cask visual-studio-code
 mkdir -p ~/Library/Application\ Support/Code/User 
 rm ~/Library/Application\ Support/Code/User/settings.json 
 rm ~/Library/Application\ Support/Code/User/keybindings.json 
@@ -121,7 +122,8 @@ brew install upx
 brew install aws-cli
 
 # container n vms
-brew cask install docker podman virtualbox
+brew install --cask docker virtualbox
+brew install podman
 
 # k8s 
 brew install kubernetes-helm terraform cfssl stern jsonnet
@@ -142,16 +144,16 @@ brew install dig
 
 
 # file sharing
-brew cask install dropbox google-drive-file-stream
-brew cask install mountain-duck grandperspective disk-inventory-x daisydisk grandperspective ipartition
+brew install --cask dropbox google-drive-file-stream
+brew install --cask mountain-duck grandperspective disk-inventory-x daisydisk grandperspective ipartition
 
 
 # terminal emulators
-brew cask install iterm2
+brew install --cask iterm2
 # curl "https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/master/scheme/iterm/One%20Dark.itermcolors" > ~/Downloads/OneDark.itermcolors
 
 # shell : zsh and oh-my-zsh
-brew install zsh fish
+brew install zsh fish fisher
 echo Make sure you do the followin...
 echo sudo su -
 echo cat "/usr/local/bin/fish" >> /etc/shells
@@ -171,13 +173,14 @@ brew install redis
 brew services start redis
 # brew install neo4j
 # brew install postgresql
-# brew cask install postgres
-# brew cask install pgadmin4
+# brew install --cask postgres
+# brew install --cask pgadmin4
 # brew services start postgresql
 
 # source / version control
-brew cask install sourcetree beyond-compare
+brew install --cask sourcetree beyond-compare
 brew install ydiff bfg tig git-filter-repo sourcetree
+brew install svn
 
 # fonts
 # These aren't really necessary
@@ -185,8 +188,10 @@ brew install ydiff bfg tig git-filter-repo sourcetree
 #    brew install powerlevel9k
 # Because these have PowerLine Icons...
 # https://github.com/Homebrew/homebrew-cask-fonts 
+brew tap caskroom/fonts
 brew tap homebrew/cask-fonts
-brew cask install font-firacode-nerd-font font-firacode-nerd-font-mono font-hack-nerd-font font-hack-nerd-font-mono
+brew install --cask font-source-code-pro
+brew install --cask font-firacode-nerd-font font-firacode-nerd-font-mono font-hack-nerd-font font-hack-nerd-font-mono
 # Apple has disabled Subpixel antialiasing for text in macOS Mojave. Re-enable with
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 # undo that with
@@ -200,7 +205,7 @@ brew install little-snitch iperf htop
 
 
 # single board computer tools
-brew cask install balenaetcher kekka angry-ip-scanner
+brew install --cask balenaetcher kekka angry-ip-scanner
 
 echo "Post installation tips:"
 echo "- Set fira-code font in iterm2"
