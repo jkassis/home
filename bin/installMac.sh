@@ -116,7 +116,6 @@ sudo /usr/sbin/DevToolsSecurity --enable
 # build tools
 brew install upx
 
-
 # cloud service providers
 #brew install heroku-toolbelt
 brew install aws-cli
@@ -146,6 +145,9 @@ brew install dig
 # file sharing
 brew install --cask dropbox google-drive-file-stream
 brew install --cask mountain-duck grandperspective disk-inventory-x daisydisk grandperspective ipartition
+
+# fs utils
+brew install watch fswatch
 
 
 # terminal emulators
