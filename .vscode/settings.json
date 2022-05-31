@@ -8,7 +8,6 @@
   "coverage-gutters.xmlname": "coverage.xml",
   "debug.allowBreakpointsEverywhere": true,
   "debug.inlineValues": "auto",
-  // "debug.javascript.usePreview": true,
   "debug.onTaskErrors": "debugAnyway",
   "debug.openDebug": "openOnDebugBreak",
   "debug.toolBarLocation": "docked",
@@ -337,6 +336,12 @@
   "files.associations": {
     "*.gohtml": "html"
   },
+  // "debug.javascript.usePreview": true,
   "debug.javascript.unmapMissingSources": true,
+  "debug.javascript.resourceRequestOptions": {
+    "https": {
+      "rejectUnauthorized": false
+    }
+  },
   "cmake.configureOnOpen": false
 }

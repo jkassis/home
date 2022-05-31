@@ -94,3 +94,4 @@ set -gx P4CONFIG .p4config
 
 echo PATH is $PATH
 
+source ~/.config/fish/config.fish.local
