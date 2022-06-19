@@ -139,6 +139,7 @@
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "typescript.tsserver.maxTsServerMemory": 30720,
   "typescript.format.enable": true,
+  "typescript.format.semicolons": "remove",
   "typescript.updateImportsOnFileMove.enabled": "never",
   "typescript.tsdk": "~/.config/yarn/global/node_modules/typescript/lib",
   "vim.cursorStylePerMode.insert": "line",
