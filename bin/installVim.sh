@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # binary link
-ln -sf $(which nvim) /usr/local/bin/nv
+ln -sf $(which nvim) /usr/bin/nv
 
 # setup the config dir
 mkdir "$HOME/.config"

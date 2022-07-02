@@ -118,7 +118,7 @@ brew install upx
 
 # cloud service providers
 #brew install heroku-toolbelt
-brew install aws-cli
+brew install awscli
 
 # container n vms
 brew install --cask docker virtualbox
@@ -208,6 +208,7 @@ brew install little-snitch iperf htop
 
 # single board computer tools
 brew install --cask balenaetcher kekka angry-ip-scanner
+brew install balena-cli
 
 echo "Post installation tips:"
 echo "- Set fira-code font in iterm2"
