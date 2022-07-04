@@ -63,8 +63,9 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 # export ARCHFLAGS="-arch x86_64"
 
 # LANG: GO
-set -gx GOPATH "$HOME/go" $GOPATH
-pathadd "$GOPATH/bin" "/usr/local/go/bin"
+# set -gx GOPATH "$HOME/go"
+# set -gx GOPATH "/Cellar/go/1.18.3/bin/go"
+# pathadd "$GOPATH/bin" "/usr/local/go/bin"
 
 # LANG: PYTHON
 alias python=python3
