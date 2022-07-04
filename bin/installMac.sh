@@ -73,7 +73,7 @@ yarn global add less
 #pip2 install virtualenv virtualenvwrapper flake8
 
 ## languages: go
-brew install golang 
+brew install golang goreleaser
 mkdir -p "$HOME/Code/go"
 
 ## languages: clojure
