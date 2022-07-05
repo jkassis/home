@@ -196,8 +196,7 @@ brew install svn
 # https://github.com/Homebrew/homebrew-cask-fonts 
 brew tap caskroom/fonts
 brew tap homebrew/cask-fonts
-brew install --cask font-source-code-pro
-brew install --cask font-firacode-nerd-font font-firacode-nerd-font-mono font-hack-nerd-font font-hack-nerd-font-mono
+brew install --cask font-source-code-pro font-fira-code-nerd-font font-fira-mono-nerd-font font-hack-nerd-font 
 # Apple has disabled Subpixel antialiasing for text in macOS Mojave. Re-enable with
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 # undo that with
