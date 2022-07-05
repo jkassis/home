@@ -16,7 +16,9 @@
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.accessibilitySupport": "off",
   "editor.autoClosingBrackets": "languageDefined",
-  "editor.fontFamily": "Source Code Pro",
+  // "editor.fontFamily": "Source Code Pro",
+  "editor.fontFamily": "Hack Nerd Font Mono",
+  // "terminal.integrated.fontFamily": "Furacode Nerd Font Mono",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
@@ -126,7 +128,9 @@
     "**/tsconfig.tsbuildinfo": true
   },
   "task.slowProviderWarning": ["typescript"],
-  "terminal.integrated.fontFamily": "Source Code Pro",
+  // "terminal.integrated.fontFamily": "Source Code Pro",
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  // "terminal.integrated.fontFamily": "Furacode Nerd Font Mono",
   "terminal.integrated.scrollback": 100000,
   "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.profiles.osx": {
