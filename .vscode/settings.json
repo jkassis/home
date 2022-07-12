@@ -347,5 +347,6 @@
       "rejectUnauthorized": false
     }
   },
-  "cmake.configureOnOpen": false
+  "cmake.configureOnOpen": false,
+  "go.toolsManagement.autoUpdate": true
 }

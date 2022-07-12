@@ -49,6 +49,7 @@ set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/opt/homebrew/share/info"
 
 # GIT
 source $HOME/.config/fish/git.aliases
+set -x PRIVATE "github.com/jkassis"
 
 # i18N
 # You may need to manually set your language environment
