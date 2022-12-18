@@ -22,7 +22,7 @@
 	ui = true
 [core]
 	editor = nvim
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/jkassis/.gitignore_global
 	preloadindex = true
 [diff]
 	tool = ydiff
@@ -50,8 +50,10 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
 	name = Jeremy Kassis
 	email = jkassis@gmail.com
+[commit]
+	template = /Users/jkassis/.stCommitMsg

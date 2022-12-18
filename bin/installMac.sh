@@ -60,17 +60,18 @@ brew install --cask slack telegram
 brew install java
 
 ## language : javascript
-brew install n
+brew install n yarn
+echo Running... `n latest`
 n latest
+yarn global add less typescript
 
-## language : hammerspoon
-brew install hammerspoon
-
-brew install node yarn typescript
-yarn global add less
 #npm install -g jasmine-core
 #npm install -g karma karma-jasmine karma-coverage karma-webpack karma-sourcemap-loader karma-chrome-launcher
 #npm install -g webpack
+#
+## language : hammerspoon
+brew install hammerspoon
+
 
 ## languages: python
 #brew install python@2
@@ -129,40 +130,39 @@ brew install --cask docker virtualbox
 brew install podman
 
 # k8s 
-brew install kubernetes-helm terraform cfssl stern jsonnet
+brew install kubernetes-helm terraform cfssl stern jsonnet openshift-cli
 
 # format utils : yaml json
 pip3 install yq
-go get github.com/brancz/gojsontoyaml
+go install github.com/brancz/gojsontoyaml@latest
 brew install jq jp jid
 
 # protocol clients : http
 brew install httpie
 # protocol clients : ws
-go get -u github.com/hashrocket/ws
+go install github.com/hashrocket/ws@latest
 # protocol client : TCP/UDP
 brew install netcat
 # protocol clients : dns
-brew install dig
+brew install bind
 
 
 # file sharing
-brew install --cask dropbox google-drive-file-stream
+brew install --cask google-drive
 brew install --cask mountain-duck grandperspective disk-inventory-x daisydisk grandperspective ipartition
 
 # fs utils
 brew install watch fswatch
 
-
 # terminal emulators
 brew install --cask iterm2
 # curl "https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/master/scheme/iterm/One%20Dark.itermcolors" > ~/Downloads/OneDark.itermcolors
 
-# shell : zsh and oh-my-zsh
+# shell : zsh and fish 
 brew install zsh fish fisher
 echo Make sure you do the followin...
 echo sudo su -
-echo cat "/usr/local/bin/fish" >> /etc/shells
+echo 'sudo cat "/opt/homebrew/bin/fish" >> /etc/shells'
 echo exit
 echo chsh -s /usr/local/bin/fish jkassis
 
@@ -171,12 +171,12 @@ echo chsh -s /usr/local/bin/fish jkassis
 brew install direnv
 
 # dbs 
-brew install elasticsearch@5.6
-brew services start elasticsearch@5.6
-brew install cockroach
-brew services start cockroach
-brew install redis
-brew services start redis
+# brew install elasticsearch@5.6
+#brew services start elasticsearch@5.6
+# brew install cockroach
+#brew services start cockroach
+# brew install redis
+#brew services start redis
 # brew install neo4j
 # brew install postgresql
 # brew install --cask postgres
@@ -203,11 +203,8 @@ defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 # defaults delete -g CGFontRenderingFontSmoothingDisabled
 #
 
-
 # system resource monitoring
 brew install little-snitch iperf htop
-
-
 
 # single board computer tools
 brew install --cask balenaetcher kekka angry-ip-scanner
@@ -222,7 +219,7 @@ echo "- Set itermcolor scheme (file is OneDark.itermcolors)"
 brew install tradingview
 
 # 3d printing
-brew install slic3r openscad
+brew install slic3r openscad ultimaker-cura
 
 # network tools
 brew install nmap
