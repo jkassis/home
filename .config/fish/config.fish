@@ -1,3 +1,7 @@
+if not status --is-interactive
+        exit
+end
+
 # Say hello
 echo "Running .config/fish/config.fish"
 
@@ -64,9 +68,9 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 # export ARCHFLAGS="-arch x86_64"
 
 # LANG: GO
-# set -gx GOPATH "$HOME/go"
+set -gx GOPATH "$HOME/go"
 # set -gx GOPATH "/Cellar/go/1.18.3/bin/go"
-# pathadd "$GOPATH/bin" "/usr/local/go/bin"
+pathadd "$GOPATH/bin" "/usr/local/go/bin"
 
 # LANG: PYTHON
 alias python=python3

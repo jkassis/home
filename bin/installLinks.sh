@@ -9,4 +9,4 @@ ln -sf "$HOME/home/.tmux.conf" "$HOME"
 ln -sf "$HOME/home/.tmux" "$HOME"
 ln -sf "$HOME/home/.vim" "$HOME"
 ln -sf "$HOME/home/bin" "$HOME"
-
+ln -sf $(which nvim) "$HOME/nv"
