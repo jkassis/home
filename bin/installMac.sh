@@ -64,6 +64,8 @@ brew install n yarn
 echo Running... `n latest`
 n latest
 yarn global add less typescript
+brew install pkg-config cairo pango libpng jpeg giflib librsvg
+
 
 #npm install -g jasmine-core
 #npm install -g karma karma-jasmine karma-coverage karma-webpack karma-sourcemap-loader karma-chrome-launcher
@@ -80,6 +82,9 @@ brew install hammerspoon
 ## languages: go
 brew install golang goreleaser
 mkdir -p "$HOME/Code/go"
+go install github.com/karalabe/xgo@latest
+brew install opencv@4
+
 
 ## languages: clojure
 brew install clojure leiningen
@@ -206,9 +211,10 @@ defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 # system resource monitoring
 brew install little-snitch iperf htop
 
-# single board computer tools
+# iot 
 brew install --cask balenaetcher kekka angry-ip-scanner
 brew install balena-cli
+brew install arduino teensy
 
 echo "Post installation tips:"
 echo "- Set fira-code font in iterm2"
@@ -219,7 +225,8 @@ echo "- Set itermcolor scheme (file is OneDark.itermcolors)"
 brew install tradingview
 
 # 3d printing
-brew install slic3r openscad ultimaker-cura
+brew install slic3r openscad ultimaker-cura autodesk-fusion360
 
 # network tools
-brew install nmap
+brew install nmap openvpn-connect
+

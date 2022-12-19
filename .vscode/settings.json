@@ -137,7 +137,7 @@
   "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.profiles.osx": {
     "fish": {
-      "path": "/usr/local/bin/fish",
+      "path": "/opt/homebrew/bin/fish",
       "args": ["-l"]
     }
   },
