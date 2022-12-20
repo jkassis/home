@@ -230,3 +230,6 @@ brew install slic3r openscad ultimaker-cura autodesk-fusion360
 # network tools
 brew install nmap openvpn-connect
 
+# adobe
+brew install adobe-creative-cloud
+
