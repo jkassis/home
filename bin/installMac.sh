@@ -191,7 +191,7 @@ brew install direnv
 
 # source / version control
 brew install --cask sourcetree beyond-compare
-brew install ydiff bfg tig git-filter-repo sourcetree svn
+brew install ydiff bfg tig git-filter-repo sourcetree svn gh
 go install github.com/maykonlf/semver-cli/cmd/semver@latest
 
 # fonts
