@@ -70,7 +70,7 @@ Plug 'jkassis/vim-chrome-devtools', { 'do': 'npm install && npm run build' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " fzf fuzzy search with fzf
 Plug 'junegunn/fzf.vim'                                 " fzf fuzzy search
 Plug 'kana/vim-operator-user'                           " Easy API for making new operators
-Plug 'ludovicchabant/vim-gutentags'                     " Gutentags
+" Plug 'ludovicchabant/vim-gutentags'                     " Gutentags
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }      " Tag based file outlines
 Plug 'mileszs/ack.vim'                                  " ACK full-text searching with quickfix window
 Plug 'moll/vim-bbye'                                    " Clear out buffers with \q shortcut without blowing up windows

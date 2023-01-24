@@ -12,28 +12,32 @@
   "debug.openDebug": "openOnDebugBreak",
   "debug.toolBarLocation": "docked",
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.acceptSuggestionOnEnter": "on",
   "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "on",
   "editor.accessibilitySupport": "off",
-  "editor.detectIndentation": false,
-  "editor.tabSize": 2,
   "editor.autoClosingBrackets": "languageDefined",
-  // "editor.fontFamily": "Source Code Pro",
+  "editor.detectIndentation": false,
   "editor.fontFamily": "Hack Nerd Font Mono",
-  // "terminal.integrated.fontFamily": "Furacode Nerd Font Mono",
-  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.hover.enabled": false,
   "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
-  "editor.quickSuggestions": {
-    "other": true,
-    "comments": false,
-    "strings": false
-  },
   "editor.quickSuggestionsDelay": 750,
-  "editor.rulers": [100],
+  "editor.rulers": [80],
   "editor.semanticHighlighting.enabled": true,
+  "editor.snippetSuggestions": "bottom",
+  // "editor.suggest.showFunctions": false,
+  // "editor.suggest.showMethods": false,
+  "editor.tabSize": 2,
+  // "editor.fontFamily": "Source Code Pro",
+  // "editor.quickSuggestions": {
+  //   "other": false,
+  //   "comments": false,
+  //   "strings": false
+  // },
+  // "terminal.integrated.fontFamily": "Furacode Nerd Font Mono",
   "editor.semanticTokenColorCustomizations": {
     "enabled": true, // enable semantic highlighting for all themes
     "rules": {
@@ -44,7 +48,6 @@
       "*.declaration": { "bold": true }
     }
   },
-  "editor.snippetSuggestions": "bottom",
   "workbench.editor.decorations.badges": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -127,7 +130,8 @@
     // "**/*.js": { "when": "$(basename).ts" },
     "**/*.js.map": true,
     "**/node_modules": true,
-    "**/tsconfig.tsbuildinfo": true
+    "**/tsconfig.tsbuildinfo": true,
+    "**/vendor": true
   },
   "task.slowProviderWarning": ["typescript"],
   // "terminal.integrated.fontFamily": "Source Code Pro",
@@ -350,5 +354,8 @@
     }
   },
   "cmake.configureOnOpen": false,
-  "go.toolsManagement.autoUpdate": true
+  "go.toolsManagement.autoUpdate": true,
+  "workbench.colorTheme": "Visual Studio Dark",
+  "window.zoomLevel": 1,
+  "security.workspace.trust.untrustedFiles": "open"
 }

@@ -34,7 +34,7 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 # gitutils
 brew tap jkassis/keg
-brew install gitall
+brew install gitall git-gc
 
 # gags
 brew install sl
@@ -80,9 +80,10 @@ brew install hammerspoon
 #pip2 install virtualenv virtualenvwrapper flake8
 
 ## languages: go
-brew install golang goreleaser
+brew install golang 
+# brew install goreleaser
 mkdir -p "$HOME/Code/go"
-go install github.com/karalabe/xgo@latest
+# go install github.com/karalabe/xgo@latest
 brew install opencv@4
 
 
@@ -152,9 +153,9 @@ brew install netcat
 brew install bind
 
 
-# file sharing
-brew install --cask google-drive
-brew install --cask mountain-duck grandperspective disk-inventory-x daisydisk grandperspective ipartition
+# disk maintenance
+brew install --cask google-drive mountain-duck grandperspective disk-inventory-x daisydisk grandperspective ipartition kekka
+
 
 # fs utils
 brew install watch fswatch
@@ -190,8 +191,8 @@ brew install direnv
 
 # source / version control
 brew install --cask sourcetree beyond-compare
-brew install ydiff bfg tig git-filter-repo sourcetree
-brew install svn
+brew install ydiff bfg tig git-filter-repo sourcetree svn
+go install github.com/maykonlf/semver-cli/cmd/semver@latest
 
 # fonts
 # These aren't really necessary
@@ -212,9 +213,7 @@ defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 brew install little-snitch iperf htop
 
 # iot 
-brew install --cask balenaetcher kekka angry-ip-scanner
-brew install balena-cli
-brew install arduino teensy
+brew install balena-cli balenaetcher arduino teensy
 
 echo "Post installation tips:"
 echo "- Set fira-code font in iterm2"
@@ -228,8 +227,17 @@ brew install tradingview
 brew install slic3r openscad ultimaker-cura autodesk-fusion360
 
 # network tools
-brew install nmap openvpn-connect
+brew install nmap openvpn-connect angry-ip-scanner
 
 # adobe
 brew install adobe-creative-cloud
+
+# torrents
+brew install qbittorrent
+
+# electronics
+brew install circuitjs1
+
+# office suite
+brew install libreoffice
 
