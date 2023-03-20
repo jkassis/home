@@ -25,7 +25,7 @@
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "editor.quickSuggestionsDelay": 750,
-  "editor.rulers": [80],
+  "editor.rulers": [80, 100],
   "editor.semanticHighlighting.enabled": true,
   "editor.snippetSuggestions": "bottom",
   // "editor.suggest.showFunctions": false,
@@ -356,6 +356,19 @@
   "cmake.configureOnOpen": false,
   "go.toolsManagement.autoUpdate": true,
   "workbench.colorTheme": "Visual Studio Dark",
-  "window.zoomLevel": 1,
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  },
+  "arduino.useArduinoCli": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  }
 }

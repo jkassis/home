@@ -27,7 +27,7 @@
 [diff]
 	tool = ydiff
 	guitool = ydiff
-[difftool.ydiff]
+[difftool "ydiff"]
   cmd = ydiff -s -w 0 --wrap
 [filter "lfs"]
   process = git-lfs filter-process

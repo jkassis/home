@@ -56,12 +56,17 @@ brew install --cask 1password lastpass
 brew install --cask slack telegram
 # TODO: slack - auto add my specific servers?
 
+# languages: rust
+brew install rustup
+rustup-init -y
+
 # languages : java
 brew install java
 
 ## language : javascript
 brew install n yarn
 echo Running... `n latest`
+echo "Note this may not work for you... you can always downgrade"
 n latest
 yarn global add less typescript
 brew install pkg-config cairo pango libpng jpeg giflib librsvg
