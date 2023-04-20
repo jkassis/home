@@ -185,6 +185,9 @@ echo chsh -s /usr/local/bin/fish jkassis
 # shell : directory environments
 brew install direnv
 
+# fs navigation
+brew install autojump
+
 # dbs
 # brew install elasticsearch@5.6
 #brew services start elasticsearch@5.6
@@ -224,11 +227,6 @@ brew install little-snitch iperf htop
 # iot
 brew install balena-cli balenaetcher arduino teensy
 
-echo "Post installation tips:"
-echo "- Set fira-code font in iterm2"
-echo "- Set itermcolor scheme (file is OneDark.itermcolors)"
-
-
 # trading software
 brew install tradingview
 
@@ -250,3 +248,7 @@ brew install circuitjs1
 # office suite
 brew install libreoffice
 
+# post installation tips
+echo "Post installation tips:"
+echo "- Set fira-code font in iterm2"
+echo "- Set itermcolor scheme (file is OneDark.itermcolors)"
