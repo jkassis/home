@@ -131,7 +131,7 @@
     "**/*.js.map": true,
     "**/node_modules": true,
     "**/tsconfig.tsbuildinfo": true,
-    "**/vendor": true
+    "**/vendor": true,
   },
   "task.slowProviderWarning": ["typescript"],
   // "terminal.integrated.fontFamily": "Source Code Pro",
@@ -321,7 +321,7 @@
     "editor.autoClosingBrackets": "never"
   },
   "[less]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.css-language-features"
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features",
@@ -329,7 +329,7 @@
     "editor.autoSurround": "never"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
