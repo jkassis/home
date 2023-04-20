@@ -119,7 +119,5 @@ fi
 ###########################################################################
 echo To cache your ssh password... run
 echo "> keychain $HOME/.ssh/id_rsa"
-echo or run...
-echo "> ssh-add"
 source $HOME/.keychain/$HOSTNAME-sh
 
