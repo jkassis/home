@@ -6,7 +6,7 @@ Install this on a fresh MacOS or Linux development MM or VM.
 
 Prerequisites
 -------------
-You will need git and ssh client. If you have to copy your id_rsa and id_rsa.pub into your home folder first.
+You will need git and ssh client. Copy your id_rsa and id_rsa.pub into your home folder first.
 
 ```
 > mkdir ~/.ssh
