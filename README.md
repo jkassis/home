@@ -2,7 +2,7 @@ jkassis home
 ============
 Machine setup scripts, dotfiles, configuration, etc.
 
-Install this on your fresh MacOS or Linux development MM or VM.
+Install this on a fresh MacOS or Linux development MM or VM.
 
 Prerequisites
 -------------
