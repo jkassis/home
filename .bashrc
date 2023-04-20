@@ -115,11 +115,11 @@ fi
 
 ###########################################################################
 # allow $USER to use keys. Only enter once and it will remain enabled till
-# you delete it or reboot the server 
+# you delete it or reboot the server
 ###########################################################################
 echo To cache your ssh password... run
-echo > keychain $HOME/.ssh/id_rsa
+echo "> keychain $HOME/.ssh/id_rsa"
 echo or run...
-echo > ssh-add 
+echo "> ssh-add"
 source $HOME/.keychain/$HOSTNAME-sh
 
