@@ -33,7 +33,7 @@ Installation
 
 Inspiration
 -----------
-https://github.com/harsha1306/config
-https://github.com/mgeist/dotfiles
-https://github.com/statico/dotfiles/
+* https://github.com/harsha1306/config
+* https://github.com/mgeist/dotfiles
+* https://github.com/statico/dotfiles/
 
