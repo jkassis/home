@@ -53,7 +53,7 @@ brew install --cask 1password lastpass
 # TODO: can we automate 1password setup/config?
 
 # messaging
-brew install --cask slack telegram
+brew install --cask slack zoom whatsapp telegram
 # TODO: slack - auto add my specific servers?
 
 # languages: rust
@@ -95,6 +95,9 @@ brew install opencv@4
 ## languages: clojure
 brew install clojure leiningen
 
+## packagers
+brew install nfpm
+
 # editors : atom
 # brew install --cask atom
 # TODO: atom package setup...
@@ -114,6 +117,9 @@ brew install --cask sublime-text
 # editors : vim
 brew install python3 nvim fzf the_silver_searcher ctags fd
 ./installVim.sh
+
+# editors: images
+brew install inkscape
 
 # ides : xcode
 xcode-select --install
