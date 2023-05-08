@@ -53,7 +53,7 @@ brew install --cask 1password lastpass
 # TODO: can we automate 1password setup/config?
 
 # messaging
-brew install --cask slack zoom whatsapp telegram
+brew install --cask slack zoom whatsapp telegram microsoft-teams
 # TODO: slack - auto add my specific servers?
 
 # languages: rust
@@ -127,11 +127,6 @@ sudo xcodebuild -license accept # agree to xcode license
 
 # ides : vscode
 brew install --cask visual-studio-code
-mkdir -p ~/Library/Application\ Support/Code/User
-rm ~/Library/Application\ Support/Code/User/settings.json
-rm ~/Library/Application\ Support/Code/User/keybindings.json
-ln -s ~/Home/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/Home/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled -bool NO
 sudo /usr/sbin/DevToolsSecurity --enable
 
