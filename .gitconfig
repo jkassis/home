@@ -57,5 +57,7 @@
 	email = jkassis@gmail.com
 [commit]
 	template = ~/.stCommitMsg
-[url "git@github.com:"]
-    insteadOf = "https://github.com/"
+[http]
+	proxy = http_proxy=http://p3proxy.frb.org:8080
+[https]
+	proxy = http_proxy=http://p3proxy.frb.org:8080

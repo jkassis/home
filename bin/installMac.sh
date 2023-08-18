@@ -174,6 +174,7 @@ brew install watch fswatch
 brew install --cask iterm2
 # curl "https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/master/scheme/iterm/One%20Dark.itermcolors" > ~/Downloads/OneDark.itermcolors
 
+
 # shell : zsh and fish
 brew install zsh fish fisher
 echo Make sure you do the followin...
