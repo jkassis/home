@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cask_args appdir: "~/Applications"
+
 # homebrew
 #/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap homebrew/cask-versions
@@ -35,6 +37,9 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 # gitutils
 brew tap jkassis/keg
 brew install gitall git-gc
+
+# coreutils (gnu version of core utilities)
+brew install coreutils
 
 # gags
 brew install sl
@@ -115,8 +120,11 @@ brew install --cask sublime-text
 # brew install --cask emacs
 
 # editors : vim
-brew install python3 nvim fzf the_silver_searcher ctags fd
+brew install python3 nvim  ctags
 ./installVim.sh
+
+# cli search
+fzf the_silver_searcher fd
 
 # editors: images
 brew install inkscape
@@ -142,10 +150,17 @@ brew install --cask docker virtualbox
 brew install podman
 
 # k8s
-brew install kubernetes-helm terraform cfssl stern jsonnet openshift-cli
+brew krew kubernetes-cli openshift-cli
+brew install kubectx k9s openlens
+brew stern  # tail multiple k8s pods
+tap "helm/tap"
+brew kubernetes-helm chart-testing
+tap "norwoodj/tap"
+brew terraform tfenv terraform-docs
+brew openssl@3 cfssl
 
 # format utils : yaml json
-pip3 install jq yq jid  # jsonquery yamlquery and json incremental digger
+pip3 install jq yq jid jsonnet  # jsonquery yamlquery and json incremental digger
 go install github.com/brancz/gojsontoyaml@latest
 
 # data visualization
@@ -171,7 +186,8 @@ brew install --cask google-drive mountain-duck grandperspective disk-inventory-x
 brew install watch fswatch
 
 # terminal emulators
-brew install --cask iterm2
+# brew install --cask iterm2
+cask iterm2
 # curl "https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/master/scheme/iterm/One%20Dark.itermcolors" > ~/Downloads/OneDark.itermcolors
 
 
@@ -204,8 +220,10 @@ brew install autojump
 # brew services start postgresql
 
 # source / version control
-brew install --cask sourcetree beyond-compare
-brew install ydiff bfg tig git-filter-repo sourcetree svn gh
+brew svn
+brew github gh git-filter-repo tig
+brew "jesseduffield/lazygit/lazygit"
+brew ydif bfg sourcetree gitkraken gitk beyond-compare
 go install github.com/maykonlf/semver-cli/cmd/semver@latest
 
 # fonts
@@ -254,3 +272,14 @@ brew install libreoffice
 echo "Post installation tips:"
 echo "- Set fira-code font in iterm2"
 echo "- Set itermcolor scheme (file is OneDark.itermcolors)"
+
+tap "helm/tap"
+brew asdf  # version management for tools
+brew argo argocd # argo
+brew awscli aws-sso-util
+
+
+
+brew make cmake automake
+
+brew gcc
