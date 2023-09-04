@@ -56,7 +56,3 @@
 	email = jkassis@gmail.com
 [commit]
 	template = ~/.stCommitMsg
-[url "git@github.com:"]
-    insteadOf = "https://github.com/"
-[include]
-    path = ~/.gitconfig.local
