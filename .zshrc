@@ -78,7 +78,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras vi-mode zsh-autosuggestions)
+plugins=(git git-extras vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -151,7 +151,7 @@ pathrm() {
   export PATH="$(echo $PATH | sed -e "s;\(^\|:\)${1%/}\(:\|\$\);\1\2;g" -e 's;^:\|:$;;g' -e 's;::;:;g')"
 }
 
-# trick out the path 
+# trick out the path
 pathadd "$HOME/home/bin"   # these binaries are checked in
 pathadd "$HOME/bin"        # these binaries are not
 export GOPATH="$HOME/go"     # GOPATH
@@ -160,7 +160,7 @@ pathadd "/usr/local/go/bin"  # golang binaries
 pathadd "$HOME/.cargo/bin"   # rust binaries
 pathadd "/opt/homebrew/bin"  # brew binaries
 
-# infra aliases 
+# infra aliases
 alias kc="/opt/homebrew/bin/kubectl"
 alias kx="/opt/homebrew/bin/kubectx"
 alias kns="/opt/homebrew/bin/kubens"
