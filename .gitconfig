@@ -56,3 +56,5 @@
 	email = jkassis@gmail.com
 [commit]
 	template = ~/.stCommitMsg
+[fetch]
+  prune = true
