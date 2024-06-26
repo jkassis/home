@@ -165,6 +165,11 @@ alias kns="/opt/homebrew/bin/kubens"
 alias tg="/opt/homebrew/bin/terragrunt"
 alias tf="/opt/homebrew/bin/terraform"
 
+# misc aliases
+alias c="clear"
+alias y="yarn"
+
+
 # any local machine config
 source ~/.zshrc.local
 
@@ -172,4 +177,7 @@ source ~/.zshrc.local
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
+
 export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+
+[[ -s "/Users/jkassis/.gvm/scripts/gvm" ]] && source "/Users/jkassis/.gvm/scripts/gvm"

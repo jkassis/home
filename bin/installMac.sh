@@ -94,6 +94,7 @@ brew install golang
 # brew install goreleaser
 mkdir -p "$HOME/Code/go"
 # go install github.com/karalabe/xgo@latest
+brew install zig  # cross-compiler for CGO
 brew install opencv@4
 
 

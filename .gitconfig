@@ -24,6 +24,7 @@
 	editor = nvim
 	excludesfile = ~/.gitignore_global
 	preloadindex = true
+	autocrlf = input
 [diff]
 	tool = ydiff
 	guitool = ydiff
