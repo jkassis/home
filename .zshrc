@@ -154,8 +154,6 @@ pathrm() {
 # trick out the path
 pathadd "$HOME/home/bin"   # these binaries are checked in
 pathadd "$HOME/bin"        # these binaries are not
-export GOPATH="$HOME/go"     # GOPATH
-pathadd "$GOPATH/bin"        # golang binaries
 pathadd "/usr/local/go/bin"  # golang binaries
 pathadd "$HOME/.cargo/bin"   # rust binaries
 pathadd "/opt/homebrew/bin"  # brew binaries
@@ -172,3 +170,6 @@ source ~/.zshrc.local
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
