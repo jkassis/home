@@ -1,0 +1,28 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+[keybindings]
+  new_tab = <Super>t
+  close_term = <Shift><Super>t
+  copy = <Super>c
+  paste = <Super>v
+  close_window = <Super>w
+  prev_tab = <Super>braceleft
+  next_tab = <Super>braceright
+  group_tab = <Alt>t
+  ungroup_tab = <Shift><Alt>t
+[profiles]
+  [[default]]
+    background_darkness = 0.49
+    font = FiraCode Nerd Font Mono Medium 10
+    scroll_on_output = True
+    scrollback_lines = 10000
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

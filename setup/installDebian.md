@@ -34,6 +34,9 @@ fc-cache -f -v
 # open a new console > right click > preferences
 # adjust scrollback and use nerd font mono medium
 
+# install vivaldi
+# goto vivaldi webside and download the deb
+sudo dpkg -i ~/Downloads/vivaldi*
 
 # change vim and setup clipboard support
 # sudo apt install vim-gtk3
@@ -91,6 +94,7 @@ download the .deb file from the website
 sudo apt install ./<file>.deb
 
 # install dev tools
+sudo apt install cmake build-essentials
 sudo apt install sl
 sudo install python3 python3-pip
 sudo apt install slack
