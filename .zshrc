@@ -1,3 +1,7 @@
+ZSH_DISABLE_COMPFIX="true"
+
+source ~/.profile
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -10,6 +14,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh/cache"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -78,7 +83,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras vi-mode)
+plugins=(git git-extras vi-mode debian screen history extract colorize web-search docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -151,33 +156,11 @@ pathrm() {
   export PATH="$(echo $PATH | sed -e "s;\(^\|:\)${1%/}\(:\|\$\);\1\2;g" -e 's;^:\|:$;;g' -e 's;::;:;g')"
 }
 
-# trick out the path
-pathadd "$HOME/home/bin"   # these binaries are checked in
-pathadd "$HOME/bin"        # these binaries are not
-pathadd "/usr/local/go/bin"  # golang binaries
-pathadd "$HOME/.cargo/bin"   # rust binaries
-pathadd "/opt/homebrew/bin"  # brew binaries
-
-# infra aliases
-alias kc="/opt/homebrew/bin/kubectl"
-alias kx="/opt/homebrew/bin/kubectx"
-alias kns="/opt/homebrew/bin/kubens"
-alias tg="/opt/homebrew/bin/terragrunt"
-alias tf="/opt/homebrew/bin/terraform"
-
-# misc aliases
-alias c="clear"
-alias y="yarn"
-
-
 # any local machine config
 source ~/.zshrc.local
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-
 export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 
-[[ -s "/Users/jkassis/.gvm/scripts/gvm" ]] && source "/Users/jkassis/.gvm/scripts/gvm"
