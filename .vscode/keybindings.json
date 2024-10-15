@@ -1,5 +1,21 @@
 [
   {
+    "key": "meta+shift+[",
+    "command": "-cursorTop"
+  },
+  {
+    "key": "meta+shift+]",
+    "command": "-cursorBottom"
+  },
+  {
+    "key": "meta+shift+{",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "meta+shift+}",
+    "command": "workbench.action.nextEditor"
+  },
+  {
     "key": "shift+cmd+h",
     "command": "workbench.action.replaceInFiles"
   },
@@ -41,7 +57,6 @@
     "key": "ctrl+shift+-",
     "command": "-workbench.action.navigateForward"
   },
-
   // Navigation
   // {
   //   "key": "cmd+h",
@@ -63,7 +78,6 @@
     "command": "cursorRight",
     "when": "editorFocus"
   },
-
   // Debugger control
   {
     "key": "cmd+r",
@@ -75,7 +89,6 @@
     "command": "workbench.action.debug.start",
     "when": "!inDebugMode"
   },
-
   // F1
   {
     "key": "alt+f1",
@@ -90,7 +103,6 @@
     "key": "f1",
     "command": "editor.debug.action.toggleBreakpoint"
   },
-
   // F2
   {
     "key": "f2",
@@ -117,7 +129,6 @@
     "command": "-editor.action.changeAll",
     "when": "editorTextFocus && editorTextFocus && !editorReadonly"
   },
-
   // F3
   {
     "key": "f3",
@@ -174,7 +185,6 @@
     "command": "-workbench.action.terminal.findPrevious",
     "when": "terminalFindWidgetFocused"
   },
-
   // F4
   {
     "key": "f4",
@@ -236,7 +246,6 @@
     "command": "-extension.node-debug.pickLoadedScript",
     "when": "debugType == 'node'"
   },
-
   // F5
   {
     "key": "f5",
@@ -282,14 +291,12 @@
     "command": "-workbench.action.editor.previousChange",
     "when": "editorTextFocus"
   },
-
   // F6
   {
     "key": "f6",
     "command": "-workbench.action.debug.pause",
     "when": "debugState == 'running'"
   },
-
   // F7
   {
     "key": "f7",
@@ -315,7 +322,6 @@
     "command": "-editor.action.wordHighlight.prev",
     "when": "editorTextFocus && hasWordHighlights"
   },
-
   // F8 - enabled
   {
     "key": "f8",
@@ -327,7 +333,6 @@
     "command": "editor.action.marker.prev",
     "when": "editorFocus && !editorReadonly"
   },
-
   // F8 - disabled
   {
     "key": "f8",
@@ -349,7 +354,6 @@
     "command": "-editor.action.marker.prev",
     "when": "editorFocus && !editorReadonly"
   },
-
   // F9 - enabled
   {
     "key": "f9",
@@ -361,7 +365,6 @@
     "command": "search.action.focusPreviousSearchResult"
     // "when":"editorFocus && !editorReadonly"
   },
-
   // F9 - disabled
   {
     "key": "f9",
@@ -378,7 +381,6 @@
     "command": "-settings.action.showContextMenu",
     "when": "inSettingsEditor"
   },
-
   // F10
   {
     "key": "f10",
@@ -400,7 +402,6 @@
     "command": "-editor.action.showContextMenu",
     "when": "textInputFocus"
   },
-
   // F11
   {
     "key": "f11",
@@ -417,7 +418,6 @@
     "command": "-workbench.action.debug.stepOut",
     "when": "debugState == 'stopped'"
   },
-
   // F12
   {
     "key": "f12",

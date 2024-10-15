@@ -5,11 +5,12 @@
   close_term = <Shift><Super>t
   copy = <Super>c
   paste = <Super>v
-  close_window = <Super>w
-  prev_tab = <Super>braceleft
+  close_window = <Super>q
   next_tab = <Super>braceright
+  prev_tab = <Super>braceleft
   group_tab = <Alt>t
   ungroup_tab = <Shift><Alt>t
+  new_window = <Super>n
 [profiles]
   [[default]]
     background_darkness = 0.49

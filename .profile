@@ -42,6 +42,10 @@ if [ -d "/snap/bin" ] ; then
     PATH="$PATH:/snap/bin"
 fi
 
+if [ -d "$HOME/.yarn/bin" ] ; then
+    PATH="$PATH:$HOME/.yarn/bin"
+fi
+
 
 # infra aliases
 alias kc="/opt/homebrew/bin/kubectl"
@@ -57,3 +61,6 @@ alias y="yarn"
 # setup gvm
 [[ -s "/home/jkassis/.gvm/scripts/gvm" ]] && source "/home/jkassis/.gvm/scripts/gvm"
 
+# swap caps and esc
+#setxkbmap -option caps:swapescape
+alias clip="xclip -selection clipboard"

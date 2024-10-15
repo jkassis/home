@@ -162,5 +162,5 @@ source ~/.zshrc.local
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
-
+# use gvm for the GOPATH
+[[ -s "/home/jkassis/.gvm/scripts/gvm" ]] && source "/home/jkassis/.gvm/scripts/gvm"

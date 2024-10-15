@@ -1,6 +1,6 @@
 # Update apt
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt update
+sudo apt upgrade
 
 # create jkassis
 sudo useradd -m -U jkassis
@@ -12,6 +12,7 @@ chsh /usr/bin/zsh
 # install gnome
 sudo apt install gnome gnome-shell gnome-tweaks
 sudo apt install chrome-gnome-shell gnome-shell-extensions gnome-shell-extension-manager
+gsettings set org.gnome.mutter.keybindings switch-monitor '[]'  # frees up the super-p key combination
 
 # choose the gdm display manager
 # restart
@@ -99,6 +100,8 @@ sudo apt install sl
 sudo install python3 python3-pip
 sudo apt install slack
 curl https://sh.rustup.rs -sSf | sh
+
+sudo npm install -g yarn
 sudo apt install yarn
 sudo apt install fzf silversearcher-ag
 sudo apt install docker
@@ -106,10 +109,23 @@ sudo apt install awscli
 sudo apt install dnsutils
 sudo snap install core
 sudo apt install watch fswatch
+sudo apt install clang
 sudo apt install arduino
+sudo apt install postgresql postgresql-contrib
 
 # install kubernetes stuff
+sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates curl
+curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+
+
+
+
 sudo apt install kubectl
+
+# spotify
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
+
 
 # install 3d printing stuff
 sudo apt install cura
@@ -128,3 +144,40 @@ gvm use go1.23.2 --default
 # copy your key from somewhere
 ssh-add ~/.ssh/id_rsa
 
+# install cockroachdb
+sudo su -
+
+cd /usr/local
+goto https://www.cockroachlabs.com/docs/stable/install-cockroachdb-linux.html to download the lastest
+tar xfz cockroach*
+cp -i cockroach*/lib/libgeos.so /usr/local/lib/cockroach/
+cp -i cockroach*/lib/libgeos_c.so /usr/local/lib/cockroach/
+ln -s /usr/local/cockroach*/cockroach /usr/local/bin/cockroach
+
+cat >> /etc/systemd/system/cockroach.service << EOF
+[Unit]
+Description=CockroachDB service
+Documentation=https://www.cockroachlabs.com/docs/
+Wants=network.target
+After=network.target
+
+[Service]
+# Set your CockroachDB data directory (adjust path as necessary)
+ExecStart=/usr/local/bin/cockroach start-single-node --insecure --listen-addr=localhost --store=/var/lib/cockroach --advertise-addr=localhost --cache=25% --max-sql-memory=25%
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=3
+User=cockroach
+Group=cockroach
+LimitNOFILE=35000
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo useradd -r -m -d /var/lib/cockroach -s /bin/false cockroach
+sudo mkdir -p /var/lib/cockroach
+sudo chown -R cockroach:cockroach /var/lib/cockroach
+sudo systemctl daemon-reload
+sudo systemctl start cockroach
+sudo systemctl enable cockroach
