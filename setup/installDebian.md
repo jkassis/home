@@ -13,13 +13,26 @@ chsh /usr/bin/zsh
 sudo apt install gnome gnome-shell gnome-tweaks
 sudo apt install chrome-gnome-shell gnome-shell-extensions gnome-shell-extension-manager
 gsettings set org.gnome.mutter.keybindings switch-monitor '[]'  # frees up the super-p key combination
-
 # choose the gdm display manager
-# restart
+
 # purge xfce
 sudo apt purge xfce4
 sudo apt autoremove
+sudo restart now
 
+# fix hibernation settings
+vi /etc/systemd/sleep.conf
+make it look like this...
+```
+[Sleep]
+AllowSuspend=yes
+AllowHibernation=no
+AllowSuspendThenHibernate=no
+AllowHybridSleep=no
+SuspendMode=suspend
+SuspendState=mem
+HibernateMode=shutdown
+```
 
 # install fonts
 wget -P ~/.local/share/fonts https://github.com/adobe-fonts/source-code-pro/releases/download/variable-fonts/TTF-source-code-pro-VF.ttf
@@ -45,7 +58,7 @@ sudo install neovim
 
 # keyboard tweaks 
 - REMAP ESC AND CAPS LOCK
-vi /usr/share/X11/xkb/symbols/pc
+vi /usr/share/X11/xkb/symbols/c
 setxkbmap
 - repeat rates
 gsettings set org.gnome.desktop.peripherals.keyboard delay 250 
@@ -63,6 +76,7 @@ gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
 # Cmd-w to Close Window in Windows Section
 # unbind Cmd-v to open notification in System section
 # GNOME Tweaks > Keyboard & Mouse > Overview Shortcut > Right Super
+# disable just about everything
 
 # Cmd-q to Quit Applications
 sudo apt install wmctrl
@@ -88,7 +102,8 @@ sudo systemctl start bluetooth
 
 # install snap (not really used for anything)
 sudo apt install snapd
-sudo systemctl enable --now snapd
+sudo systemctl enable --now snapd.socket
+snap install core
 
 # VS Code
 download the .deb file from the website
@@ -101,26 +116,39 @@ sudo install python3 python3-pip
 sudo apt install slack
 curl https://sh.rustup.rs -sSf | sh
 
+# .js stuff
 sudo npm install -g yarn
 sudo apt install yarn
+
+# file search and watch
 sudo apt install fzf silversearcher-ag
-sudo apt install docker
-sudo apt install awscli
-sudo apt install dnsutils
-sudo snap install core
 sudo apt install watch fswatch
+
+# network utilities 
+sudo apt install dnsutils
+
+# c and arduino
 sudo apt install clang
 sudo apt install arduino
-sudo apt install postgresql postgresql-contrib
+<!-- sudo apt install postgresql postgresql-contrib -->
+
+# docker
+sudo apt-get install qemu-user-static
+sudo apt install docker docker-buildx-plugin
+sudo docker buildx create --use 
+sudo docker run --platform=linux/arm64/v8 --rm --privileged multiarch/qemu-user-static --reset -p yes
+
 
 # install kubernetes stuff
-sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates curl
-curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt install awscli
+aws configure
+snap install kubectl --classic
+aws eks --region us-west-2 update-kubeconfig --name live-shinetribe 
+<!-- snap install k9s
+sudo ln -s /snap/k9s/current/bin/k9s /snap/bin   -->
 
-
-
-
+# install k9s using golang
+go install github.com/derailed/k9s@latest
 sudo apt install kubectl
 
 # spotify
