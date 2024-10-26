@@ -151,9 +151,13 @@ sudo ln -s /snap/k9s/current/bin/k9s /snap/bin   -->
 go install github.com/derailed/k9s@latest
 sudo apt install kubectl
 
+# install balena
+wget https://github.com/balena-io/balena-cli/releases/download/v19.9.0/balena-cli-v19.9.0-linux-arm64-standalone.zip
+unzip balena*
+sudo mv balena-cli/balena /usr/local/bin/balena
+
 # spotify
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
-
 
 # install 3d printing stuff
 sudo apt install cura
