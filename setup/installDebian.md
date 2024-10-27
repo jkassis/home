@@ -151,6 +151,9 @@ sudo ln -s /snap/k9s/current/bin/k9s /snap/bin   -->
 go install github.com/derailed/k9s@latest
 sudo apt install kubectl
 
+# node and nvm
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
 # install balena
 wget https://github.com/balena-io/balena-cli/releases/download/v19.9.0/balena-cli-v19.9.0-linux-arm64-standalone.zip
 unzip balena*
