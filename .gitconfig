@@ -54,8 +54,24 @@
 	trustExitCode = true
 [user]
 	name = Jeremy Kassis
-	email = jkassis@gmail.com
+	email = jeremy.kassis@sf.frb.org
+	signingkey = 13148BD153F9764463DA40F32B064B40C4063CA7
 [commit]
 	template = ~/.stCommitMsg
 [fetch]
   prune = true
+[init]
+	defaultBranch = main
+[credential]
+	helper = store
+[http]
+	sslVersion = tlsv1.2
+	postBuffer = 524288000
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[rerere]
+	enabled = true

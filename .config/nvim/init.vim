@@ -4,10 +4,6 @@
 " https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
 " http://fisadev.github.io/fisa-vim-config/
 
-" THIS FILE: Shortcuts to edit
-nnoremap gev :e ~/home/init.vim<CR>
-nnoremap gsv :so ~/home/init.vim<CR>
-
 " STARTUP
 set shellcmdflag=-ic        " Start in interactive mode
 
@@ -15,9 +11,6 @@ set shellcmdflag=-ic        " Start in interactive mode
 " Run :checkhealth to make sure these work
 let g:python2_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
-
-" LANGUAGE: GO
-let g:go_version_warning = 0
 
 " LEADER
 " Change Leader to <Space>
@@ -48,7 +41,7 @@ let g:ack_qhandler = 'copen'
 " let g:ack_lhandler = 'copen'
 " ACK Dispatch: this is annoying cause it causes a warning window to pop open in iterm
 " let g:ack_use_dispatch = 1
-" use Silver Surfer 
+" use Silver Surfer
 if executable('ag')                                  " Have Silver Searcher?
   let g:ackprg = 'ag --nogroup --nocolor --column'   " Uses the silver searcher for acik
 endif
@@ -66,7 +59,7 @@ Plug 'gcmt/taboo.vim'                                   " Ease the way you set t
 Plug 'groenewege/vim-less'                              " Syntax highlighting for less files
 Plug 'haya14busa/vim-operator-flashy'                   " Flash on yank
 Plug 'janko-m/vim-test'                                 " Test.vim framework
-Plug 'jkassis/vim-chrome-devtools', { 'do': 'npm install && npm run build' } 
+Plug 'jkassis/vim-chrome-devtools', { 'do': 'npm install && npm run build' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " fzf fuzzy search with fzf
 Plug 'junegunn/fzf.vim'                                 " fzf fuzzy search
 Plug 'kana/vim-operator-user'                           " Easy API for making new operators
@@ -84,7 +77,7 @@ Plug 'skywind3000/vim-preview'                          " advanced preview windo
 " Plug 'tbastos/vim-lua'                                  " Improved Lua 5.3 syntax and indentation support for Vim
 " Plug 'terryma/vim-smooth-scroll'                        " Smooth-Scrolling... maps optionally
 Plug 'tpope/vim-commentary'                             " Code commenting
-Plug 'tpope/vim-dispatch'                               " Asynchronous job adapters 
+Plug 'tpope/vim-dispatch'                               " Asynchronous job adapters
 Plug 'tpope/vim-fugitive'                               " Git integration for vim
 Plug 'tpope/vim-surround'                               " easily delete, change, and add surroundings in pairs.
 Plug 'tpope/vim-unimpaired'                             " Paired bracket maps for navigation and more
@@ -104,24 +97,7 @@ nnoremap <C-i> <C-o>
 " UNDO / REDO: With uU
 nnoremap U <C-r>
 
-" DEBUGGERS: ChromeDevTools
-nnoremap <Leader><F12> :CDTToggle<CR>
-" let g:ChromeDevTools_port = '52826'
-" let g:ChromeDevTools_port = '9330'
-
-" DEBUGGERS: VDebug
-" For Python:
-"    pip install komodo-python-dbgp (in the virtualenv)
-"    then run the script with pydbgp
-"
-if !exists('g:vdebug_options')
-  let g:vdebug_options = {}
-endif
-let g:vdebug_options['break_on_open'] = 0
-let g:vdebug_options.port = 9001
-let g:vdebug_options.server = 'localhost'
-
-" TAGS 
+" TAGS
 " http://vim.wikia.com/wiki/Browsing_programs_with_tags
 " disable gutentags during gitcommit gitrebase
 nnoremap <Leader>t :TagbarToggle<CR>
@@ -139,7 +115,11 @@ autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 " Automatically close the preview window when quickfix closes
 " autocmd BufDelete <buffer> if &buftype == 'quickfix' | :pc! | endif     " Never Worked
 " autocmd FileType qf autocmd BufDelete <buffer> echom "Hey"              " Console Log Example
-autocmd FileType qf autocmd BufDelete <buffer> :pc! 
+autocmd FileType qf autocmd BufDelete <buffer> :pc!
+
+
+" auto update windows when switching back to vim
+autocmd FocusGained,BufEnter * checktime
 
 
 " FZF (Search Files by Name)
@@ -177,11 +157,11 @@ nnoremap <Leader>w :Bdelete!<CR>
 nnoremap <Leader>W :bufdo :Bdelete<CR>
 
 " BUFFERS: Switch by number
-:nnoremap <Leader>b :ls<CR>:b<SPACE>
+nnoremap <Leader>b :ls<CR>:b<SPACE>
 
 " BUFFERS: Switch left / right
-:nnoremap <Leader>H :bp<CR>
-:nnoremap <Leader>L :bn<CR>
+nnoremap <Leader>H :bp<CR>
+nnoremap <Leader>L :bn<CR>
 
 
 " BUFFERS: Auto-Save / Read Options
@@ -197,7 +177,7 @@ nnoremap <Leader>o :tabn<CR>
 let g:taboo_renamed_tab_format = ' %l '
 nnoremap <Leader>te :tabe %<CR>
 nnoremap <Leader>tn :tabnew<CR>
-nnoremap <Leader>tr :TabooRename 
+nnoremap <Leader>tr :TabooRename
 nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>U :tabm 0<CR>
 nnoremap <Leader>I :tabm -1<CR>
@@ -242,9 +222,9 @@ noremap <S-RightDrag> <LeftDrag>
 " noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " NERDTree
-"nnoremap <C-n> :NERDTreeToggle<CR> 
+"nnoremap <C-n> :NERDTreeToggle<CR>
 function! NERDTreeToggleOrFind()
-    if !exists('g:NERDTree') 
+    if !exists('g:NERDTree')
       exec ":NERDTreeToggle"
     elseif !g:NERDTree.IsOpen()
       exec ":NERDTreeToggle"
@@ -300,7 +280,7 @@ set showcmd             " Show commands when entered
 
 " FORMATTING: Tabbing and Shifting
 " tabstop       Num columns to render per tab character.
-" softtabstop   Just set this to tabstop for sanity. 
+" softtabstop   Just set this to tabstop for sanity.
 " shiftwidth    Num spaces to shift for shift commands ('<' and '>')
 " expandtab     Always insert spaces for TAB key (when set).
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
@@ -320,7 +300,7 @@ set formatoptions+=o    " Continue comment marker in new lines.
 " See http://vim.wikia.com/wiki/Search_for_visually_selected_text
 vnoremap // y/\V<C-R>"<CR>
 "vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
-vnoremap /? y/\V<C-R>"<CR> 
+vnoremap /? y/\V<C-R>"<CR>
 
 " SEARCH: Formatting
 "set magic              " Set magic on, for regexps
@@ -333,7 +313,7 @@ set smartcase           " Do case-sensitive search when target includes capitals
 
 " SEARCH: Goto next and prev centers the screen
 nnoremap n nzz
-nnoremap N Nzz 
+nnoremap N Nzz
 
 " SEARCH: Shortcut for global search and replace
 nnoremap <C-/> :%s/
@@ -348,11 +328,11 @@ nnoremap <C-/> :%s/
 "" Vertical Whitespace Shortcuts
 "" http://vim.wikia.com/wiki/Quickly_adding_and_deleting_empty_lines<Paste>
 "" noremap <C-l> :call append(line('.')-1, '')
-"" noremap <C-L> :call append(line('.')+1, '') 
+"" noremap <C-L> :call append(line('.')+1, '')
 "noremap <Up> mZO<Esc>`Z
 "noremap <S-Up> m`:-g/^\s*$\n/d<CR>'`:noh<CR>
 "noremap <Down> mZo<Esc>`Z
-"noremap <S-Down> m`:+g/^\s*$\n/d<CR>'`:noh<CR> 
+"noremap <S-Down> m`:+g/^\s*$\n/d<CR>'`:noh<CR>
 "
 "noremap <C-BS> mZO<Esc>`Z
 "noremap <BS> mZ:-1,-1s/^\s*$\n//<CR>:noh<CR>`Z

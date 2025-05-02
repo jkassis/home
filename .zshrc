@@ -164,6 +164,7 @@ source ~/.zshrc.local
 # use gvm for the GOPATH
 [[ -s "/home/jkassis/.gvm/scripts/gvm" ]] && source "/home/jkassis/.gvm/scripts/gvm"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+
+[[ -s "/Users/jkassis/.gvm/scripts/gvm" ]] && source "/Users/jkassis/.gvm/scripts/gvm"
+export GPG_TTY=$(tty)

@@ -121,5 +121,4 @@ echo To cache your ssh password... run
 echo "> keychain $HOME/.ssh/id_rsa"
 source $HOME/.keychain/$HOSTNAME-sh
 
-
-[[ -s "/home/jkassis/.gvm/scripts/gvm" ]] && source "/home/jkassis/.gvm/scripts/gvm"
+. "$HOME/.cargo/env"
