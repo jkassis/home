@@ -156,7 +156,7 @@ pathrm() {
 }
 
 # any local machine config
-source ~/.zshrc.local
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -168,3 +168,5 @@ export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$P
 
 [[ -s "/Users/jkassis/.gvm/scripts/gvm" ]] && source "/Users/jkassis/.gvm/scripts/gvm"
 export GPG_TTY=$(tty)
+
+[[ -s "/Users/l1jxk15/.gvm/scripts/gvm" ]] && source "/Users/l1jxk15/.gvm/scripts/gvm"
