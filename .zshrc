@@ -121,6 +121,36 @@ export LANG=en_US.UTF-8
 # https://dougblack.io/words/zsh-vi-mode.html
 export KEYTIMEOUT=1
 
+# DIRECTORY NAVIGATION
+# Go up the directory tree
+alias g.='cd ..'
+alias g..='cd ../..'
+alias g...='cd ../../..'
+alias g....='cd ../../../..'
+
+# Directory stack navigation
+alias gi='pushd'   # "go in" — push current dir to stack
+alias go='popd'    # "go out" — pop back to previous dir
+alias gls='dirs -v'  # List directory stack with indices
+
+# Common locations
+alias gh='cd ~'              # Home
+alias gH='cd ~/Home'
+alias gt='cd /tmp'           # Temp
+alias gd='cd ~/Downloads'    # Downloads
+alias gp='cd ~/Projects'     # Projects
+alias gw='cd ~/workspace'    # Workspace
+alias gc='cd ~/Code'    # Code
+alias gcfg='cd ~/.config'    # Config
+
+# zoxide or autojump support (optional)
+# Uncomment if using zoxide
+# alias g='z'
+# alias ga='z -'
+
+# Custom bookmarks (adjust to your environment)
+# alias gsrc='cd ~/src/github.com/yourname'
+
 
 # EDITOR
 if [[ -n $SSH_CONNECTION ]]; then
