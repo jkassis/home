@@ -123,25 +123,25 @@ export KEYTIMEOUT=1
 
 # DIRECTORY NAVIGATION
 # Go up the directory tree
-alias g.='cd ..'
-alias g..='cd ../..'
-alias g...='cd ../../..'
-alias g....='cd ../../../..'
+alias cd.='cd ..'
+alias cd..='cd ../..'
+alias cd...='cd ../../..'
+alias cd....='cd ../../../..'
 
 # Directory stack navigation
-alias gi='pushd'   # "go in" — push current dir to stack
-alias go='popd'    # "go out" — pop back to previous dir
-alias gls='dirs -v'  # List directory stack with indices
+alias cdi='pushd'   # "go in" — push current dir to stack
+alias cdo='popd'    # "go out" — pop back to previous dir
+alias cdls='dirs -v'  # List directory stack with indices
 
 # Common locations
-alias gh='cd ~'              # Home
-alias gH='cd ~/Home'
-alias gt='cd /tmp'           # Temp
-alias gd='cd ~/Downloads'    # Downloads
-alias gp='cd ~/Projects'     # Projects
-alias gw='cd ~/workspace'    # Workspace
-alias gc='cd ~/Code'    # Code
-alias gcfg='cd ~/.config'    # Config
+alias cdh='cd ~'              # Home
+alias cdH='cd ~/Home'
+alias cdt='cd /tmp'           # Temp
+alias cdd='cd ~/Downloads'    # Downloads
+alias cdp='cd ~/Projects'     # Projects
+alias cdw='cd ~/workspace'    # Workspace
+alias cdc='cd ~/Code'    # Code
+alias cdcfg='cd ~/.config'    # Config
 
 # zoxide or autojump support (optional)
 # Uncomment if using zoxide
