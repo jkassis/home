@@ -123,10 +123,10 @@ export KEYTIMEOUT=1
 
 # DIRECTORY NAVIGATION
 # Go up the directory tree
-alias cd.='cd ..'
-alias cd..='cd ../..'
-alias cd...='cd ../../..'
-alias cd....='cd ../../../..'
+alias 'cd.'='cd ..'
+alias 'cd..'='cd ../..'
+alias 'cd...'='cd ../../..'
+alias 'cd....'='cd ../../../..'
 
 # Directory stack navigation
 alias cdi='pushd'   # "go in" — push current dir to stack
