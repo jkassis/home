@@ -130,6 +130,7 @@ sudo apt install dnsutils
 # c and arduino
 sudo apt install clang
 sudo apt install arduino
+sudo apt install libclang-dev
 <!-- sudo apt install postgresql postgresql-contrib -->
 
 # docker
