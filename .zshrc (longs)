@@ -1,0 +1,68 @@
+HISTSIZE=99999
+HISTFILESIZE=999999
+SAVEHIST=$HISTSIZE
+
+stty -ixon # Use for froward / backward reverse-i-search
+
+alias history="history -i 0"
+
+alias k="/opt/homebrew/bin/kubectl"
+alias kx="/opt/homebrew/bin/kubectx"
+alias kns="/opt/homebrew/bin/kubens"
+#alias tf="/opt/homebrew/bin/terraform"
+alias tf="/Users/l1jxk15/mcscli/tf"
+alias grep="grep --color=always"
+#alias docker="~/.docker/bin/docker"
+export http_proxy=http://p3proxy.frb.org:8080
+export https_proxy=http://p3proxy.frb.org:8080
+export no_proxy=localhost,127.0.0.0/8,*.local
+git config --global http.proxy http_proxy=$http_proxy
+git config --global https.proxy http_proxy=$https_proxy
+
+
+
+function k-getall {
+  for i in $(kubectl api-resources --verbs=list --namespaced -o name | grep -v "events.events.k8s.io" | grep -v "events" | sort | uniq); do
+    echo "Resource:" $i
+    kubectl -n ${1} get --ignore-not-found ${i}
+  done
+}
+
+# reset git creds
+# git config --global --unset credential.helper
+source /Users/l1jxk15/.p72_aliases/load.sh
+alias pod-push="/Users/l1jxk15/misc/scripts/pod-push.sh"
+alias pod-push-awscli="/Users/l1jxk15/misc/scripts/build-pod-custom/scripts/pod-push-awscli.sh"
+alias make-me="/Users/l1jxk15/misc/scripts/make-ecr.sh"
+export PATH="${PATH}:${HOME}/.krew/bin:${HOME}/Library/Python/3.11/bin"
+export GPG_TTY=$(tty)
+export GPG_TTY=$(tty)
+
+
+tgp () {
+        local terragruntCMD=$1
+        awsProfile=`grep environment ../env.yml| awk '{print $2}'`
+        AWS_PROFILE="$awsProfile" terragrunt $terragruntCMD
+}
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+alias cfsauth1="java -jar ~/awstoken/frb-okta-aws-cli.jar -o https://frbanks.okta.com/home/amazon_aws/0oa5ii1ff8U7E243L297/272"
+
+alias tfInit="~/mcscli/tf init -backend-config env/backend.dev.tfvars -app cfs-p72-proto-lz-def -context cfs-base01-gov.p72-proto.dev -terraform-version 1.3.6"
+
+ecrLogin () {
+        REGION=$1
+        /opt/homebrew/bin/aws ecr get-login-password --region $REGION --profile cfs-base01-gov-p72-proto-dev_358791347679_cfs-adt-engineer-role \
+        | docker login --username AWS --password-stdin 358791347679.dkr.ecr.$REGION.amazonaws.com
+}
+
+helmLogin () {
+        REGION=$1
+        /opt/homebrew/bin/aws ecr get-login-password --region $REGION --profile cfs-base01-gov-p72-proto-dev_358791347679_cfs-adt-engineer-role \
+        | helm registry login --username AWS --password-stdin 358791347679.dkr.ecr.$REGION.amazonaws.com
+}
+
+#eval $(minikube docker-env)

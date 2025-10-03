@@ -121,6 +121,9 @@ export LANG=en_US.UTF-8
 # https://dougblack.io/words/zsh-vi-mode.html
 export KEYTIMEOUT=1
 
+# MISC CONVENIENCE
+alias c='clear'
+
 # DIRECTORY NAVIGATION
 # Go up the directory tree
 alias 'cd.'='cd ..'
@@ -200,3 +203,11 @@ export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$P
 export GPG_TTY=$(tty)
 
 [[ -s "/Users/l1jxk15/.gvm/scripts/gvm" ]] && source "/Users/l1jxk15/.gvm/scripts/gvm"
+
+# nvm stuff
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+source /Users/l1jxk15/.p72_aliases/load.sh
+
+alias cfsauth="java -jar ~/awstoken/frb-okta-aws-cli.jar -o https://frbanks.okta.com/home/amazon_aws/0oa5ii1ff8U7E243L297/272 --username l1jxk15 loop"

@@ -67,6 +67,7 @@
 [http]
 	sslVersion = tlsv1.2
 	postBuffer = 524288000
+	proxy = http_proxy=http://p3proxy.frb.org:8080
 [credential "https://github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
@@ -75,3 +76,5 @@
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [rerere]
 	enabled = true
+[https]
+	proxy = http_proxy=http://p3proxy.frb.org:8080
